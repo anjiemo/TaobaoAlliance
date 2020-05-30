@@ -18,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,14 +29,23 @@ public class MainActivity extends AppCompatActivity {
     private RecommendFragment mRecommendFragment;
     private SearchFragment mSearchFragment;
     private FragmentManager mFm;
+    private Unbinder mBind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        mBind = ButterKnife.bind(this);
         initFragment();
         initListener();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mBind != null) {
+            mBind.unbind();
+        }
     }
 
     private void initFragment() {

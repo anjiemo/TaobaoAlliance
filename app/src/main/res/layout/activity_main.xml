@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
+        android:id="@+id/main_navigation_bar"
         app:itemIconTint="@drawable/navigation_bar_color"
         app:itemTextColor="@drawable/navigation_bar_color"
         app:menu="@menu/my_navigation_items" />

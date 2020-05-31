@@ -1,7 +1,5 @@
 package com.example.taobaoalliance.presenter.impl;
 
-import android.util.Log;
-
 import com.example.taobaoalliance.model.Api;
 import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.presenter.IHomePresenter;
@@ -22,6 +20,9 @@ public class HomePresenterImpl implements IHomePresenter {
 
     @Override
     public void getCategories() {
+        if (mCallback != null) {
+            mCallback.onLoading();
+        }
         //加载分类数据
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
         Api api = retrofit.create(Api.class);
@@ -35,13 +36,20 @@ public class HomePresenterImpl implements IHomePresenter {
                 if (code == HttpURLConnection.HTTP_OK) {
                     //请求成功
                     Categories categories = response.body();
-//                    LogUtils.d(HomePresenterImpl.this,  "result ===========> " + categories.toString());
                     if (mCallback != null) {
-                        mCallback.onCategoriesLoaded(categories);
+                        if (categories==null||categories.getData().size()==0) {
+                            mCallback.onEmpty();
+                        }else {
+                            //LogUtils.d(HomePresenterImpl.this,  "result ===========> " + categories.toString());
+                            mCallback.onCategoriesLoaded(categories);
+                        }
                     }
                 } else {
                     //请求失败
                     LogUtils.i(HomePresenterImpl.this, "===========> 请求失败....");
+                    if (mCallback != null) {
+                        mCallback.onNetworkError();
+                    }
                 }
             }
 
@@ -50,6 +58,9 @@ public class HomePresenterImpl implements IHomePresenter {
                 //加载失败的结果
                 // TODO: 2020/5/30
                 LogUtils.e(HomePresenterImpl.this, "==============> 请求错误....");
+                if (mCallback != null) {
+                    mCallback.onNetworkError();
+                }
             }
         });
     }

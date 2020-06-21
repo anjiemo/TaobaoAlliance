@@ -1,7 +1,11 @@
 package com.example.taobaoalliance.ui.fragment;
 
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.taobaoalliance.R;
@@ -45,6 +49,11 @@ public class HomeFragment extends BaseFragment implements IHomeCallback {
     }
 
     @Override
+    protected View loadRootView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
+        return inflater.inflate(R.layout.base_home_fragment_layout, container, false);
+    }
+
+    @Override
     protected void loadData() {
         //加载数据
         mHomePresenter.getCategories();
@@ -79,6 +88,15 @@ public class HomeFragment extends BaseFragment implements IHomeCallback {
         //取消回调注册
         if (mHomePresenter != null) {
             mHomePresenter.unregisterCallback(this);
+        }
+    }
+
+    @Override
+    protected void onRetryClick() {
+        //网络错误，点击了重试
+        //重新加载分类内容
+        if (mHomePresenter != null) {
+            mHomePresenter.getCategories();
         }
     }
 }

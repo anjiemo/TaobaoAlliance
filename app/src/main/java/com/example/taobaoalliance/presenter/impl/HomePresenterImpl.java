@@ -37,9 +37,9 @@ public class HomePresenterImpl implements IHomePresenter {
                     //请求成功
                     Categories categories = response.body();
                     if (mCallback != null) {
-                        if (categories==null||categories.getData().size()==0) {
+                        if (categories == null || categories.getData().size() == 0) {
                             mCallback.onEmpty();
-                        }else {
+                        } else {
                             //LogUtils.d(HomePresenterImpl.this,  "result ===========> " + categories.toString());
                             mCallback.onCategoriesLoaded(categories);
                         }

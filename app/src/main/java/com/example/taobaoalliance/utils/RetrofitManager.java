@@ -16,7 +16,7 @@ public class RetrofitManager {
     private RetrofitManager() {
         //创建Retrofit
         mRetrofit = new Retrofit.Builder()
-                .baseUrl("https://api.sunofbeach.net/shop/")
+                .baseUrl(Constants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

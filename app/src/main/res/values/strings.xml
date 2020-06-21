@@ -4,5 +4,6 @@
     <string name="text_red_packet">特惠</string>
     <string name="text_selected">精选</string>
     <string name="text_home">首页</string>
-    <string name="search_tips_text">搜你想搜的宝贝</string>
+    <string name="text_search_tips">搜你想搜的宝贝</string>
+    <string name="text_network_error_tips">网络出错，请点击重试...</string>
 </resources>

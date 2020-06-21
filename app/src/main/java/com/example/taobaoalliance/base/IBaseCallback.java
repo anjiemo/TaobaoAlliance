@@ -2,10 +2,9 @@ package com.example.taobaoalliance.base;
 
 public interface IBaseCallback {
 
-    void onNetworkError();
+    void onError();
 
     void onLoading();
 
     void onEmpty();
-
 }

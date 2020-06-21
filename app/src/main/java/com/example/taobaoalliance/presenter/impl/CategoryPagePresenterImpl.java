@@ -1,13 +1,13 @@
 package com.example.taobaoalliance.presenter.impl;
 
+import androidx.annotation.NonNull;
+
 import com.example.taobaoalliance.model.Api;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
 import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.RetrofitManager;
 import com.example.taobaoalliance.view.ICategoryCallback;
-import com.google.gson.internal.LazilyParsedNumber;
-import com.vondear.rxui.fragment.FragmentLazy;
 
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
@@ -41,7 +41,9 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
     @Override
     public void getContentByCategoryId(int categoryId) {
         for (ICategoryCallback callback : mCallbacks) {
-            callback.onLoading(categoryId);
+            if (callback.getCategoryId() == categoryId){
+                callback.onLoading();
+            }
         }
         //根据分类id去加载内容
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
@@ -54,7 +56,7 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
         Call<HomePagerContent> task = api.getHomePagerContent(categoryId, targetPage);
         task.enqueue(new Callback<HomePagerContent>() {
             @Override
-            public void onResponse(Call<HomePagerContent> call, Response<HomePagerContent> response) {
+            public void onResponse(@NonNull Call<HomePagerContent> call, @NonNull Response<HomePagerContent> response) {
                 int code = response.code();
                 LogUtils.d(CategoryPagePresenterImpl.this, "onResponse===========> " + code);
                 if (code == HttpURLConnection.HTTP_OK) {
@@ -68,7 +70,7 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
             }
 
             @Override
-            public void onFailure(Call<HomePagerContent> call, Throwable t) {
+            public void onFailure(@NonNull Call<HomePagerContent> call, @NonNull Throwable t) {
                 LogUtils.d(this, "onFailure===========> " + t.toString());
                 handleNetworkError(categoryId);
             }
@@ -77,17 +79,21 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
 
     private void handleNetworkError(int categoryId) {
         for (ICategoryCallback callback : mCallbacks) {
-            callback.onError(categoryId);
+            if (callback.getCategoryId() == categoryId) {
+                callback.onError();
+            }
         }
     }
 
     private void handleHomePageContentResult(HomePagerContent pagerContent, int categoryId) {
         //通知UI层更新数据
         for (ICategoryCallback callback : mCallbacks) {
-            if (pagerContent == null || pagerContent.getData().size() == 0) {
-                callback.onEmpty(categoryId);
-            } else {
-                callback.onContentLoaded(pagerContent.getData(), categoryId);
+            if (callback.getCategoryId() == categoryId) {
+                if (pagerContent == null || pagerContent.getData().size() == 0) {
+                    callback.onEmpty();
+                } else {
+                    callback.onContentLoaded(pagerContent.getData());
+                }
             }
         }
     }

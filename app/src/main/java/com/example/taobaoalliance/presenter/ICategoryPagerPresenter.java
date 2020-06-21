@@ -1,6 +1,9 @@
 package com.example.taobaoalliance.presenter;
 
-public interface ICategoryPagerPresenter  {
+import com.example.taobaoalliance.base.IBasePresenter;
+import com.example.taobaoalliance.view.ICategoryCallback;
+
+public interface ICategoryPagerPresenter extends IBasePresenter<ICategoryCallback> {
 
     /**
      * 根据分类Id去获取分类内容

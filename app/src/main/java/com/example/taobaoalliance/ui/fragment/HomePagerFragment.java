@@ -1,11 +1,15 @@
 package com.example.taobaoalliance.ui.fragment;
 
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -24,6 +28,7 @@ import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.view.ICategoryCallback;
 
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 
@@ -49,6 +54,8 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     ViewPager looperPager;
     @BindView(R.id.home_pager_title)
     TextView currentCategoryTitle;
+    @BindView(R.id.looper_point_container)
+    LinearLayout looperPointContainer;
 
     @Override
     protected int getRootViewResId() {
@@ -145,6 +152,28 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     @Override
     public void onLooperListLoaded(List<HomePagerContent.DataBean> contents) {
         mLooperPagerAdapter.setData(contents);
+        looperPointContainer.removeAllViews();
+        GradientDrawable selectedDrawable = (GradientDrawable) ContextCompat
+                .getDrawable(Objects.requireNonNull(getContext()), R.drawable.shape_indicator_point);
+        GradientDrawable normalDrawable = (GradientDrawable) ContextCompat
+                .getDrawable(getContext(), R.drawable.shape_indicator_point);
+        assert normalDrawable != null;
+        normalDrawable.setColor(ContextCompat.getColor(getContext(), R.color.white));
+        //添加点
+        for (int i = 0; i < contents.size(); i++) {
+            View view = new View(getContext());
+            int size = ConvertUtils.dp2px(8);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
+            layoutParams.leftMargin = ConvertUtils.dp2px(5);
+            layoutParams.rightMargin = ConvertUtils.dp2px(5);
+            view.setLayoutParams(layoutParams);
+            if (i == 1) {
+                view.setBackground(selectedDrawable);
+            } else {
+                view.setBackground(normalDrawable);
+            }
+            looperPointContainer.addView(view);
+        }
     }
 
     @Override

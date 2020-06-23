@@ -41,7 +41,7 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
     @Override
     public void getContentByCategoryId(int categoryId) {
         for (ICategoryCallback callback : mCallbacks) {
-            if (callback.getCategoryId() == categoryId){
+            if (callback.getCategoryId() == categoryId) {
                 callback.onLoading();
             }
         }
@@ -63,10 +63,12 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
                     HomePagerContent pagerContent = response.body();
                     LogUtils.d(CategoryPagePresenterImpl.this, "pagerContent============> " + pagerContent);
                     //把数据给UI更新
-                    handleHomePageContentResult(pagerContent, categoryId);
-                } else {
-                    handleNetworkError(categoryId);
+                    if (pagerContent != null) {
+                        handleHomePageContentResult(pagerContent, categoryId);
+                        return;
+                    }
                 }
+                handleNetworkError(categoryId);
             }
 
             @Override
@@ -87,12 +89,15 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
 
     private void handleHomePageContentResult(HomePagerContent pagerContent, int categoryId) {
         //通知UI层更新数据
+        List<HomePagerContent.DataBean> data = pagerContent.getData();
         for (ICategoryCallback callback : mCallbacks) {
             if (callback.getCategoryId() == categoryId) {
-                if (pagerContent == null || pagerContent.getData().size() == 0) {
+                if (data == null || data.size() == 0) {
                     callback.onEmpty();
                 } else {
-                    callback.onContentLoaded(pagerContent.getData());
+                    List<HomePagerContent.DataBean> looperData = data.subList(data.size() - 5, data.size());
+                    callback.onLooperListLoaded(looperData);
+                    callback.onContentLoaded(data);
                 }
             }
         }

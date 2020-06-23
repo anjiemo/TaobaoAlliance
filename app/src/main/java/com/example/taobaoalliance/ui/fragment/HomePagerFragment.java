@@ -1,24 +1,37 @@
 package com.example.taobaoalliance.ui.fragment;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
+import com.blankj.utilcode.util.ConvertUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
 import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
 import com.example.taobaoalliance.presenter.impl.CategoryPagePresenterImpl;
+import com.example.taobaoalliance.ui.adapter.HomePagerContentAdapter;
+import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.view.ICategoryCallback;
 
 import java.util.List;
 
+import butterknife.BindView;
+
 public class HomePagerFragment extends BaseFragment implements ICategoryCallback {
 
     private ICategoryPagerPresenter mCategoryPagerPresenter;
     private int mMaterialId;
+    private HomePagerContentAdapter mContentAdapter;
+    private LooperPagerAdapter mLooperPagerAdapter;
 
     public static HomePagerFragment newInstance(Categories.DataBean category) {
         HomePagerFragment fragment = new HomePagerFragment();
@@ -29,6 +42,12 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         return fragment;
     }
 
+    @BindView(R.id.home_pager_content_list)
+    RecyclerView mContentList;
+
+    @BindView(R.id.looper_pager)
+    ViewPager looperPager;
+
     @Override
     protected int getRootViewResId() {
         return R.layout.fragment_home_pager;
@@ -36,7 +55,23 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     @Override
     protected void initView(View rootView) {
-        setUpState(State.SUCCESS);
+        //设置布局管理器
+        mContentList.setLayoutManager(new LinearLayoutManager(getContext()));
+        mContentList.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+                outRect.top = ConvertUtils.dp2px(2);
+                outRect.bottom = ConvertUtils.dp2px(2);
+            }
+        });
+        //创建适配器
+        mContentAdapter = new HomePagerContentAdapter();
+        //设置适配器
+        mContentList.setAdapter(mContentAdapter);
+        //创建轮播图适配器
+        mLooperPagerAdapter = new LooperPagerAdapter();
+        //设置适配器
+        looperPager.setAdapter(mLooperPagerAdapter);
     }
 
     @Override
@@ -62,6 +97,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     public void onContentLoaded(List<HomePagerContent.DataBean> contents) {
         //数据列表加载到了
         // TODO: 2020/6/21 更新UI
+        mContentAdapter.setData(contents);
         setUpState(State.SUCCESS);
     }
 
@@ -103,7 +139,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     @Override
     public void onLooperListLoaded(List<HomePagerContent.DataBean> contents) {
-
+        mLooperPagerAdapter.setData(contents);
     }
 
     @Override

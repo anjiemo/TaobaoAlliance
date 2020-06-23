@@ -23,12 +23,15 @@ public class LooperPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        //处理一下越界问题
+        int realPosition = position % mData.size();
+        //size = 5 ===> 0,1,2,3,4,0,1,2 ...
         Context context = container.getContext();
         ImageView ivLooper = new ImageView(context);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         ivLooper.setLayoutParams(layoutParams);
         ivLooper.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        HomePagerContent.DataBean dataBean = mData.get(position);
+        HomePagerContent.DataBean dataBean = mData.get(realPosition);
         String coverPath = UrlUtils.getCoverPath(dataBean.getPict_url());
         Glide.with(context).load(coverPath).into(ivLooper);
         container.addView(ivLooper);
@@ -42,7 +45,7 @@ public class LooperPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return mData.size();
+        return Integer.MAX_VALUE;
     }
 
     @Override
@@ -54,5 +57,9 @@ public class LooperPagerAdapter extends PagerAdapter {
         mData.clear();
         mData.addAll(contents);
         notifyDataSetChanged();
+    }
+
+    public int getDataSize() {
+        return mData.size();
     }
 }

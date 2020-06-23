@@ -3,6 +3,7 @@ package com.example.taobaoalliance.ui.fragment;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -44,9 +45,10 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     @BindView(R.id.home_pager_content_list)
     RecyclerView mContentList;
-
     @BindView(R.id.looper_pager)
     ViewPager looperPager;
+    @BindView(R.id.home_pager_title)
+    TextView currentCategoryTitle;
 
     @Override
     protected int getRootViewResId() {
@@ -90,6 +92,9 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         LogUtils.d(this, "=======materialId：" + mMaterialId);
         if (mCategoryPagerPresenter != null) {
             mCategoryPagerPresenter.getContentByCategoryId(mMaterialId);
+        }
+        if (currentCategoryTitle != null) {
+            currentCategoryTitle.setText(title);
         }
     }
 

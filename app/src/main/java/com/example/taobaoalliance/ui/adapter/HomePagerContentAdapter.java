@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
+import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.UrlUtils;
 import com.vondear.rxtool.RxTool;
 
@@ -82,7 +83,13 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
 
         public void setData(HomePagerContent.DataBean dataBean) {
             Context context = itemView.getContext();
-            Glide.with(context).load(UrlUtils.getCoverPath(dataBean.getPict_url())).into(ivCover);
+            ViewGroup.LayoutParams layoutParams = ivCover.getLayoutParams();
+            int width = layoutParams.width;
+            int height = layoutParams.height;
+            int coverSize = Math.max(width, height) / 2;
+            String coverPath = UrlUtils.getCoverPath(dataBean.getPict_url(), coverSize);
+//            LogUtils.d(this, "coverPath============> " + coverPath);
+            Glide.with(context).load(coverPath).into(ivCover);
             tvTitle.setText(dataBean.getTitle());
             String finalPrice = dataBean.getZk_final_price();
             long couponAmount = dataBean.getCoupon_amount();

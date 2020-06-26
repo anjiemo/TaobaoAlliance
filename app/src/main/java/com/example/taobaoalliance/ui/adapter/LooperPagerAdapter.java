@@ -46,7 +46,11 @@ public class LooperPagerAdapter extends PagerAdapter {
         ivLooper.setLayoutParams(layoutParams);
         ivLooper.setScaleType(ImageView.ScaleType.CENTER_CROP);
         HomePagerContent.DataBean dataBean = mData.get(realPosition);
-        String coverPath = UrlUtils.getCoverPath(dataBean.getPict_url());
+        int measuredWidth = container.getMeasuredWidth();
+        int measuredHeight = container.getMeasuredHeight();
+        int coverSize = Math.max(measuredWidth, measuredHeight) / 2;
+//        LogUtils.d(this, "measuredWidth =======> " + measuredWidth + "   measuredHeight =======>" + measuredHeight);
+        String coverPath = UrlUtils.getCoverPath(dataBean.getPict_url(), coverSize);
         Glide.with(context).load(coverPath).into(ivLooper);
         container.addView(ivLooper);
         return ivLooper;

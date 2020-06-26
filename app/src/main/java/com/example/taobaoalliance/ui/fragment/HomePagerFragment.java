@@ -182,12 +182,15 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     @Override
     public void onLoaderMoreError() {
-
+        ToastUtils.showShort("网络异常，请稍后重试~");
+        if (mTwinklingRefreshLayout != null) {
+            mTwinklingRefreshLayout.finishLoadmore();
+        }
     }
 
     @Override
     public void onLoaderMoreEmpty() {
-
+        ToastUtils.showShort("没有更多的商品~");
     }
 
     @Override
@@ -197,7 +200,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         if (mTwinklingRefreshLayout != null) {
             mTwinklingRefreshLayout.finishLoadmore();
         }
-        ToastUtils.showShort("加载了" + contents.size() + "个商品");
+        ToastUtils.showShort("加载了" + contents.size() + "条数据");
     }
 
     @Override

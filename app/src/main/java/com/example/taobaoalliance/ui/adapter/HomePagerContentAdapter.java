@@ -52,6 +52,14 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
         notifyDataSetChanged();
     }
 
+    public void addData(List<HomePagerContent.DataBean> contents) {
+        //添加之前拿到原来的size
+        int oldSize = objects.size();
+        objects.addAll(contents);
+        //更新UI
+        notifyItemRangeChanged(oldSize, contents.size());
+    }
+
     public static class InnerHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.goods_cover)

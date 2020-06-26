@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.blankj.utilcode.util.ConvertUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.Categories;
@@ -25,6 +26,8 @@ import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.view.ICategoryCallback;
+import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
+import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 import java.util.List;
 import java.util.Objects;
@@ -55,6 +58,8 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     TextView currentCategoryTitle;
     @BindView(R.id.looper_point_container)
     LinearLayout looperPointContainer;
+    @BindView(R.id.home_pager_refresh)
+    TwinklingRefreshLayout mTwinklingRefreshLayout;
 
     @Override
     protected int getRootViewResId() {
@@ -66,9 +71,20 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         looperPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                int targetPosition = position % mLooperPagerAdapter.getDataSize();
+                int dataSize = mLooperPagerAdapter.getDataSize();
+                if (dataSize == 0) return;
+                int targetPosition = position % dataSize;
                 //切换指示器
                 updateLooperIndicator(targetPosition);
+            }
+        });
+        mTwinklingRefreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
+            @Override
+            public void onLoadMore(TwinklingRefreshLayout refreshLayout) {
+                //去加载更多的内容
+                if (mCategoryPagerPresenter != null) {
+                    mCategoryPagerPresenter.loadMore(mMaterialId);
+                }
             }
         });
     }
@@ -108,6 +124,9 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         mLooperPagerAdapter = new LooperPagerAdapter();
         //设置适配器
         looperPager.setAdapter(mLooperPagerAdapter);
+        //设置Refresh相关内容
+        mTwinklingRefreshLayout.setEnableRefresh(false);
+        mTwinklingRefreshLayout.setEnableLoadmore(true);
     }
 
     @Override
@@ -173,7 +192,12 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     @Override
     public void onLoaderMoreLoaded(List<HomePagerContent.DataBean> contents) {
-
+        //添加到适配器数据的底部
+        mContentAdapter.addData(contents);
+        if (mTwinklingRefreshLayout != null) {
+            mTwinklingRefreshLayout.finishLoadmore();
+        }
+        ToastUtils.showShort("加载了" + contents.size() + "个商品");
     }
 
     @Override

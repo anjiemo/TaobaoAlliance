@@ -8,6 +8,7 @@ import com.example.taobaoalliance.model.domain.TicketResult;
 import com.example.taobaoalliance.presenter.ITickPresenter;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.RetrofitManager;
+import com.example.taobaoalliance.utils.UrlUtils;
 import com.example.taobaoalliance.view.ITicketPagerCallback;
 
 import java.net.HttpURLConnection;
@@ -21,10 +22,11 @@ public class TicketPresenterImpl implements ITickPresenter {
 
     @Override
     public void getTicket(String title, String url, String cover) {
+        String targetUrl = UrlUtils.getTicketUrl(url);
         //去获取淘口令
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
         Api api = retrofit.create(Api.class);
-        TicketParams ticketParams = new TicketParams(title, url);
+        TicketParams ticketParams = new TicketParams(title, targetUrl);
         Call<TicketResult> task = api.getTicket(ticketParams);
         task.enqueue(new Callback<TicketResult>() {
             @Override

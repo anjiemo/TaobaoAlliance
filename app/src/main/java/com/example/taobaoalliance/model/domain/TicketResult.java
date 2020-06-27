@@ -103,6 +103,14 @@ public class TicketResult {
                 this.request_id = request_id;
             }
 
+            @Override
+            public String toString() {
+                return "TbkTpwdCreateResponseBean{" +
+                        "data=" + data +
+                        ", request_id='" + request_id + '\'' +
+                        '}';
+            }
+
             public static class DataBean {
                 /**
                  * model : ￥xhQoYC66sMX￥

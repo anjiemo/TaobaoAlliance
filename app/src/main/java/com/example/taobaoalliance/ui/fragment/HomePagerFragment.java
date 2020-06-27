@@ -61,8 +61,8 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     TextView currentCategoryTitle;
     @BindView(R.id.looper_point_container)
     LinearLayout looperPointContainer;
-    //    @BindView(R.id.home_pager_refresh)
-//    TwinklingRefreshLayout mTwinklingRefreshLayout;
+    @BindView(R.id.home_pager_refresh)
+    TwinklingRefreshLayout mTwinklingRefreshLayout;
     @BindView(R.id.home_pager_parent)
     LinearLayout mHomePagerParent;
     @BindView(R.id.home_pager_header_container)
@@ -101,15 +101,15 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
                 updateLooperIndicator(targetPosition);
             }
         });
-//        mTwinklingRefreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
-//            @Override
-//            public void onLoadMore(TwinklingRefreshLayout refreshLayout) {
-//                //去加载更多的内容
-//                if (mCategoryPagerPresenter != null) {
-//                    mCategoryPagerPresenter.loadMore(mMaterialId);
-//                }
-//            }
-//        });
+        mTwinklingRefreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
+            @Override
+            public void onLoadMore(TwinklingRefreshLayout refreshLayout) {
+                //去加载更多的内容
+                if (mCategoryPagerPresenter != null) {
+                    mCategoryPagerPresenter.loadMore(mMaterialId);
+                }
+            }
+        });
     }
 
     /**
@@ -148,8 +148,8 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         //设置适配器
         looperPager.setAdapter(mLooperPagerAdapter);
         //设置Refresh相关内容
-//        mTwinklingRefreshLayout.setEnableRefresh(false);
-//        mTwinklingRefreshLayout.setEnableLoadmore(true);
+        mTwinklingRefreshLayout.setEnableRefresh(false);
+        mTwinklingRefreshLayout.setEnableLoadmore(true);
     }
 
     @Override
@@ -206,9 +206,9 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     @Override
     public void onLoaderMoreError() {
         ToastUtils.showShort("网络异常，请稍后重试~");
-//        if (mTwinklingRefreshLayout != null) {
-//            mTwinklingRefreshLayout.finishLoadmore();
-//        }
+        if (mTwinklingRefreshLayout != null) {
+            mTwinklingRefreshLayout.finishLoadmore();
+        }
     }
 
     @Override
@@ -220,9 +220,9 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     public void onLoaderMoreLoaded(List<HomePagerContent.DataBean> contents) {
         //添加到适配器数据的底部
         mContentAdapter.addData(contents);
-//        if (mTwinklingRefreshLayout != null) {
-//            mTwinklingRefreshLayout.finishLoadmore();
-//        }
+        if (mTwinklingRefreshLayout != null) {
+            mTwinklingRefreshLayout.finishLoadmore();
+        }
         ToastUtils.showShort("加载了" + contents.size() + "条数据");
     }
 

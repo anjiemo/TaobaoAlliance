@@ -1,2 +1,2 @@
-include ':app'
+include ':app',"refreshlibrary"
 rootProject.name='TaobaoAlliance'

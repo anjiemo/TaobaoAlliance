@@ -40,6 +40,12 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
     public void onBindViewHolder(@NonNull InnerHolder holder, int position) {
         HomePagerContent.DataBean dataBean = objects.get(position);
         holder.setData(dataBean);
+        holder.itemView.setOnClickListener(v -> {
+            if (mOnListItemClickListener != null) {
+                HomePagerContent.DataBean item = objects.get(position);
+                mOnListItemClickListener.onItemClick(item);
+            }
+        });
     }
 
     @Override
@@ -100,5 +106,14 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
             tvOriginalPrise.setText(String.format(context.getString(R.string.text_goods_original_prise), finalPrice));
             tvSellCount.setText(String.format(context.getString(R.string.text_goods_sell_count), dataBean.getVolume()));
         }
+    }
+
+    public void setOnListItemClickListener(OnListItemClickListener onListItemClickListener) {
+        mOnListItemClickListener = onListItemClickListener;
+    }
+
+    private OnListItemClickListener mOnListItemClickListener = null;
+    public interface OnListItemClickListener{
+        void onItemClick(HomePagerContent.DataBean item);
     }
 }

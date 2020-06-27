@@ -37,6 +37,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.example.taobaoalliance.ui.activity.TicketActivity"
+            android:launchMode="singleTop" />
         <activity android:name="com.example.taobaoalliance.ui.activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

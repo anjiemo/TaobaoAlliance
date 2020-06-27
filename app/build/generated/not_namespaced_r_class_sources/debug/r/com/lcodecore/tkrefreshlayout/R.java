@@ -13,45 +13,45 @@ public final class R {
         private attr() {}
 
         public static final int alpha = 0x7f040030;
-        public static final int fastScrollEnabled = 0x7f040138;
-        public static final int fastScrollHorizontalThumbDrawable = 0x7f040139;
-        public static final int fastScrollHorizontalTrackDrawable = 0x7f04013a;
-        public static final int fastScrollVerticalThumbDrawable = 0x7f04013b;
-        public static final int fastScrollVerticalTrackDrawable = 0x7f04013c;
-        public static final int font = 0x7f040140;
-        public static final int fontProviderAuthority = 0x7f040142;
-        public static final int fontProviderCerts = 0x7f040143;
-        public static final int fontProviderFetchStrategy = 0x7f040144;
-        public static final int fontProviderFetchTimeout = 0x7f040145;
-        public static final int fontProviderPackage = 0x7f040146;
-        public static final int fontProviderQuery = 0x7f040147;
-        public static final int fontStyle = 0x7f040148;
-        public static final int fontVariationSettings = 0x7f040149;
-        public static final int fontWeight = 0x7f04014a;
-        public static final int layoutManager = 0x7f0401a5;
-        public static final int recyclerViewStyle = 0x7f040286;
-        public static final int reverseLayout = 0x7f040288;
-        public static final int spanCount = 0x7f0402c9;
-        public static final int stackFromEnd = 0x7f0402da;
-        public static final int tr_autoLoadMore = 0x7f04036d;
-        public static final int tr_bottomView = 0x7f04036e;
-        public static final int tr_bottom_height = 0x7f04036f;
-        public static final int tr_enable_keepIView = 0x7f040370;
-        public static final int tr_enable_loadmore = 0x7f040371;
-        public static final int tr_enable_overscroll = 0x7f040372;
-        public static final int tr_enable_refresh = 0x7f040373;
-        public static final int tr_floatRefresh = 0x7f040374;
-        public static final int tr_head_height = 0x7f040375;
-        public static final int tr_headerView = 0x7f040376;
-        public static final int tr_max_bottom_height = 0x7f040377;
-        public static final int tr_max_head_height = 0x7f040378;
-        public static final int tr_overscroll_bottom_show = 0x7f040379;
-        public static final int tr_overscroll_height = 0x7f04037a;
-        public static final int tr_overscroll_top_show = 0x7f04037b;
-        public static final int tr_pureScrollMode_on = 0x7f04037c;
-        public static final int tr_showLoadingWhenOverScroll = 0x7f04037d;
-        public static final int tr_showRefreshingWhenOverScroll = 0x7f04037e;
-        public static final int ttcIndex = 0x7f040387;
+        public static final int fastScrollEnabled = 0x7f040139;
+        public static final int fastScrollHorizontalThumbDrawable = 0x7f04013a;
+        public static final int fastScrollHorizontalTrackDrawable = 0x7f04013b;
+        public static final int fastScrollVerticalThumbDrawable = 0x7f04013c;
+        public static final int fastScrollVerticalTrackDrawable = 0x7f04013d;
+        public static final int font = 0x7f040141;
+        public static final int fontProviderAuthority = 0x7f040143;
+        public static final int fontProviderCerts = 0x7f040144;
+        public static final int fontProviderFetchStrategy = 0x7f040145;
+        public static final int fontProviderFetchTimeout = 0x7f040146;
+        public static final int fontProviderPackage = 0x7f040147;
+        public static final int fontProviderQuery = 0x7f040148;
+        public static final int fontStyle = 0x7f040149;
+        public static final int fontVariationSettings = 0x7f04014a;
+        public static final int fontWeight = 0x7f04014b;
+        public static final int layoutManager = 0x7f0401a6;
+        public static final int recyclerViewStyle = 0x7f040287;
+        public static final int reverseLayout = 0x7f040289;
+        public static final int spanCount = 0x7f0402ca;
+        public static final int stackFromEnd = 0x7f0402db;
+        public static final int tr_autoLoadMore = 0x7f04036e;
+        public static final int tr_bottomView = 0x7f04036f;
+        public static final int tr_bottom_height = 0x7f040370;
+        public static final int tr_enable_keepIView = 0x7f040371;
+        public static final int tr_enable_loadmore = 0x7f040372;
+        public static final int tr_enable_overscroll = 0x7f040373;
+        public static final int tr_enable_refresh = 0x7f040374;
+        public static final int tr_floatRefresh = 0x7f040375;
+        public static final int tr_head_height = 0x7f040376;
+        public static final int tr_headerView = 0x7f040377;
+        public static final int tr_max_bottom_height = 0x7f040378;
+        public static final int tr_max_head_height = 0x7f040379;
+        public static final int tr_overscroll_bottom_show = 0x7f04037a;
+        public static final int tr_overscroll_height = 0x7f04037b;
+        public static final int tr_overscroll_top_show = 0x7f04037c;
+        public static final int tr_pureScrollMode_on = 0x7f04037d;
+        public static final int tr_showLoadingWhenOverScroll = 0x7f04037e;
+        public static final int tr_showRefreshingWhenOverScroll = 0x7f04037f;
+        public static final int ttcIndex = 0x7f040388;
     }
     public static final class color {
         private color() {}
@@ -203,15 +203,15 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int custom_dialog = 0x7f0c0027;
-        public static final int notification_action = 0x7f0c0076;
-        public static final int notification_action_tombstone = 0x7f0c0077;
-        public static final int notification_template_custom_big = 0x7f0c0078;
-        public static final int notification_template_icon_group = 0x7f0c0079;
-        public static final int notification_template_part_chronometer = 0x7f0c007a;
-        public static final int notification_template_part_time = 0x7f0c007b;
-        public static final int view_bezier = 0x7f0c0094;
-        public static final int view_sinaheader = 0x7f0c0095;
+        public static final int custom_dialog = 0x7f0c0028;
+        public static final int notification_action = 0x7f0c0077;
+        public static final int notification_action_tombstone = 0x7f0c0078;
+        public static final int notification_template_custom_big = 0x7f0c0079;
+        public static final int notification_template_icon_group = 0x7f0c007a;
+        public static final int notification_template_part_chronometer = 0x7f0c007b;
+        public static final int notification_template_part_time = 0x7f0c007c;
+        public static final int view_bezier = 0x7f0c0095;
+        public static final int view_sinaheader = 0x7f0c0096;
     }
     public static final class mipmap {
         private mipmap() {}
@@ -254,14 +254,14 @@ public final class R {
         public static final int ColorStateListItem_android_color = 0;
         public static final int ColorStateListItem_android_alpha = 1;
         public static final int ColorStateListItem_alpha = 2;
-        public static final int[] FontFamily = { 0x7f040142, 0x7f040143, 0x7f040144, 0x7f040145, 0x7f040146, 0x7f040147 };
+        public static final int[] FontFamily = { 0x7f040143, 0x7f040144, 0x7f040145, 0x7f040146, 0x7f040147, 0x7f040148 };
         public static final int FontFamily_fontProviderAuthority = 0;
         public static final int FontFamily_fontProviderCerts = 1;
         public static final int FontFamily_fontProviderFetchStrategy = 2;
         public static final int FontFamily_fontProviderFetchTimeout = 3;
         public static final int FontFamily_fontProviderPackage = 4;
         public static final int FontFamily_fontProviderQuery = 5;
-        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f040140, 0x7f040148, 0x7f040149, 0x7f04014a, 0x7f040387 };
+        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f040141, 0x7f040149, 0x7f04014a, 0x7f04014b, 0x7f040388 };
         public static final int FontFamilyFont_android_font = 0;
         public static final int FontFamilyFont_android_fontWeight = 1;
         public static final int FontFamilyFont_android_fontStyle = 2;
@@ -288,7 +288,7 @@ public final class R {
         public static final int[] GradientColorItem = { 0x10101a5, 0x1010514 };
         public static final int GradientColorItem_android_color = 0;
         public static final int GradientColorItem_android_offset = 1;
-        public static final int[] RecyclerView = { 0x10100c4, 0x10100eb, 0x10100f1, 0x7f040138, 0x7f040139, 0x7f04013a, 0x7f04013b, 0x7f04013c, 0x7f0401a5, 0x7f040288, 0x7f0402c9, 0x7f0402da };
+        public static final int[] RecyclerView = { 0x10100c4, 0x10100eb, 0x10100f1, 0x7f040139, 0x7f04013a, 0x7f04013b, 0x7f04013c, 0x7f04013d, 0x7f0401a6, 0x7f040289, 0x7f0402ca, 0x7f0402db };
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_android_clipToPadding = 1;
         public static final int RecyclerView_android_descendantFocusability = 2;
@@ -301,7 +301,7 @@ public final class R {
         public static final int RecyclerView_reverseLayout = 9;
         public static final int RecyclerView_spanCount = 10;
         public static final int RecyclerView_stackFromEnd = 11;
-        public static final int[] TwinklingRefreshLayout = { 0x7f04036d, 0x7f04036e, 0x7f04036f, 0x7f040370, 0x7f040371, 0x7f040372, 0x7f040373, 0x7f040374, 0x7f040375, 0x7f040376, 0x7f040377, 0x7f040378, 0x7f040379, 0x7f04037a, 0x7f04037b, 0x7f04037c, 0x7f04037d, 0x7f04037e };
+        public static final int[] TwinklingRefreshLayout = { 0x7f04036e, 0x7f04036f, 0x7f040370, 0x7f040371, 0x7f040372, 0x7f040373, 0x7f040374, 0x7f040375, 0x7f040376, 0x7f040377, 0x7f040378, 0x7f040379, 0x7f04037a, 0x7f04037b, 0x7f04037c, 0x7f04037d, 0x7f04037e, 0x7f04037f };
         public static final int TwinklingRefreshLayout_tr_autoLoadMore = 0;
         public static final int TwinklingRefreshLayout_tr_bottomView = 1;
         public static final int TwinklingRefreshLayout_tr_bottom_height = 2;

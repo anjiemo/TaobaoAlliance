@@ -52,6 +52,12 @@ public class LooperPagerAdapter extends PagerAdapter {
 //        LogUtils.d(this, "measuredWidth =======> " + measuredWidth + "   measuredHeight =======>" + measuredHeight);
         String coverPath = UrlUtils.getCoverPath(dataBean.getPict_url(), coverSize);
         Glide.with(context).load(coverPath).into(ivLooper);
+        ivLooper.setOnClickListener(v -> {
+            if (mOnLooperPageItemClickListener != null) {
+                HomePagerContent.DataBean item = mData.get(realPosition);
+                mOnLooperPageItemClickListener.onLooperItemClick(item);
+            }
+        });
         container.addView(ivLooper);
         return ivLooper;
     }
@@ -79,5 +85,15 @@ public class LooperPagerAdapter extends PagerAdapter {
 
     public int getDataSize() {
         return mData.size();
+    }
+
+    public void setOnLooperPageItemClickListener(OnLooperPageItemClickListener onLooperPageItemClickListener) {
+        mOnLooperPageItemClickListener = onLooperPageItemClickListener;
+    }
+
+    private OnLooperPageItemClickListener mOnLooperPageItemClickListener = null;
+
+    public interface OnLooperPageItemClickListener {
+        void onLooperItemClick(HomePagerContent.DataBean item);
     }
 }

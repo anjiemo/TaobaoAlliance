@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 
 import com.example.taobaoalliance.R;
+import com.example.taobaoalliance.utils.LogUtils;
 
 public class LoadingView extends AppCompatImageView {
 
@@ -42,13 +43,14 @@ public class LoadingView extends AppCompatImageView {
                 if (mDegrees >= 360) {
                     mDegrees = 0;
                 }
+                LogUtils.d(LoadingView.this,"loading...");
                 invalidate();
                 //判断是否要继续旋转
                 //如果不可见，或者已经DetachedFromWindow就不再转动了
                 if (getVisibility() != VISIBLE && !mNeedRotate) {
-                    postDelayed(this, 10);
-                } else {
                     removeCallbacks(this);
+                } else {
+                    postDelayed(this, 10);
                 }
             }
         });
@@ -66,7 +68,7 @@ public class LoadingView extends AppCompatImageView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.rotate(10, getWidth() >> 2, getHeight() >> 2);
+        canvas.rotate(mDegrees, getWidth() / 2, getHeight() / 2);
         super.onDraw(canvas);
     }
 }

@@ -29,6 +29,10 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
     EditText mTicketCode;
     @BindView(R.id.ticket_copy_open_btn)
     TextView mOpenCopyBtn;
+    @BindView(R.id.ticket_cover_loading)
+    View mLoadingView;
+    @BindView(R.id.ticket_load_retry)
+    View mRetryLoadText;
 
     @Override
     protected void initPresenter() {
@@ -69,16 +73,29 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
         if (result != null && result.getData().getTbk_tpwd_create_response() != null) {
             mTicketCode.setText(result.getData().getTbk_tpwd_create_response().getData().getModel());
         }
+        if (mLoadingView != null) {
+            mLoadingView.setVisibility(View.GONE);
+        }
     }
 
     @Override
     public void onError() {
-
+        if (mLoadingView != null) {
+            mLoadingView.setVisibility(View.GONE);
+        }
+        if (mRetryLoadText != null) {
+            mRetryLoadText.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
     public void onLoading() {
-
+        if (mRetryLoadText != null) {
+            mRetryLoadText.setVisibility(View.GONE);
+        }
+        if (mLoadingView != null) {
+            mLoadingView.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

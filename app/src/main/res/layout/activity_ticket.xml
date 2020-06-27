@@ -31,12 +31,33 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/ticket_cover"
+    <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="33dp"
-        android:src="@mipmap/no_image" />
+        android:layout_marginTop="33dp">
+
+        <ImageView
+            android:id="@+id/ticket_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/no_image" />
+
+        <com.example.taobaoalliance.ui.custom.LoadingView
+            android:id="@+id/ticket_cover_loading"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/ticket_load_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载出错，请点击重试"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/ticket_code"

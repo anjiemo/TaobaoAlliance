@@ -23,6 +23,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -55,7 +56,11 @@
                     </RelativeLayout>
 
                     <!--标题-->
-                    <include layout="@layout/include_home_pager_title_part" />
+                    <include
+                        layout="@layout/include_home_pager_title_part"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp" />
 
                 </LinearLayout>
 
@@ -63,7 +68,6 @@
                     android:id="@+id/home_pager_content_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="11dp"
                     android:overScrollMode="never" />
 
             </LinearLayout>

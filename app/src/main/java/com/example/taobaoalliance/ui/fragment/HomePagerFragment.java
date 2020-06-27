@@ -76,6 +76,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         mHomePagerParent.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
+                if (mHomePagerHeaderContainer == null) return;
                 int headerHeight = mHomePagerHeaderContainer.getMeasuredHeight();
                 mHomePagerNestedView.setHeaderHeight(headerHeight);
                 int measuredHeight = mHomePagerParent.getMeasuredHeight();

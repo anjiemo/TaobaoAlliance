@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     android:background="@color/colorPageBg"
     android:gravity="center"
-    tools:context=".ui.fragment.HomePagerFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.fragment.HomePagerFragment">
 
     <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
         android:id="@+id/home_pager_refresh"
@@ -44,7 +44,8 @@
                             android:id="@+id/looper_pager"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:overScrollMode="never" />
+                            android:overScrollMode="never"
+                            app:duration="4000" />
 
                         <LinearLayout
                             android:id="@+id/looper_point_container"

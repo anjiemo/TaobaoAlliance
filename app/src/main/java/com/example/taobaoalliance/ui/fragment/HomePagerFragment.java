@@ -158,6 +158,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
         mLooperPagerAdapter = new LooperPagerAdapter();
         //设置适配器
         looperPager.setAdapter(mLooperPagerAdapter);
+        looperPager.setDuration(5000);
         //设置Refresh相关内容
         mTwinklingRefreshLayout.setEnableRefresh(false);
         mTwinklingRefreshLayout.setEnableLoadmore(true);

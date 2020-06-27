@@ -10,8 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 import butterknife.internal.Utils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment_ViewBinding;
-import com.example.taobaoalliance.ui.custom.MyNestedScrollView;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
+import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 import java.lang.IllegalStateException;
 import java.lang.Override;
 

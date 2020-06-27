@@ -1,16 +1,13 @@
 package com.example.taobaoalliance.ui.fragment;
 
 import android.graphics.Rect;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -25,7 +22,7 @@ import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
 import com.example.taobaoalliance.presenter.impl.CategoryPagePresenterImpl;
 import com.example.taobaoalliance.ui.adapter.HomePagerContentAdapter;
 import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
-import com.example.taobaoalliance.ui.custom.MyNestedScrollView;
+import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.view.ICategoryCallback;
@@ -33,7 +30,6 @@ import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 import java.util.List;
-import java.util.Objects;
 
 import butterknife.BindView;
 

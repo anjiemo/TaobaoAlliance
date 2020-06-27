@@ -6,10 +6,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.UiThread;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import butterknife.internal.Utils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment_ViewBinding;
+import com.example.taobaoalliance.ui.custom.AutoLoopViewPager;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 import java.lang.IllegalStateException;
@@ -25,7 +25,7 @@ public class HomePagerFragment_ViewBinding extends BaseFragment_ViewBinding {
     this.target = target;
 
     target.mContentList = Utils.findRequiredViewAsType(source, R.id.home_pager_content_list, "field 'mContentList'", RecyclerView.class);
-    target.looperPager = Utils.findRequiredViewAsType(source, R.id.looper_pager, "field 'looperPager'", ViewPager.class);
+    target.looperPager = Utils.findRequiredViewAsType(source, R.id.looper_pager, "field 'looperPager'", AutoLoopViewPager.class);
     target.currentCategoryTitle = Utils.findRequiredViewAsType(source, R.id.home_pager_title, "field 'currentCategoryTitle'", TextView.class);
     target.looperPointContainer = Utils.findRequiredViewAsType(source, R.id.looper_point_container, "field 'looperPointContainer'", LinearLayout.class);
     target.mTwinklingRefreshLayout = Utils.findRequiredViewAsType(source, R.id.home_pager_refresh, "field 'mTwinklingRefreshLayout'", TwinklingRefreshLayout.class);

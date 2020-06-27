@@ -22,6 +22,7 @@ import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
 import com.example.taobaoalliance.presenter.impl.CategoryPagePresenterImpl;
 import com.example.taobaoalliance.ui.adapter.HomePagerContentAdapter;
 import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
+import com.example.taobaoalliance.ui.custom.AutoLoopViewPager;
 import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.LogUtils;
@@ -52,7 +53,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     @BindView(R.id.home_pager_content_list)
     RecyclerView mContentList;
     @BindView(R.id.looper_pager)
-    ViewPager looperPager;
+    AutoLoopViewPager looperPager;
     @BindView(R.id.home_pager_title)
     TextView currentCategoryTitle;
     @BindView(R.id.looper_point_container)
@@ -69,6 +70,19 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     @Override
     protected int getRootViewResId() {
         return R.layout.fragment_home_pager;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //可见的时候我们开始调用轮播
+        looperPager.startLoop();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        looperPager.stopLoop();
     }
 
     @Override

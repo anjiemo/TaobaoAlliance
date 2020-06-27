@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_pager_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPageBg"
     android:gravity="center"
+    tools:context=".ui.fragment.HomePagerFragment"
     android:orientation="vertical">
 
     <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
@@ -38,7 +40,7 @@
                         android:layout_height="125dp"
                         android:layout_marginBottom="14dp">
 
-                        <androidx.viewpager.widget.ViewPager
+                        <com.example.taobaoalliance.ui.custom.AutoLoopViewPager
                             android:id="@+id/looper_pager"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"

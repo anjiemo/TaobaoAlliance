@@ -80,11 +80,11 @@ public final class R {
         public static final int split = 0x7f090198;
         public static final int ticker_made_count = 0x7f0901c3;
         public static final int ticker_scan_count = 0x7f0901c4;
-        public static final int top_back = 0x7f0901d5;
-        public static final int top_mask = 0x7f0901d6;
-        public static final int top_openpicture = 0x7f0901d7;
-        public static final int webview = 0x7f090204;
-        public static final int zhuce_title = 0x7f09020d;
+        public static final int top_back = 0x7f0901d7;
+        public static final int top_mask = 0x7f0901d8;
+        public static final int top_openpicture = 0x7f0901d9;
+        public static final int webview = 0x7f090206;
+        public static final int zhuce_title = 0x7f09020f;
     }
     public static final class layout {
         private layout() {}

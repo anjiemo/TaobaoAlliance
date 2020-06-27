@@ -1,12 +1,20 @@
 package com.example.taobaoalliance.ui.activity;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.AppUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseActivity;
@@ -33,6 +41,7 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
     View mLoadingView;
     @BindView(R.id.ticket_load_retry)
     View mRetryLoadText;
+    private boolean mHasTaoBaoApp = false;
 
     @Override
     protected void initPresenter() {
@@ -40,6 +49,23 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
         if (mTicketPresenter != null) {
             mTicketPresenter.registerViewCallback(this);
         }
+        //判断是否有安装淘宝
+        // act=android.intent.action.MAIN
+        // cat[android.intent.category.LAUNCHER]
+        // flag=0x10200000
+        // cmp=com.taobao.taobao/com.taobao.taobao.welcome.Welcome
+        //包名是这个：com.taobao.taobao
+        //检查是否有安装淘宝应用
+        PackageManager packageManager = getPackageManager();
+        try {
+            PackageInfo packageInfo = packageManager.getPackageInfo("com.taobao.taobao", PackageManager.MATCH_UNINSTALLED_PACKAGES);
+            mHasTaoBaoApp = packageInfo != null;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            mHasTaoBaoApp = false;
+        }
+        //根据这个值去修改UI
+        mOpenCopyBtn.setText(mHasTaoBaoApp ? "打开淘宝领券" : "复制淘口令");
     }
 
     @Override
@@ -57,6 +83,28 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
     @Override
     protected void initEvent() {
         mBackPress.setOnClickListener(v -> finish());
+        mOpenCopyBtn.setOnClickListener(v -> {
+            //复制淘口令
+            //拿到内容
+            String ticketCode = mTicketCode.getText().toString().trim();
+            ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            //复制到粘贴板
+            ClipData clipData = ClipData.newPlainText("taobao_ticket_code", ticketCode);
+            cm.setPrimaryClip(clipData);
+            //判断有没有淘宝
+            if (mHasTaoBaoApp) {
+                Intent taoBaoIntent = new Intent();
+                //taoBaoIntent.setAction("android.intent.action.MAIN");
+                //taoBaoIntent.addCategory("android.intent.category.LAUNCHER");
+                //com.taobao.taobao/com.taobao.tao.TBMainActivity
+                ComponentName componentName = new ComponentName("com.taobao.taobao", "com.taobao.tao.TBMainActivity");
+                taoBaoIntent.setComponent(componentName);
+                startActivity(taoBaoIntent);
+            } else {
+                //没有就提示复制成功
+                ToastUtils.showShort("已经复制，粘贴分享，或打开淘宝");
+            }
+        });
     }
 
     @Override

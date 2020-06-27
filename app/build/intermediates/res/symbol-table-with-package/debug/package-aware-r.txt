@@ -3590,6 +3590,8 @@ id ticket_back_press
 id ticket_code
 id ticket_copy_open_btn
 id ticket_cover
+id ticket_cover_loading
+id ticket_load_retry
 id time
 id title
 id titleDividerNoCustom

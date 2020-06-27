@@ -20,11 +20,14 @@ import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
 import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
+import com.example.taobaoalliance.presenter.ITickPresenter;
 import com.example.taobaoalliance.presenter.impl.CategoryPagePresenterImpl;
+import com.example.taobaoalliance.presenter.impl.TicketPresenterImpl;
 import com.example.taobaoalliance.ui.activity.TicketActivity;
 import com.example.taobaoalliance.ui.adapter.HomePagerContentAdapter;
 import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
 import com.example.taobaoalliance.ui.custom.AutoLoopViewPager;
+import com.example.taobaoalliance.utils.PresenterManager;
 import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.LogUtils;
@@ -170,7 +173,7 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     @Override
     protected void initPresenter() {
-        mCategoryPagerPresenter = CategoryPagePresenterImpl.getInstance();
+        mCategoryPagerPresenter = PresenterManager.getInstance().getCategoryPagePresenter();
         mCategoryPagerPresenter.registerViewCallback(this);
     }
 
@@ -289,6 +292,12 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
 
     private void handleItemClick(HomePagerContent.DataBean item) {
         //处理数据
+        String title = item.getTitle();
+        String url = item.getClick_url();
+        String cover = item.getPict_url();
+        //拿到TicketPresenter去加载数据
+        ITickPresenter ticketPresenter = PresenterManager.getInstance().getTicketPresenter();
+        ticketPresenter.getTicket(title, url, cover);
         startActivity(new Intent(getContext(), TicketActivity.class));
     }
 }

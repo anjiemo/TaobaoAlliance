@@ -25,9 +25,9 @@ public final class R {
         public static final int s_left_jiantou = 0x7f0800c8;
         public static final int s_light = 0x7f0800c9;
         public static final int scan_mask = 0x7f0800cc;
-        public static final int shape_small_round_blue1_code_tool = 0x7f0800e7;
-        public static final int shape_small_round_blue_code_tool = 0x7f0800e8;
-        public static final int transparent_bg_code_tool = 0x7f080100;
+        public static final int shape_small_round_blue1_code_tool = 0x7f0800e8;
+        public static final int shape_small_round_blue_code_tool = 0x7f0800e9;
+        public static final int transparent_bg_code_tool = 0x7f080102;
     }
     public static final class id {
         private id() {}
@@ -80,11 +80,11 @@ public final class R {
         public static final int split = 0x7f090198;
         public static final int ticker_made_count = 0x7f0901c3;
         public static final int ticker_scan_count = 0x7f0901c4;
-        public static final int top_back = 0x7f0901d1;
-        public static final int top_mask = 0x7f0901d2;
-        public static final int top_openpicture = 0x7f0901d3;
-        public static final int webview = 0x7f090200;
-        public static final int zhuce_title = 0x7f090209;
+        public static final int top_back = 0x7f0901d5;
+        public static final int top_mask = 0x7f0901d6;
+        public static final int top_openpicture = 0x7f0901d7;
+        public static final int webview = 0x7f090204;
+        public static final int zhuce_title = 0x7f09020d;
     }
     public static final class layout {
         private layout() {}

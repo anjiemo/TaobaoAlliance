@@ -3085,6 +3085,7 @@ drawable selector_location
 drawable selector_love
 drawable set
 drawable shadow
+drawable shape_button_bg
 drawable shape_circle_blue
 drawable shape_circle_blue1
 drawable shape_edit_box_bg
@@ -3106,6 +3107,7 @@ drawable shape_small_round_blue_code_tool
 drawable shape_small_round_theme
 drawable shape_stroke_gray_5dp
 drawable shape_tag_bg
+drawable shape_ticket_code_box_bg
 drawable shape_title_flag
 drawable sign_ban_30
 drawable sign_check_30
@@ -3584,6 +3586,10 @@ id textinput_prefix_text
 id textinput_suffix_text
 id ticker_made_count
 id ticker_scan_count
+id ticket_back_press
+id ticket_code
+id ticket_copy_open_btn
+id ticket_cover
 id time
 id title
 id titleDividerNoCustom
@@ -3985,11 +3991,13 @@ string text_goods_off_prise
 string text_goods_original_prise
 string text_goods_sell_count
 string text_home
+string text_ling_quan
 string text_network_error_tips
 string text_red_packet
 string text_search
 string text_search_tips
 string text_selected
+string text_tao_kou_ling
 style ActivityTranslucent
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

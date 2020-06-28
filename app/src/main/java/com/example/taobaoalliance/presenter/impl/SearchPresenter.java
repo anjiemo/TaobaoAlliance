@@ -26,6 +26,7 @@ public class SearchPresenter implements ISearchPresenter {
     public static final int DEFAULT_PAGE = 0;
     //搜索的当前页面
     private int mCurrentPage = DEFAULT_PAGE;
+    private String mCurrentKeyword = null;
 
     private SearchPresenter() {
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
@@ -44,10 +45,11 @@ public class SearchPresenter implements ISearchPresenter {
 
     @Override
     public void doSearch(String keyword) {
-        //更新UI状态
-        for (ISearchPageCallback callback : mSearchPageCallbacks) {
-            callback.onLoading();
+        if (mCurrentKeyword == null || !mCurrentKeyword.equals(keyword)) {
+            mCurrentKeyword = keyword;
         }
+        //更新UI状态
+        onLoading();
         Call<SearchResult> task = mApi.doSearch(mCurrentPage, keyword);
         task.enqueue(new Callback<SearchResult>() {
             @Override
@@ -69,6 +71,12 @@ public class SearchPresenter implements ISearchPresenter {
         });
     }
 
+    private void onLoading() {
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onLoading();
+        }
+    }
+
     private void onError() {
         for (ISearchPageCallback callback : mSearchPageCallbacks) {
             callback.onError();
@@ -76,11 +84,11 @@ public class SearchPresenter implements ISearchPresenter {
     }
 
     private void handleSearchResult(SearchResult result) {
-        for (ISearchPageCallback callback : mSearchPageCallbacks) {
-            if (isResultEmpty(result)) {
-                //数据为空
-                callback.onEmpty();
-            } else {
+        if (isResultEmpty(result)) {
+            //数据为空
+            onEmpty();
+        } else {
+            for (ISearchPageCallback callback : mSearchPageCallbacks) {
                 callback.onSearchSuccess(result);
             }
         }
@@ -97,12 +105,84 @@ public class SearchPresenter implements ISearchPresenter {
 
     @Override
     public void refresh() {
-
+        if (mCurrentKeyword == null) {
+            onEmpty();
+        } else {
+            //可以重新搜索
+            doSearch(mCurrentKeyword);
+        }
     }
 
     @Override
     public void loaderMore() {
+        mCurrentPage++;
+        //进行搜索
+        if (mCurrentKeyword == null) {
+            onEmpty();
+        } else {
+            //做搜索的事情
+            doSearchMore();
+        }
+    }
 
+    private void doSearchMore() {
+        Call<SearchResult> task = mApi.doSearch(mCurrentPage, mCurrentKeyword);
+        task.enqueue(new Callback<SearchResult>() {
+            @Override
+            public void onResponse(@NonNull Call<SearchResult> call, @NonNull Response<SearchResult> response) {
+                int code = response.code();
+                LogUtils.d(SearchPresenter.this, "doSearch result code ===> " + code);
+                if (code == HttpURLConnection.HTTP_OK) {
+                    //处理结果
+                    handleMoreSearchResult(response.body());
+                } else {
+                    onLoaderMoreError();
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<SearchResult> call, @NonNull Throwable t) {
+                onLoaderMoreError();
+            }
+        });
+    }
+
+    /**
+     * 处理加载更多的结果
+     *
+     * @param result
+     */
+    private void handleMoreSearchResult(SearchResult result) {
+        if (isResultEmpty(result)) {
+            //数据为空
+            onLoadMoreEmpty();
+        } else {
+            for (ISearchPageCallback callback : mSearchPageCallbacks) {
+                callback.onMoreLoaded(result);
+            }
+        }
+    }
+
+    private void onLoadMoreEmpty() {
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onMoreLoadedEmpty();
+        }
+    }
+
+    /**
+     * 加载更多内容失败
+     */
+    private void onLoaderMoreError() {
+        mCurrentPage--;
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onMoreLoaderError();
+        }
+    }
+
+    private void onEmpty() {
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onEmpty();
+        }
     }
 
     @Override

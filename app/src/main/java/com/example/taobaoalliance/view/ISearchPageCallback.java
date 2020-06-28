@@ -23,9 +23,9 @@ public interface ISearchPageCallback extends IBaseCallback {
     /**
      * 搜索结果：成功
      *
-     * @param results
+     * @param result
      */
-    void onSearchSuccess(List<SearchResult> results);
+    void onSearchSuccess(SearchResult result);
 
     /**
      * 加载到了更多内容

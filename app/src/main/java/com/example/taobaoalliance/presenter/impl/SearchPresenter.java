@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import com.example.taobaoalliance.model.Api;
 import com.example.taobaoalliance.model.domain.SearchRecommend;
+import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.RetrofitManager;
@@ -22,6 +23,9 @@ public class SearchPresenter implements ISearchPresenter {
 
     private List<ISearchPageCallback> mSearchPageCallbacks = new ArrayList<>();
     private final Api mApi;
+    public static final int DEFAULT_PAGE = 0;
+    //搜索的当前页面
+    private int mCurrentPage = DEFAULT_PAGE;
 
     private SearchPresenter() {
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
@@ -40,7 +44,55 @@ public class SearchPresenter implements ISearchPresenter {
 
     @Override
     public void doSearch(String keyword) {
+        //更新UI状态
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onLoading();
+        }
+        Call<SearchResult> task = mApi.doSearch(mCurrentPage, keyword);
+        task.enqueue(new Callback<SearchResult>() {
+            @Override
+            public void onResponse(@NonNull Call<SearchResult> call, @NonNull Response<SearchResult> response) {
+                int code = response.code();
+                LogUtils.d(SearchPresenter.this, "doSearch result code ===> " + code);
+                if (code == HttpURLConnection.HTTP_OK) {
+                    //处理结果
+                    handleSearchResult(response.body());
+                } else {
+                    onError();
+                }
+            }
 
+            @Override
+            public void onFailure(@NonNull Call<SearchResult> call, @NonNull Throwable t) {
+                onError();
+            }
+        });
+    }
+
+    private void onError() {
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onError();
+        }
+    }
+
+    private void handleSearchResult(SearchResult result) {
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            if (isResultEmpty(result)) {
+                //数据为空
+                callback.onEmpty();
+            } else {
+                callback.onSearchSuccess(result);
+            }
+        }
+    }
+
+    private boolean isResultEmpty(SearchResult result) {
+        try {
+            return result == null || result.getData().getTbk_dg_material_optional_response().getResult_list().getMap_data().size() == 0;
+        } catch (Exception e) {
+            //e.printStackTrace();
+            return false;
+        }
     }
 
     @Override

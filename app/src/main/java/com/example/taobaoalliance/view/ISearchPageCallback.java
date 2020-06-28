@@ -1,11 +1,12 @@
 package com.example.taobaoalliance.view;
 
 import com.example.taobaoalliance.base.IBaseCallback;
+import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 
 import java.util.List;
 
-public interface ISearchViewCallback extends IBaseCallback {
+public interface ISearchPageCallback extends IBaseCallback {
 
     /**
      * 搜索历史结果
@@ -48,5 +49,5 @@ public interface ISearchViewCallback extends IBaseCallback {
      *
      * @param recommendWords
      */
-    void onRecommendWordsLoaded(List<String> recommendWords);
+    void onRecommendWordsLoaded(List<SearchRecommend.DataBean > recommendWords);
 }

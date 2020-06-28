@@ -5,6 +5,7 @@ import com.example.taobaoalliance.model.domain.HomePagerContent;
 import com.example.taobaoalliance.model.domain.OnSellContent;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.model.domain.RecommendPageCategory;
+import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.TicketParams;
 import com.example.taobaoalliance.model.domain.TicketResult;
 
@@ -35,4 +36,7 @@ public interface Api {
 
     @GET()
     Call<OnSellContent> getOnSellPageContent(@Url String url);
+
+    @GET("search/recommend")
+    Call<SearchRecommend> getRecommendWords();
 }

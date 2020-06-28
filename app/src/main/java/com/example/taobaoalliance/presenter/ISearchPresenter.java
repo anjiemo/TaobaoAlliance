@@ -1,9 +1,9 @@
 package com.example.taobaoalliance.presenter;
 
 import com.example.taobaoalliance.base.IBasePresenter;
-import com.example.taobaoalliance.view.ISearchViewCallback;
+import com.example.taobaoalliance.view.ISearchPageCallback;
 
-public interface ISearchPresenter extends IBasePresenter<ISearchViewCallback> {
+public interface ISearchPresenter extends IBasePresenter<ISearchPageCallback> {
 
     /**
      * 获取搜索历史内容

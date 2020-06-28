@@ -165,8 +165,10 @@ id text2
 id time
 id title
 id tv
+id tv_left_category
 integer status_bar_notification_info_maxnum
 layout custom_dialog
+layout item_recommend_page_left
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

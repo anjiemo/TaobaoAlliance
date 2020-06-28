@@ -3382,6 +3382,7 @@ id layout_progress
 id layout_progress_holder
 id layout_secondary_progress
 id left
+id left_category_list
 id left_mask
 id linLayoutSmall
 id line1
@@ -3486,6 +3487,7 @@ id register_phone_edittext
 id restart_preview
 id return_scan_result
 id right
+id right_content_list
 id right_icon
 id right_mask
 id right_side
@@ -3632,6 +3634,7 @@ id tv_file
 id tv_imply
 id tv_itpop
 id tv_left
+id tv_left_category
 id tv_number
 id tv_point_la
 id tv_point_lo
@@ -3780,6 +3783,7 @@ layout include_webview
 layout item_home_pager_content
 layout item_listview_popup
 layout item_pinned_header
+layout item_recommend_page_left
 layout item_view
 layout item_wave_contact
 layout layout_auto_imageview
@@ -3995,6 +3999,7 @@ string text_goods_sell_count
 string text_home
 string text_ling_quan
 string text_network_error_tips
+string text_recommend_title
 string text_red_packet
 string text_search
 string text_search_tips

@@ -32,6 +32,8 @@ id ripple
 id round1
 id round2
 id tv
+id tv_left_category
+layout item_recommend_page_left
 layout view_bezier
 layout view_sinaheader
 mipmap refresh_head_arrow

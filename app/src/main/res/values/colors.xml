@@ -7,6 +7,7 @@
 
     <color name="colorTabSelected">#FFFFFF</color>
     <color name="colorTabNormal">#AAFFFFFF</color>
-    <color name="color_tmall">#D00218</color>
+    <color name="colorTmall">#D00218</color>
     <color name="colorPageBg">#EFEEEE</color>
+    <color name="colorEEEEEE">#EFEEEE</color>
 </resources>

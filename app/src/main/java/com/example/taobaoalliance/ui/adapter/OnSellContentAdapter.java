@@ -56,6 +56,19 @@ public class OnSellContentAdapter extends RecyclerView.Adapter<OnSellContentAdap
         notifyDataSetChanged();
     }
 
+    /**
+     * 加载更多的内容
+     *
+     * @param moreResult
+     */
+    public void onMoreLoaded(OnSellContent moreResult) {
+        //原数据的长度
+        int size = mData.size();
+        List<OnSellContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean> moreData = moreResult.getData().getTbk_dg_optimus_material_response().getResult_list().getMap_data();
+        mData.addAll(moreData);
+        notifyItemRangeChanged(size - 1, moreData.size());
+    }
+
     public static class InnerHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.iv_on_sell_cover)
         ImageView ivCover;

@@ -137,7 +137,7 @@ public class OnSellPagePresenterImpl implements IOnSellPagePresenter {
         mIsLoading = false;
         mCurrentPage--;
         for (IOnSellPageCallback viewCallback : mViewCallbacks) {
-            viewCallback.onError();
+            viewCallback.onMoreLoadedError();
         }
     }
 
@@ -149,6 +149,7 @@ public class OnSellPagePresenterImpl implements IOnSellPagePresenter {
     private void onMoreLoaded(OnSellContent result) {
         for (IOnSellPageCallback viewCallback : mViewCallbacks) {
             if (isEmpty(result)) {
+                mCurrentPage--;
                 viewCallback.onMoreLoadedEmpty();
             } else {
                 viewCallback.onMoreLoaded(result);

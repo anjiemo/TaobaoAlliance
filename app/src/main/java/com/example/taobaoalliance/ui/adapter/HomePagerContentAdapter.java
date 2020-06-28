@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.UrlUtils;
 import com.vondear.rxtool.RxTool;
@@ -114,6 +115,6 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
 
     private OnListItemClickListener mOnListItemClickListener = null;
     public interface OnListItemClickListener{
-        void onItemClick(HomePagerContent.DataBean item);
+        void onItemClick(IBaseInfo item);
     }
 }

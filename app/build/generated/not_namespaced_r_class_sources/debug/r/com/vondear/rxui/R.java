@@ -1762,22 +1762,22 @@ public final class R {
         public static final int tv_contact_name = 0x7f0901f7;
         public static final int tv_content = 0x7f0901f8;
         public static final int tv_file = 0x7f0901f9;
-        public static final int tv_imply = 0x7f0901fa;
-        public static final int tv_itpop = 0x7f0901fb;
-        public static final int tv_left = 0x7f0901fc;
-        public static final int tv_number = 0x7f0901fe;
-        public static final int tv_point_la = 0x7f090202;
-        public static final int tv_point_lo = 0x7f090203;
-        public static final int tv_progress = 0x7f090204;
-        public static final int tv_reminder = 0x7f090205;
-        public static final int tv_right = 0x7f090206;
-        public static final int tv_rx_title = 0x7f090207;
-        public static final int tv_sure = 0x7f090208;
-        public static final int tv_title = 0x7f090209;
-        public static final int web_base = 0x7f090213;
-        public static final int wheelView_day = 0x7f090215;
-        public static final int wheelView_month = 0x7f090216;
-        public static final int wheelView_year = 0x7f090217;
+        public static final int tv_imply = 0x7f0901fb;
+        public static final int tv_itpop = 0x7f0901fc;
+        public static final int tv_left = 0x7f0901fd;
+        public static final int tv_number = 0x7f0901ff;
+        public static final int tv_point_la = 0x7f090203;
+        public static final int tv_point_lo = 0x7f090204;
+        public static final int tv_progress = 0x7f090205;
+        public static final int tv_reminder = 0x7f090206;
+        public static final int tv_right = 0x7f090207;
+        public static final int tv_rx_title = 0x7f090208;
+        public static final int tv_sure = 0x7f090209;
+        public static final int tv_title = 0x7f09020a;
+        public static final int web_base = 0x7f090214;
+        public static final int wheelView_day = 0x7f090216;
+        public static final int wheelView_month = 0x7f090217;
+        public static final int wheelView_year = 0x7f090218;
     }
     public static final class integer {
         private integer() {}
@@ -1807,24 +1807,24 @@ public final class R {
         public static final int dialog_sure_false = 0x7f0c0042;
         public static final int dialog_year_month_day = 0x7f0c0043;
         public static final int footer_item_default_loading = 0x7f0c0044;
-        public static final int image = 0x7f0c004d;
-        public static final int include_rx_title = 0x7f0c004f;
-        public static final int include_title = 0x7f0c0050;
-        public static final int include_webview = 0x7f0c0051;
-        public static final int item_listview_popup = 0x7f0c0053;
-        public static final int item_pinned_header = 0x7f0c0055;
-        public static final int item_view = 0x7f0c0058;
-        public static final int item_wave_contact = 0x7f0c0059;
-        public static final int layout_auto_imageview = 0x7f0c005a;
-        public static final int layout_icon_round_corner_progress_bar = 0x7f0c005b;
-        public static final int layout_round_corner_progress_bar = 0x7f0c005c;
-        public static final int layout_text_round_corner_progress_bar = 0x7f0c005d;
-        public static final int picker_edit = 0x7f0c0080;
-        public static final int popup_imply = 0x7f0c0081;
-        public static final int popupwindow_definition_layout = 0x7f0c0082;
-        public static final int popupwindow_layout = 0x7f0c0083;
-        public static final int rx_netspeed_view = 0x7f0c0084;
-        public static final int toast_layout = 0x7f0c0097;
+        public static final int image = 0x7f0c004e;
+        public static final int include_rx_title = 0x7f0c0050;
+        public static final int include_title = 0x7f0c0051;
+        public static final int include_webview = 0x7f0c0052;
+        public static final int item_listview_popup = 0x7f0c0054;
+        public static final int item_pinned_header = 0x7f0c0056;
+        public static final int item_view = 0x7f0c0059;
+        public static final int item_wave_contact = 0x7f0c005a;
+        public static final int layout_auto_imageview = 0x7f0c005b;
+        public static final int layout_icon_round_corner_progress_bar = 0x7f0c005c;
+        public static final int layout_round_corner_progress_bar = 0x7f0c005d;
+        public static final int layout_text_round_corner_progress_bar = 0x7f0c005e;
+        public static final int picker_edit = 0x7f0c0081;
+        public static final int popup_imply = 0x7f0c0082;
+        public static final int popupwindow_definition_layout = 0x7f0c0083;
+        public static final int popupwindow_layout = 0x7f0c0084;
+        public static final int rx_netspeed_view = 0x7f0c0085;
+        public static final int toast_layout = 0x7f0c0098;
     }
     public static final class raw {
         private raw() {}

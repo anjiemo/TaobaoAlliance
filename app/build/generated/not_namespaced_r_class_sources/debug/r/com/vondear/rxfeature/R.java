@@ -83,8 +83,8 @@ public final class R {
         public static final int top_back = 0x7f0901e1;
         public static final int top_mask = 0x7f0901e2;
         public static final int top_openpicture = 0x7f0901e3;
-        public static final int webview = 0x7f090214;
-        public static final int zhuce_title = 0x7f09021d;
+        public static final int webview = 0x7f090215;
+        public static final int zhuce_title = 0x7f09021e;
     }
     public static final class layout {
         private layout() {}

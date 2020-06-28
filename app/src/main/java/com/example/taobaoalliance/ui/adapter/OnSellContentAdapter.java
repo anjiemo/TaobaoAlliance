@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.OnSellContent;
 import com.example.taobaoalliance.utils.UrlUtils;
 
@@ -42,6 +43,12 @@ public class OnSellContentAdapter extends RecyclerView.Adapter<OnSellContentAdap
         //绑定数据
         OnSellContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean mapDataBean = mData.get(position);
         holder.setData(mapDataBean, mContext);
+        View itemView = holder.itemView;
+        itemView.setOnClickListener(v -> {
+            if (mOnSellPageItemClickListener != null) {
+                mOnSellPageItemClickListener.onSellItemClick(mapDataBean);
+            }
+        });
     }
 
     @Override
@@ -97,5 +104,15 @@ public class OnSellContentAdapter extends RecyclerView.Adapter<OnSellContentAdap
             float finalPrise = originPriseFloat - couponAmount;
             tvOffPrise.setText(String.format(Locale.SIMPLIFIED_CHINESE, "券后价：%.2f", finalPrise));
         }
+    }
+
+    public void setOnSellPageItemClickListener(OnSellPageItemClickListener onSellPageItemClickListener) {
+        mOnSellPageItemClickListener = onSellPageItemClickListener;
+    }
+
+    private OnSellPageItemClickListener mOnSellPageItemClickListener = null;
+
+    public interface OnSellPageItemClickListener {
+        void onSellItemClick(IBaseInfo item);
     }
 }

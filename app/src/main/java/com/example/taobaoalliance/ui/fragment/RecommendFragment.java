@@ -1,43 +1,50 @@
 package com.example.taobaoalliance.ui.fragment;
 
-import android.content.Intent;
 import android.graphics.Rect;
-import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.ConvertUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.model.domain.RecommendPageCategory;
 import com.example.taobaoalliance.presenter.IRecommendPagePresenter;
-import com.example.taobaoalliance.presenter.ITickPresenter;
-import com.example.taobaoalliance.ui.activity.TicketActivity;
 import com.example.taobaoalliance.ui.adapter.RecommendPageContentAdapter;
 import com.example.taobaoalliance.ui.adapter.RecommendPageLeftAdapter;
-import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.PresenterManager;
+import com.example.taobaoalliance.utils.TicketUtils;
 import com.example.taobaoalliance.view.IRecommendPageCallback;
-import com.lcodecore.tkrefreshlayout.utils.LogUtil;
-
-import java.util.List;
 
 import butterknife.BindView;
 
-public class RecommendFragment extends BaseFragment implements IRecommendPageCallback, RecommendPageLeftAdapter.OnLeftItemClickListener, RecommendPageContentAdapter.OnRecommendPageContentItemClickListener {
+public class RecommendFragment extends BaseFragment
+        implements IRecommendPageCallback, RecommendPageLeftAdapter.OnLeftItemClickListener,
+        RecommendPageContentAdapter.OnRecommendPageContentItemClickListener {
 
     @BindView(R.id.left_category_list)
     RecyclerView mLeftCategoryList;
     @BindView(R.id.right_content_list)
     RecyclerView mRightContentList;
+    @BindView(R.id.tv_fragment_bar_title)
+    TextView mTvFragmentBarTitle;
 
     private IRecommendPagePresenter mRecommendPagePresenter;
     private RecommendPageLeftAdapter mLeftAdapter;
     private RecommendPageContentAdapter mRightAdapter;
+
+    @Override
+    protected View loadRootView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
+        return inflater.inflate(R.layout.fragment_with_bar_layout, container, false);
+    }
 
     @Override
     protected void initPresenter() {
@@ -68,6 +75,7 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
 
     @Override
     protected void initView(View rootView) {
+        mTvFragmentBarTitle.setText(getResources().getString(R.string.text_recommend_title));
         setUpState(State.SUCCESS);
         mLeftCategoryList.setLayoutManager(new LinearLayoutManager(getContext()));
         mLeftAdapter = new RecommendPageLeftAdapter();
@@ -134,18 +142,9 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
     }
 
     @Override
-    public void onContentItemClick(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean item) {
+    public void onContentItemClick(IBaseInfo item) {
         //内容点击了
         //处理数据
-        String title = item.getTitle();
-        String url = item.getCoupon_click_url();
-        if (TextUtils.isEmpty(url)) {
-            url = item.getClick_url();
-        }
-        String cover = item.getPict_url();
-        //拿到TicketPresenter去加载数据
-        ITickPresenter ticketPresenter = PresenterManager.getInstance().getTicketPresenter();
-        ticketPresenter.getTicket(title, url, cover);
-        startActivity(new Intent(getContext(), TicketActivity.class));
+        TicketUtils.toTicketPage(item);
     }
 }

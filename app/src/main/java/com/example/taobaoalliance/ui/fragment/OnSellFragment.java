@@ -1,9 +1,13 @@
 package com.example.taobaoalliance.ui.fragment;
 
 import android.graphics.Rect;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -11,17 +15,20 @@ import com.blankj.utilcode.util.ConvertUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.OnSellContent;
 import com.example.taobaoalliance.presenter.IOnSellPagePresenter;
 import com.example.taobaoalliance.ui.adapter.OnSellContentAdapter;
 import com.example.taobaoalliance.utils.PresenterManager;
+import com.example.taobaoalliance.utils.TicketUtils;
 import com.example.taobaoalliance.view.IOnSellPageCallback;
 import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 import butterknife.BindView;
 
-public class OnSellFragment extends BaseFragment implements IOnSellPageCallback {
+public class OnSellFragment extends BaseFragment
+        implements IOnSellPageCallback, OnSellContentAdapter.OnSellPageItemClickListener {
 
     private IOnSellPagePresenter mOnSellPagePresenter;
     public static final int DEFAULT_SPAN_COUNT = 2;
@@ -29,6 +36,8 @@ public class OnSellFragment extends BaseFragment implements IOnSellPageCallback 
     RecyclerView mOnSellContentList;
     @BindView(R.id.on_sell_refresh_layout)
     TwinklingRefreshLayout mTwinklingRefreshLayout;
+    @BindView(R.id.tv_fragment_bar_title)
+    TextView mTvFragmentBarTitle;
     private OnSellContentAdapter mOnSellContentAdapter;
     private StaggeredGridLayoutManager mStaggeredGridLayoutManager;
 
@@ -62,10 +71,17 @@ public class OnSellFragment extends BaseFragment implements IOnSellPageCallback 
                 }
             }
         });
+        mOnSellContentAdapter.setOnSellPageItemClickListener(this);
+    }
+
+    @Override
+    protected View loadRootView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
+        return inflater.inflate(R.layout.fragment_with_bar_layout, container, false);
     }
 
     @Override
     protected void initView(View rootView) {
+        mTvFragmentBarTitle.setText(getResources().getString(R.string.text_on_sell_title));
         //设置布局管理器
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(DEFAULT_SPAN_COUNT, StaggeredGridLayoutManager.VERTICAL);
         mOnSellContentList.setLayoutManager(mStaggeredGridLayoutManager);
@@ -127,5 +143,12 @@ public class OnSellFragment extends BaseFragment implements IOnSellPageCallback 
     @Override
     public void onEmpty() {
         setUpState(State.EMPTY);
+    }
+
+    @Override
+    public void onSellItemClick(IBaseInfo item) {
+        //特惠列表内容被点击
+        //处理数据
+        TicketUtils.toTicketPage(item);
     }
 }

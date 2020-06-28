@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.utils.Constants;
 
@@ -102,6 +103,6 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
     private OnRecommendPageContentItemClickListener mOnRecommendPageContentItemClickListener = null;
 
     public interface OnRecommendPageContentItemClickListener {
-        void onContentItemClick(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean item);
+        void onContentItemClick(IBaseInfo item);
     }
 }

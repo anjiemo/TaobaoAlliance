@@ -1,9 +1,7 @@
 package com.example.taobaoalliance.ui.fragment;
 
-import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
@@ -20,27 +18,27 @@ import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
-import com.example.taobaoalliance.presenter.ITickPresenter;
-import com.example.taobaoalliance.presenter.impl.CategoryPagePresenterImpl;
-import com.example.taobaoalliance.presenter.impl.TicketPresenterImpl;
-import com.example.taobaoalliance.ui.activity.TicketActivity;
 import com.example.taobaoalliance.ui.adapter.HomePagerContentAdapter;
 import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
 import com.example.taobaoalliance.ui.custom.AutoLoopViewPager;
-import com.example.taobaoalliance.utils.PresenterManager;
-import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.LogUtils;
+import com.example.taobaoalliance.utils.PresenterManager;
+import com.example.taobaoalliance.utils.TicketUtils;
 import com.example.taobaoalliance.view.ICategoryCallback;
 import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
+import com.lcodecore.tkrefreshlayout.views.MyNestedScrollView;
 
 import java.util.List;
 
 import butterknife.BindView;
 
-public class HomePagerFragment extends BaseFragment implements ICategoryCallback, HomePagerContentAdapter.OnListItemClickListener, LooperPagerAdapter.OnLooperPageItemClickListener {
+public class HomePagerFragment extends BaseFragment
+        implements ICategoryCallback, HomePagerContentAdapter.OnListItemClickListener,
+        LooperPagerAdapter.OnLooperPageItemClickListener {
 
     private ICategoryPagerPresenter mCategoryPagerPresenter;
     private int mMaterialId;
@@ -280,28 +278,19 @@ public class HomePagerFragment extends BaseFragment implements ICategoryCallback
     }
 
     @Override
-    public void onItemClick(HomePagerContent.DataBean item) {
+    public void onItemClick(IBaseInfo item) {
         //列表内容被点击了
         handleItemClick(item);
     }
 
     @Override
-    public void onLooperItemClick(HomePagerContent.DataBean item) {
+    public void onLooperItemClick(IBaseInfo item) {
         //轮播图内容被点击了
         handleItemClick(item);
     }
 
-    private void handleItemClick(HomePagerContent.DataBean item) {
+    private void handleItemClick(IBaseInfo item) {
         //处理数据
-        String title = item.getTitle();
-        String url = item.getCoupon_click_url();
-        if (TextUtils.isEmpty(url)) {
-            url = item.getClick_url();
-        }
-        String cover = item.getPict_url();
-        //拿到TicketPresenter去加载数据
-        ITickPresenter ticketPresenter = PresenterManager.getInstance().getTicketPresenter();
-        ticketPresenter.getTicket(title, url, cover);
-        startActivity(new Intent(getContext(), TicketActivity.class));
+        TicketUtils.toTicketPage(item);
     }
 }

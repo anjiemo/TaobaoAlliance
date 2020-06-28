@@ -24,6 +24,7 @@ import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.transition.Transition;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.UrlUtils;
 
@@ -94,6 +95,6 @@ public class LooperPagerAdapter extends PagerAdapter {
     private OnLooperPageItemClickListener mOnLooperPageItemClickListener = null;
 
     public interface OnLooperPageItemClickListener {
-        void onLooperItemClick(HomePagerContent.DataBean item);
+        void onLooperItemClick(IBaseInfo item);
     }
 }

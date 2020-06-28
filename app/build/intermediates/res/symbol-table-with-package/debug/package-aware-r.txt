@@ -3640,6 +3640,7 @@ id tv_collect_date
 id tv_contact_name
 id tv_content
 id tv_file
+id tv_fragment_bar_title
 id tv_imply
 id tv_itpop
 id tv_left
@@ -3787,6 +3788,7 @@ layout fragment_loading
 layout fragment_on_sell
 layout fragment_recommend
 layout fragment_search
+layout fragment_with_bar_layout
 layout image
 layout include_home_pager_title_part
 layout include_rx_title

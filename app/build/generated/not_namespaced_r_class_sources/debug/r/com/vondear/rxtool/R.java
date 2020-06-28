@@ -28,7 +28,7 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int toast_layout = 0x7f0c0097;
+        public static final int toast_layout = 0x7f0c0098;
     }
     public static final class raw {
         private raw() {}

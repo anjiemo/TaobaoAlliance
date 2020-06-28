@@ -24,7 +24,6 @@ import retrofit2.http.Url;
 public class RecommendPagePresenterIml implements IRecommendPagePresenter {
 
     private final Api mApi;
-    private RecommendPageCategory.DataBean mCurrentCategoryItem = null;
 
     public RecommendPagePresenterIml() {
         //拿到Retrofit
@@ -71,7 +70,6 @@ public class RecommendPagePresenterIml implements IRecommendPagePresenter {
 
     @Override
     public void getContentByCategory(RecommendPageCategory.DataBean item) {
-        mCurrentCategoryItem = item;
         int categoryId = item.getFavorites_id();
         LogUtils.d(this,"getContentByCategory categoryId =======> " + categoryId);
         String targetUrl = UrlUtils.getRecommendPageContentUrl(categoryId);
@@ -99,9 +97,7 @@ public class RecommendPagePresenterIml implements IRecommendPagePresenter {
 
     @Override
     public void reloadContent() {
-        if (mCurrentCategoryItem != null) {
-            getContentByCategory(mCurrentCategoryItem);
-        }
+        getCategories();
     }
 
     @Override

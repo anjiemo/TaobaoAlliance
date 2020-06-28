@@ -47,6 +47,14 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
     }
 
     @Override
+    protected void onRetryClick() {
+        //重试
+        if (mRecommendPagePresenter != null) {
+            mRecommendPagePresenter.reloadContent();
+        }
+    }
+
+    @Override
     protected void release() {
         if (mRecommendPagePresenter != null) {
             mRecommendPagePresenter.unregisterViewCallback(this);
@@ -106,7 +114,7 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
 
     @Override
     public void onError() {
-
+        setUpState(State.ERROR);
     }
 
     @Override

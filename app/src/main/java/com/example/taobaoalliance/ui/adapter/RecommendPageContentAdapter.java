@@ -77,7 +77,7 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
 
         public void setData(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean itemData) {
             String pictUrl = itemData.getPict_url();
-            Glide.with(itemView.getContext()).load(pictUrl).into(ivCover);
+            Glide.with(itemView.getContext()).load(pictUrl).error(R.mipmap.no_image).placeholder(R.mipmap.no_image).into(ivCover);
             if (TextUtils.isEmpty(itemData.getCoupon_click_url())) {
                 tvOriginalPrise.setText("晚啦，没有优惠券了");
                 tvBuyBtn.setVisibility(View.GONE);
@@ -100,7 +100,8 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
     }
 
     private OnRecommendPageContentItemClickListener mOnRecommendPageContentItemClickListener = null;
-    public interface OnRecommendPageContentItemClickListener{
+
+    public interface OnRecommendPageContentItemClickListener {
         void onContentItemClick(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean item);
     }
 }

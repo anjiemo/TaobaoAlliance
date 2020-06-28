@@ -1,6 +1,8 @@
 package com.example.taobaoalliance.ui.fragment;
 
+import android.content.Intent;
 import android.graphics.Rect;
+import android.text.TextUtils;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.model.domain.RecommendPageCategory;
 import com.example.taobaoalliance.presenter.IRecommendPagePresenter;
+import com.example.taobaoalliance.presenter.ITickPresenter;
+import com.example.taobaoalliance.ui.activity.TicketActivity;
 import com.example.taobaoalliance.ui.adapter.RecommendPageContentAdapter;
 import com.example.taobaoalliance.ui.adapter.RecommendPageLeftAdapter;
 import com.example.taobaoalliance.utils.LogUtils;
@@ -24,7 +28,7 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class RecommendFragment extends BaseFragment implements IRecommendPageCallback, RecommendPageLeftAdapter.OnLeftItemClickListener {
+public class RecommendFragment extends BaseFragment implements IRecommendPageCallback, RecommendPageLeftAdapter.OnLeftItemClickListener, RecommendPageContentAdapter.OnRecommendPageContentItemClickListener {
 
     @BindView(R.id.left_category_list)
     RecyclerView mLeftCategoryList;
@@ -79,6 +83,7 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
     @Override
     protected void initListener() {
         mLeftAdapter.setOnLeftItemClickListener(this);
+        mRightAdapter.setOnRecommendPageContentItemClickListener(this);
     }
 
     @Override
@@ -118,5 +123,21 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
     public void onLeftItemClick(RecommendPageCategory.DataBean item) {
         //左边的分类点击了
         mRecommendPagePresenter.getContentByCategory(item);
+    }
+
+    @Override
+    public void onContentItemClick(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean item) {
+        //内容点击了
+        //处理数据
+        String title = item.getTitle();
+        String url = item.getCoupon_click_url();
+        if (TextUtils.isEmpty(url)) {
+            url = item.getClick_url();
+        }
+        String cover = item.getPict_url();
+        //拿到TicketPresenter去加载数据
+        ITickPresenter ticketPresenter = PresenterManager.getInstance().getTicketPresenter();
+        ticketPresenter.getTicket(title, url, cover);
+        startActivity(new Intent(getContext(), TicketActivity.class));
     }
 }

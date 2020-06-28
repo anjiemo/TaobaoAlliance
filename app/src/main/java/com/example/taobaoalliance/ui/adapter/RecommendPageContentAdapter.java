@@ -34,8 +34,14 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
 
     @Override
     public void onBindViewHolder(@NonNull InnerHolder holder, int position) {
-        RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean uatmTbkItemBean = mData.get(position);
-        holder.setData(uatmTbkItemBean);
+        RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean itemData = mData.get(position);
+        holder.setData(itemData);
+        View itemView = holder.itemView;
+        itemView.setOnClickListener(v -> {
+            if (mOnRecommendPageContentItemClickListener != null) {
+                mOnRecommendPageContentItemClickListener.onContentItemClick(itemData);
+            }
+        });
     }
 
     @Override
@@ -87,5 +93,14 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
             }
             tvTitle.setText(itemData.getTitle());
         }
+    }
+
+    public void setOnRecommendPageContentItemClickListener(OnRecommendPageContentItemClickListener onRecommendPageContentItemClickListener) {
+        mOnRecommendPageContentItemClickListener = onRecommendPageContentItemClickListener;
+    }
+
+    private OnRecommendPageContentItemClickListener mOnRecommendPageContentItemClickListener = null;
+    public interface OnRecommendPageContentItemClickListener{
+        void onContentItemClick(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean item);
     }
 }

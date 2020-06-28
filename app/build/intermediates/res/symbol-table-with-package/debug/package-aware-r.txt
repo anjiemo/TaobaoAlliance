@@ -1077,13 +1077,14 @@ color chocolate
 color circle
 color colorAccent
 color colorBackground
+color colorEEEEEE
 color colorGray
 color colorPageBg
 color colorPrimary
 color colorPrimaryDark
 color colorTabNormal
 color colorTabSelected
-color color_tmall
+color colorTmall
 color coral
 color cornflowerblue
 color cornsilk
@@ -3482,6 +3483,11 @@ id quit
 id radio
 id range
 id recommend
+id recommend_buy_btn
+id recommend_cover
+id recommend_off_prise
+id recommend_original_prise
+id recommend_title
 id red_packet
 id register_phone_edittext
 id restart_preview
@@ -3783,6 +3789,7 @@ layout include_webview
 layout item_home_pager_content
 layout item_listview_popup
 layout item_pinned_header
+layout item_recommend_page_content
 layout item_recommend_page_left
 layout item_view
 layout item_wave_contact
@@ -3993,6 +4000,7 @@ string path_password_strike_through
 string rmb
 string search_menu_title
 string status_bar_notification_info_overflow
+string text_coupon_purchase
 string text_goods_off_prise
 string text_goods_original_prise
 string text_goods_sell_count

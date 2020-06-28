@@ -1,15 +1,19 @@
 package com.example.taobaoalliance.ui.fragment;
 
+import android.graphics.Rect;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blankj.utilcode.util.ConvertUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.model.domain.RecommendPageCategory;
 import com.example.taobaoalliance.presenter.IRecommendPagePresenter;
+import com.example.taobaoalliance.ui.adapter.RecommendPageContentAdapter;
 import com.example.taobaoalliance.ui.adapter.RecommendPageLeftAdapter;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.PresenterManager;
@@ -20,13 +24,16 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class RecommendFragment extends BaseFragment implements IRecommendPageCallback {
+public class RecommendFragment extends BaseFragment implements IRecommendPageCallback, RecommendPageLeftAdapter.OnLeftItemClickListener {
 
     @BindView(R.id.left_category_list)
     RecyclerView mLeftCategoryList;
+    @BindView(R.id.right_content_list)
+    RecyclerView mRightContentList;
 
     private IRecommendPagePresenter mRecommendPagePresenter;
     private RecommendPageLeftAdapter mLeftAdapter;
+    private RecommendPageContentAdapter mRightAdapter;
 
     @Override
     protected void initPresenter() {
@@ -53,10 +60,30 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
         mLeftCategoryList.setLayoutManager(new LinearLayoutManager(getContext()));
         mLeftAdapter = new RecommendPageLeftAdapter();
         mLeftCategoryList.setAdapter(mLeftAdapter);
+        mRightContentList.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRightAdapter = new RecommendPageContentAdapter();
+        mRightContentList.setAdapter(mRightAdapter);
+        mRightContentList.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+                int topAndBottom = ConvertUtils.dp2px(4);
+                int leftAndRight = ConvertUtils.dp2px(6);
+                outRect.top = topAndBottom;
+                outRect.bottom = topAndBottom;
+                outRect.left = leftAndRight;
+                outRect.right = leftAndRight;
+            }
+        });
+    }
+
+    @Override
+    protected void initListener() {
+        mLeftAdapter.setOnLeftItemClickListener(this);
     }
 
     @Override
     public void onCategoriesLoaded(RecommendPageCategory categories) {
+        setUpState(State.SUCCESS);
         mLeftAdapter.setData(categories);
         //分类内容
 //        LogUtils.d(this,"onCategoriesLoaded ===> " +categories);
@@ -68,7 +95,8 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
 
     @Override
     public void onContentLoaded(RecommendContent content) {
-//        LogUtils.d(this,"onContentLoaded =====> "  + content.getData().getTbk_uatm_favorites_item_get_response().getResults().getUatm_tbk_item().get(0).getTitle());
+        mRightAdapter.setData(content);
+        mRightContentList.scrollToPosition(0);
     }
 
     @Override
@@ -78,11 +106,17 @@ public class RecommendFragment extends BaseFragment implements IRecommendPageCal
 
     @Override
     public void onLoading() {
-
+        setUpState(State.LOADING);
     }
 
     @Override
     public void onEmpty() {
 
+    }
+
+    @Override
+    public void onLeftItemClick(RecommendPageCategory.DataBean item) {
+        //左边的分类点击了
+        mRecommendPagePresenter.getContentByCategory(item);
     }
 }

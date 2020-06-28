@@ -69,22 +69,22 @@ public final class R {
         public static final int ll_scaner = 0x7f09010f;
         public static final int nestedScrollView = 0x7f09013c;
         public static final int quit = 0x7f090159;
-        public static final int register_phone_edittext = 0x7f09015e;
-        public static final int restart_preview = 0x7f09015f;
-        public static final int return_scan_result = 0x7f090160;
-        public static final int right_mask = 0x7f090164;
-        public static final int rl_title = 0x7f09016a;
-        public static final int rx_title = 0x7f090171;
-        public static final int search_book_contents_failed = 0x7f09017f;
-        public static final int search_book_contents_succeeded = 0x7f090180;
-        public static final int split = 0x7f09019a;
-        public static final int ticker_made_count = 0x7f0901c5;
-        public static final int ticker_scan_count = 0x7f0901c6;
-        public static final int top_back = 0x7f0901d9;
-        public static final int top_mask = 0x7f0901da;
-        public static final int top_openpicture = 0x7f0901db;
-        public static final int webview = 0x7f090209;
-        public static final int zhuce_title = 0x7f090212;
+        public static final int register_phone_edittext = 0x7f090163;
+        public static final int restart_preview = 0x7f090164;
+        public static final int return_scan_result = 0x7f090165;
+        public static final int right_mask = 0x7f090169;
+        public static final int rl_title = 0x7f09016f;
+        public static final int rx_title = 0x7f090176;
+        public static final int search_book_contents_failed = 0x7f090184;
+        public static final int search_book_contents_succeeded = 0x7f090185;
+        public static final int split = 0x7f09019f;
+        public static final int ticker_made_count = 0x7f0901ca;
+        public static final int ticker_scan_count = 0x7f0901cb;
+        public static final int top_back = 0x7f0901de;
+        public static final int top_mask = 0x7f0901df;
+        public static final int top_openpicture = 0x7f0901e0;
+        public static final int webview = 0x7f09020e;
+        public static final int zhuce_title = 0x7f090217;
     }
     public static final class layout {
         private layout() {}

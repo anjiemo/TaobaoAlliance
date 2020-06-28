@@ -12,4 +12,5 @@
     <string name="text_tao_kou_ling">淘口令</string>
     <string name="text_ling_quan">领券</string>
     <string name="text_recommend_title">精选宝贝</string>
+    <string name="text_coupon_purchase">领券购买</string>
 </resources>

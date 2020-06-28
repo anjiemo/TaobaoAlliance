@@ -31,7 +31,7 @@ public class RecommendPageLeftAdapter extends RecyclerView.Adapter<RecommendPage
     @Override
     public InnerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         mContext = parent.getContext();
-        View itemView = LayoutInflater.from(mContext).inflate(com.lcodecore.tkrefreshlayout.R.layout.item_recommend_page_left, parent, false);
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_recommend_page_left, parent, false);
         return new InnerHolder(itemView);
     }
 
@@ -45,6 +45,25 @@ public class RecommendPageLeftAdapter extends RecyclerView.Adapter<RecommendPage
         }
         RecommendPageCategory.DataBean dataBean = mData.get(position);
         tvLeftCategory.setText(dataBean.getFavorites_title());
+        tvLeftCategory.setOnClickListener(v -> {
+            if (mOnLeftItemClickListener != null && mCurrentRecommendPosition != position) {
+                //修改当前选中的位置
+                mCurrentRecommendPosition = position;
+                mOnLeftItemClickListener.onLeftItemClick(dataBean);
+                notifyDataSetChanged();
+            }
+        });
+    }
+
+
+    public void setOnLeftItemClickListener(OnLeftItemClickListener onLeftItemClickListener) {
+        mOnLeftItemClickListener = onLeftItemClickListener;
+    }
+
+    private OnLeftItemClickListener mOnLeftItemClickListener = null;
+
+    public interface OnLeftItemClickListener {
+        void onLeftItemClick(RecommendPageCategory.DataBean item);
     }
 
     @Override
@@ -63,6 +82,9 @@ public class RecommendPageLeftAdapter extends RecyclerView.Adapter<RecommendPage
             mData.clear();
             mData.addAll(data);
             notifyDataSetChanged();
+        }
+        if (mData.size() > 0 && mOnLeftItemClickListener != null) {
+            mOnLeftItemClickListener.onLeftItemClick(mData.get(mCurrentRecommendPosition));
         }
     }
 

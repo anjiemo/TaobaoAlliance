@@ -1380,6 +1380,10 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_recommend_page_content.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\item_recommend_page_content.xml"
+    },
+    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_toast_frame.9.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xhdpi-v4\\toast_frame.9.png"
     },

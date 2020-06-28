@@ -2,6 +2,7 @@ package com.example.taobaoalliance.model;
 
 import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
+import com.example.taobaoalliance.model.domain.OnSellContent;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.model.domain.RecommendPageCategory;
 import com.example.taobaoalliance.model.domain.TicketParams;
@@ -29,6 +30,9 @@ public interface Api {
     @GET("recommend/categories")
     Call<RecommendPageCategory> getRecommendPageCategories();
 
-    @GET("")
+    @GET()
     Call<RecommendContent> getRecommendPageContent(@Url String url);
+
+    @GET()
+    Call<OnSellContent> getOnSellPageContent(@Url String url);
 }

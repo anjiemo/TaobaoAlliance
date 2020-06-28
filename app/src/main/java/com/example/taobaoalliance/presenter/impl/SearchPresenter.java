@@ -3,9 +3,11 @@ package com.example.taobaoalliance.presenter.impl;
 import androidx.annotation.NonNull;
 
 import com.example.taobaoalliance.model.Api;
+import com.example.taobaoalliance.model.domain.Histories;
 import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
+import com.example.taobaoalliance.utils.JsonCacheUtil;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.RetrofitManager;
 import com.example.taobaoalliance.view.ISearchPageCallback;
@@ -27,25 +29,69 @@ public class SearchPresenter implements ISearchPresenter {
     //搜索的当前页面
     private int mCurrentPage = DEFAULT_PAGE;
     private String mCurrentKeyword = null;
+    private final JsonCacheUtil mJsonCacheUtil;
 
     private SearchPresenter() {
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
         mApi = retrofit.create(Api.class);
+        mJsonCacheUtil = JsonCacheUtil.getInstance();
     }
 
     @Override
     public void getHistories() {
-
+        Histories histories = mJsonCacheUtil.getValue(KEY_HISTORIES, Histories.class);
+        if (histories != null && histories.getHistories() != null && histories.getHistories().size() != 0) {
+            for (ISearchPageCallback callback : mSearchPageCallbacks) {
+                callback.onHistoriesLoaded(histories.getHistories());
+            }
+        }
     }
 
     @Override
     public void delHistories() {
+        mJsonCacheUtil.delCache(KEY_HISTORIES);
+    }
 
+    public static final String KEY_HISTORIES = "key_histories";
+    public static final int DEFAULT_HISTORIES_SIZE = 10;
+    private int mHistoriesMaxSize = DEFAULT_HISTORIES_SIZE;
+
+    /**
+     * 添加历史记录
+     *
+     * @param history
+     */
+    private void saveHistory(String history) {
+        List<String> historiesList = null;
+        Histories histories = mJsonCacheUtil.getValue(KEY_HISTORIES, Histories.class);
+        //如果已经存在了，就干掉，然后再添加
+        if (histories != null && histories.getHistories() != null) {
+            historiesList = histories.getHistories();
+            historiesList.remove(history);
+        }
+        //去重完成
+        //处理没有数据的情况
+        if (historiesList == null) {
+            historiesList = new ArrayList<>();
+        }
+        if (histories == null) {
+            histories = new Histories();
+        }
+        histories.setHistories(historiesList);
+        //对个数进行限制
+        if (historiesList.size() > mHistoriesMaxSize) {
+            historiesList.subList(0, mHistoriesMaxSize);
+        }
+        //添加记录
+        historiesList.add(history);
+        //保存记录
+        mJsonCacheUtil.saveCache(KEY_HISTORIES, historiesList);
     }
 
     @Override
     public void doSearch(String keyword) {
         if (mCurrentKeyword == null || !mCurrentKeyword.equals(keyword)) {
+            saveHistory(keyword);
             mCurrentKeyword = keyword;
         }
         //更新UI状态

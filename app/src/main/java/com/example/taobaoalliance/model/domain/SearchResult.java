@@ -48,6 +48,16 @@ public class SearchResult {
         this.data = data;
     }
 
+    @Override
+    public String toString() {
+        return "SearchResult{" +
+                "success=" + success +
+                ", code=" + code +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
+    }
+
     public static class DataBean {
         /**
          * tbk_dg_material_optional_response : {"result_list":{"map_data":[{"category_id":50011977,"category_name":"洁面","commission_rate":"2106","commission_type":"MKT","coupon_amount":"50","coupon_end_time":"2019-12-06","coupon_id":"148d9d6ee22a40b8a9edf3cd9cca5bea","coupon_info":"满51.00元减50元","coupon_remain_count":100000,"coupon_share_url":"//uland.taobao.com/coupon/edetail?e=zR6oJv3HxYMNfLV8niU3RwXoB%2BDaBK5LQS0Flu%2FfbSp4QsdWMikAalrisGmre1Id522H2TxuqpJ0WI0w%2Fy1%2FUQBhsQBH6bPpnXTi95x%2F5EnCIALRMrUzmckbkW%2BkBhM2q2rZP7lt5W1ZLSj1nOXTTgH%2FlwNDrBX3bNt8v1hgCr6aTXmsSV3hf%2FMuEspq%2F3ISiJuCef6Q6GuOn7Sn8esaKgrE199RXvLx%2FjtLOxCEadVVbrKqp4Yn8g%3D%3D&&app_pvid=59590_11.132.118.131_591_1575278342678&ptl=floorId:2836;app_pvid:59590_11.132.118.131_591_1575278342678;tpp_pvid:100_11.9.3.155_1484_3811575278342682292&xId=5iX1bnfX3GSqpWopgYWlRorjJvZrmGQ8NzW5KyZnfJnORfB1V9ls6UFJGcxoDpW1ka4lVKA2dKjAUbI7OWUoWl&union_lens=lensId%3A0b847683_0cb4_16ec5e7f259_5cda","coupon_start_fee":"51.00","coupon_start_time":"2019-12-02","coupon_total_count":100000,"include_dxjh":"false","include_mkt":"true","info_dxjh":"{}","item_description":"深层清洁毛孔泡沫氨基酸控油洗面奶","item_id":599642809504,"item_url":"https://detail.tmall.com/item.htm?id=599642809504","level_one_category_id":1801,"level_one_category_name":"美容护肤/美体/精油","nick":"朴悦旗舰店","num_iid":599642809504,"pict_url":"https://img.alicdn.com/bao/uploaded/i1/2201504856387/O1CN01LaHjYm1x3IEtfPnUv_!!0-item_pic.jpg","presale_deposit":null,"presale_end_time":0,"presale_start_time":0,"presale_tail_end_time":0,"presale_tail_start_time":0,"provcity":"浙江 温州","real_post_fee":"0.00","reserve_price":"368","seller_id":2201504856387,"shop_dsr":49301,"shop_title":"朴悦旗舰店","short_title":"朴悦玫瑰滋养女男士深层清洁洁面膏","small_images":{"string":["https://img.alicdn.com/i3/2201504856387/O1CN01kErajQ1x3IEs6QDCx_!!2201504856387.jpg","https://img.alicdn.com/i4/2201504856387/O1CN01myeUW91x3IEt4FPET_!!2201504856387.jpg","https://img.alicdn.com/i3/2201504856387/O1CN01SsaMHx1x3IEuZbwan_!!2201504856387.jpg","https://img.alicdn.com/i3/2201504856387/O1CN0191Qbri1x3IEsKZ4Wk_!!2201504856387.jpg"]},"title":"朴悦玫瑰滋养洁面膏女男士深层清洁毛孔泡沫洗面奶温和氨基酸控油","tk_total_commi":"610.06","tk_total_sales":"318","url":"//s.click.taobao.com/t?e=m%3D2%26s%3Dj%2B1spI3qz9kcQipKwQzePOeEDrYVVa64r4ll3HtqqoxyINtkUhsv0G7pUK386tCDyLijLsm%2Be5hm5nS0VR3oT0KAZCke%2BMGJxC%2FP4%2FZfPFbcQmwDRwHnn1oN8CPq4PKMSBaygToy7XlvKzaj8WgV5VhGKxHIVN7zskmx5kiO8DrXn%2F66GKkZXbj8Cm8j3o1mWS5Ua7R8sogUSYuZCqnQwioX879W%2Fg3McSpj5qSCmbA%3D&scm=null&pvid=100_11.9.3.155_1484_3811575278342682292&app_pvid=59590_11.132.118.131_591_1575278342678&ptl=floorId:2836;originalFloorId:2836;pvid:100_11.9.3.155_1484_3811575278342682292;app_pvid:59590_11.132.118.131_591_1575278342678&xId=5iX1bnfX3GSqpWopgYWlRorjJvZrmGQ8NzW5KyZnfJnORfB1V9ls6UFJGcxoDpW1ka4lVKA2dKjAUbI7OWUoWl&union_lens=lensId%3A0b847683_0cb4_16ec5e7f259_5cda","user_type":1,"volume":507,"white_image":"https://img.alicdn.com/bao/uploaded/O1CN01VOS2zo1x3IDkonPPM_!!2-item_pic.png","x_id":"5iX1bnfX3GSqpWopgYWlRorjJvZrmGQ8NzW5KyZnfJnORfB1V9ls6UFJGcxoDpW1ka4lVKA2dKjAUbI7OWUoWl","zk_final_price":"168","jdd_num":0,"jdd_price":null,"oetime":null,"ostime":null},{"category_id":50011977,"category_name":"洁面","commission_rate":"1203","commission_type":"MKT","coupon_amount":"30","coupon_end_time":"2019-12-05","coupon_id":"87d2ebeb5685483986e6b330c21a7f5f","coupon_info":"满69.00元减30元","coupon_remain_count":99929,"coupon_share_url":"//uland.taobao.com/coupon/edetail?e=4XpygGwyFIkNfLV8niU3RwXoB%2BDaBK5LQS0Flu%2FfbSp4QsdWMikAalrisGmre1Id522H2TxuqpINesp7gn%2Be987OOaxnvQ0rnXTi95x%2F5EnCIALRMrUzmckbkW%2BkBhM2q2rZP7lt5W1ZLSj1nOXTTgH%2FlwNDrBX3bNt8v1hgCr7w8JifyEUHj7SIFlZWv%2BMI%2FZySoZmG4hx%2FEcO4WUgotHCshnSxXxfjTTiZb6qxNoeie%2FpBy9wBFg%3D%3D&&app_pvid=59590_11.132.118.131_591_1575278342678&ptl=floorId:2836;app_pvid:59590_11.132.118.131_591_1575278342678;tpp_pvid:100_11.9.3.155_1484_3811575278342682292&xId=iZlXNaxgCiWNr6zR3sN52oc9s4EG7gDHrYxpBFYksK25jq0sCdlRB2g1yTpku35H97o7iqcsqO1OINPMP1p2zD&union_lens=lensId%3A0b847683_0cb4_16ec5e7f259_5cdb","coupon_start_fee":"69.00","coupon_start_time":"2019-11-29","coupon_total_count":100000,"include_dxjh":"true","include_mkt":"true","info_dxjh":"{}","item_description":"除螨净肤 卸妆洗护 季德胜保密配方用心传承","item_id":573698005083,"item_url":"https://detail.tmall.com/item.htm?id=573698005083","level_one_category_id":1801,"level_one_category_name":"美容护肤/美体/精油","nick":"季德胜旗舰店","num_iid":573698005083,"pict_url":"https://img.alicdn.com/bao/uploaded/i2/2479351423/O1CN01azU5j71MNmB2KEAbf_!!0-item_pic.jpg","presale_deposit":null,"presale_end_time":0,"presale_start_time":0,"presale_tail_end_time":0,"presale_tail_start_time":0,"provcity":"江苏 南通","real_post_fee":"0.00","reserve_price":"119","seller_id":2479351423,"shop_dsr":48553,"shop_title":"季德胜旗舰店","short_title":"季德胜百部草本氨基酸除螨女洗面奶","small_images":{"string":["https://img.alicdn.com/i3/2479351423/O1CN01aqnqmg1MNmAeqoEIO_!!2479351423.jpg","https://img.alicdn.com/i1/2479351423/O1CN01GWrzUt1MNm4fBjnB1_!!2479351423.jpg","https://img.alicdn.com/i4/2479351423/O1CN01eb52DN1MNm8k6ZjZw_!!2479351423.jpg","https://img.alicdn.com/i4/2479351423/O1CN01SIgIB61MNm9aBnRxX_!!2479351423.jpg"]},"title":"季德胜百部草本氨基酸除螨洗面奶女祛痘清洁控油去螨虫男士洁面乳","tk_total_commi":"243188","tk_total_sales":"8780","url":"//s.click.taobao.com/t?e=m%3D2%26s%3DgUiLQU7%2FQLgcQipKwQzePOeEDrYVVa64r4ll3HtqqoxyINtkUhsv0G7pUK386tCDyLijLsm%2Be5hm5nS0VR3oT0KAZCke%2BMGJxC%2FP4%2FZfPFbcQmwDRwHnn1oN8CPq4PKMSBaygToy7XkE0DTilvyypEZ2r7aDcEE%2BjB7r%2B0aDb9HA690f%2B0EVnh1zIaJvETSGYckP0VpqcrHjM7YyINweHVINgCELUUjKxiXvDf8DaRs%3D&scm=null&pvid=100_11.9.3.155_1484_3811575278342682292&app_pvid=59590_11.132.118.131_591_1575278342678&ptl=floorId:2836;originalFloorId:2836;pvid:100_11.9.3.155_1484_3811575278342682292;app_pvid:59590_11.132.118.131_591_1575278342678&xId=iZlXNaxgCiWNr6zR3sN52oc9s4EG7gDHrYxpBFYksK25jq0sCdlRB2g1yTpku35H97o7iqcsqO1OINPMP1p2zD&union_lens=lensId%3A0b847683_0cb4_16ec5e7f259_5cdb","user_type":1,"volume":9183,"white_image":"https://img.alicdn.com/bao/uploaded/TB2nSl6mA7mBKNjSZFyXXbydFXa_!!2479351423.png","x_id":"iZlXNaxgCiWNr6zR3sN52oc9s4EG7gDHrYxpBFYksK25jq0sCdlRB2g1yTpku35H97o7iqcsqO1OINPMP1p2zD","zk_final_price":"69.9","jdd_num":0,"jdd_price":null,"oetime":null,"ostime":null}]},"total_results":307087,"request_id":"e3698tip080w"}
@@ -61,6 +71,13 @@ public class SearchResult {
 
         public void setTbk_dg_material_optional_response(TbkDgMaterialOptionalResponseBean tbk_dg_material_optional_response) {
             this.tbk_dg_material_optional_response = tbk_dg_material_optional_response;
+        }
+
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "tbk_dg_material_optional_response=" + tbk_dg_material_optional_response +
+                    '}';
         }
 
         public static class TbkDgMaterialOptionalResponseBean {
@@ -98,6 +115,15 @@ public class SearchResult {
                 this.request_id = request_id;
             }
 
+            @Override
+            public String toString() {
+                return "TbkDgMaterialOptionalResponseBean{" +
+                        "result_list=" + result_list +
+                        ", total_results=" + total_results +
+                        ", request_id='" + request_id + '\'' +
+                        '}';
+            }
+
             public static class ResultListBean {
                 private List<MapDataBean> map_data;
 
@@ -107,6 +133,13 @@ public class SearchResult {
 
                 public void setMap_data(List<MapDataBean> map_data) {
                     this.map_data = map_data;
+                }
+
+                @Override
+                public String toString() {
+                    return "ResultListBean{" +
+                            "map_data=" + map_data +
+                            '}';
                 }
 
                 public static class MapDataBean {
@@ -614,6 +647,62 @@ public class SearchResult {
                         this.ostime = ostime;
                     }
 
+                    @Override
+                    public String toString() {
+                        return "MapDataBean{" +
+                                "category_id=" + category_id +
+                                ", category_name='" + category_name + '\'' +
+                                ", commission_rate='" + commission_rate + '\'' +
+                                ", commission_type='" + commission_type + '\'' +
+                                ", coupon_amount='" + coupon_amount + '\'' +
+                                ", coupon_end_time='" + coupon_end_time + '\'' +
+                                ", coupon_id='" + coupon_id + '\'' +
+                                ", coupon_info='" + coupon_info + '\'' +
+                                ", coupon_remain_count=" + coupon_remain_count +
+                                ", coupon_share_url='" + coupon_share_url + '\'' +
+                                ", coupon_start_fee='" + coupon_start_fee + '\'' +
+                                ", coupon_start_time='" + coupon_start_time + '\'' +
+                                ", coupon_total_count=" + coupon_total_count +
+                                ", include_dxjh='" + include_dxjh + '\'' +
+                                ", include_mkt='" + include_mkt + '\'' +
+                                ", info_dxjh='" + info_dxjh + '\'' +
+                                ", item_description='" + item_description + '\'' +
+                                ", item_id=" + item_id +
+                                ", item_url='" + item_url + '\'' +
+                                ", level_one_category_id=" + level_one_category_id +
+                                ", level_one_category_name='" + level_one_category_name + '\'' +
+                                ", nick='" + nick + '\'' +
+                                ", num_iid=" + num_iid +
+                                ", pict_url='" + pict_url + '\'' +
+                                ", presale_deposit=" + presale_deposit +
+                                ", presale_end_time=" + presale_end_time +
+                                ", presale_start_time=" + presale_start_time +
+                                ", presale_tail_end_time=" + presale_tail_end_time +
+                                ", presale_tail_start_time=" + presale_tail_start_time +
+                                ", provcity='" + provcity + '\'' +
+                                ", real_post_fee='" + real_post_fee + '\'' +
+                                ", reserve_price='" + reserve_price + '\'' +
+                                ", seller_id=" + seller_id +
+                                ", shop_dsr=" + shop_dsr +
+                                ", shop_title='" + shop_title + '\'' +
+                                ", short_title='" + short_title + '\'' +
+                                ", small_images=" + small_images +
+                                ", title='" + title + '\'' +
+                                ", tk_total_commi='" + tk_total_commi + '\'' +
+                                ", tk_total_sales='" + tk_total_sales + '\'' +
+                                ", url='" + url + '\'' +
+                                ", user_type=" + user_type +
+                                ", volume=" + volume +
+                                ", white_image='" + white_image + '\'' +
+                                ", x_id='" + x_id + '\'' +
+                                ", zk_final_price='" + zk_final_price + '\'' +
+                                ", jdd_num=" + jdd_num +
+                                ", jdd_price=" + jdd_price +
+                                ", oetime=" + oetime +
+                                ", ostime=" + ostime +
+                                '}';
+                    }
+
                     public static class SmallImagesBean {
                         private List<String> string;
 
@@ -623,6 +712,13 @@ public class SearchResult {
 
                         public void setString(List<String> string) {
                             this.string = string;
+                        }
+
+                        @Override
+                        public String toString() {
+                            return "SmallImagesBean{" +
+                                    "string=" + string +
+                                    '}';
                         }
                     }
                 }

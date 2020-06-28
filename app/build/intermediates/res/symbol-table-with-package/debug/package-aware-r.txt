@@ -3527,6 +3527,7 @@ id search_badge
 id search_bar
 id search_book_contents_failed
 id search_book_contents_succeeded
+id search_btn
 id search_button
 id search_close_btn
 id search_edit_frame
@@ -3788,6 +3789,7 @@ layout fragment_loading
 layout fragment_on_sell
 layout fragment_recommend
 layout fragment_search
+layout fragment_search_layout
 layout fragment_with_bar_layout
 layout image
 layout include_home_pager_title_part

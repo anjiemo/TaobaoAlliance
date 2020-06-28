@@ -31,7 +31,7 @@ public class SearchPresenter implements ISearchPresenter {
     private String mCurrentKeyword = null;
     private final JsonCacheUtil mJsonCacheUtil;
 
-    private SearchPresenter() {
+    public SearchPresenter() {
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
         mApi = retrofit.create(Api.class);
         mJsonCacheUtil = JsonCacheUtil.getInstance();
@@ -85,7 +85,7 @@ public class SearchPresenter implements ISearchPresenter {
         //添加记录
         historiesList.add(history);
         //保存记录
-        mJsonCacheUtil.saveCache(KEY_HISTORIES, historiesList);
+        mJsonCacheUtil.saveCache(KEY_HISTORIES, histories);
     }
 
     @Override

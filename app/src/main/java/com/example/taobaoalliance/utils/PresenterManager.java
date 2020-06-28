@@ -2,10 +2,12 @@ package com.example.taobaoalliance.utils;
 
 import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
 import com.example.taobaoalliance.presenter.IHomePresenter;
+import com.example.taobaoalliance.presenter.IOnSellPagePresenter;
 import com.example.taobaoalliance.presenter.IRecommendPagePresenter;
 import com.example.taobaoalliance.presenter.ITickPresenter;
 import com.example.taobaoalliance.presenter.impl.CategoryPagePresenterImpl;
 import com.example.taobaoalliance.presenter.impl.HomePresenterImpl;
+import com.example.taobaoalliance.presenter.impl.OnSellPagePresenterImpl;
 import com.example.taobaoalliance.presenter.impl.RecommendPagePresenterIml;
 import com.example.taobaoalliance.presenter.impl.TicketPresenterImpl;
 
@@ -15,6 +17,7 @@ public class PresenterManager {
     private final IHomePresenter mHomePresenter;
     private final ITickPresenter mTicketPresenter;
     private final IRecommendPagePresenter mRecommendPagePresenter;
+    private final IOnSellPagePresenter mOnSellPagePresenter;
 
     public static PresenterManager getInstance() {
         if (singleton == null) {
@@ -43,10 +46,15 @@ public class PresenterManager {
         return mRecommendPagePresenter;
     }
 
+    public IOnSellPagePresenter getOnSellPagePresenter() {
+        return mOnSellPagePresenter;
+    }
+
     private PresenterManager() {
         mCategoryPagePresenter = new CategoryPagePresenterImpl();
         mHomePresenter = new HomePresenterImpl();
         mTicketPresenter = new TicketPresenterImpl();
         mRecommendPagePresenter = new RecommendPagePresenterIml();
+        mOnSellPagePresenter = new OnSellPagePresenterImpl();
     }
 }

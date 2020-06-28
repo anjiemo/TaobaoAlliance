@@ -3371,6 +3371,7 @@ id iv_left
 id iv_loading
 id iv_logo
 id iv_menu
+id iv_on_sell_cover
 id iv_picture
 id iv_progress_icon
 id iv_qr_code
@@ -3462,6 +3463,7 @@ id notification_main_column_container
 id number
 id off
 id on
+id on_sell_content_list
 id other
 id outgoing
 id outline
@@ -3642,6 +3644,9 @@ id tv_itpop
 id tv_left
 id tv_left_category
 id tv_number
+id tv_on_sell_content_title
+id tv_on_sell_off_prise
+id tv_on_sell_original_prise
 id tv_point_la
 id tv_point_lo
 id tv_progress
@@ -3778,8 +3783,8 @@ layout fragment_error
 layout fragment_home
 layout fragment_home_pager
 layout fragment_loading
+layout fragment_on_sell
 layout fragment_recommend
-layout fragment_red_packet
 layout fragment_search
 layout image
 layout include_home_pager_title_part
@@ -3788,6 +3793,7 @@ layout include_title
 layout include_webview
 layout item_home_pager_content
 layout item_listview_popup
+layout item_on_sell_content
 layout item_pinned_header
 layout item_recommend_page_content
 layout item_recommend_page_left
@@ -4007,6 +4013,7 @@ string text_goods_sell_count
 string text_home
 string text_ling_quan
 string text_network_error_tips
+string text_on_sell_title
 string text_recommend_title
 string text_red_packet
 string text_search

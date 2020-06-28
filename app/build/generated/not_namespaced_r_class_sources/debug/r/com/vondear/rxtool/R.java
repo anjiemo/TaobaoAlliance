@@ -21,14 +21,14 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int toast_icon = 0x7f0901d9;
-        public static final int toast_root = 0x7f0901da;
-        public static final int toast_text = 0x7f0901db;
+        public static final int toast_icon = 0x7f0901db;
+        public static final int toast_root = 0x7f0901dc;
+        public static final int toast_text = 0x7f0901dd;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int toast_layout = 0x7f0c0096;
+        public static final int toast_layout = 0x7f0c0097;
     }
     public static final class raw {
         private raw() {}

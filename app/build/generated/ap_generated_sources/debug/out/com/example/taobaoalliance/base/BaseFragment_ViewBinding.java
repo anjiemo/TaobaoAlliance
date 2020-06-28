@@ -14,7 +14,7 @@ import java.lang.Override;
 public class BaseFragment_ViewBinding implements Unbinder {
   private BaseFragment target;
 
-  private View view7f09013d;
+  private View view7f09013e;
 
   @UiThread
   public BaseFragment_ViewBinding(final BaseFragment target, View source) {
@@ -22,7 +22,7 @@ public class BaseFragment_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.network_error_tips, "method 'retry'");
-    view7f09013d = view;
+    view7f09013e = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -38,7 +38,7 @@ public class BaseFragment_ViewBinding implements Unbinder {
     target = null;
 
 
-    view7f09013d.setOnClickListener(null);
-    view7f09013d = null;
+    view7f09013e.setOnClickListener(null);
+    view7f09013e = null;
   }
 }

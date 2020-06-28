@@ -8,7 +8,7 @@ import com.example.taobaoalliance.base.BaseActivity;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.ui.fragment.HomeFragment;
 import com.example.taobaoalliance.ui.fragment.RecommendFragment;
-import com.example.taobaoalliance.ui.fragment.RedPacketFragment;
+import com.example.taobaoalliance.ui.fragment.OnSellFragment;
 import com.example.taobaoalliance.ui.fragment.SearchFragment;
 import com.example.taobaoalliance.utils.LogUtils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,7 +20,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.main_navigation_bar)
     BottomNavigationView mNavigationView;
     private HomeFragment mHomeFragment;
-    private RedPacketFragment mRedPacketFragment;
+    private OnSellFragment mRedPacketFragment;
     private RecommendFragment mRecommendFragment;
     private SearchFragment mSearchFragment;
     private FragmentManager mFm;
@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity {
 
     private void initFragment() {
         mHomeFragment = new HomeFragment();
-        mRedPacketFragment = new RedPacketFragment();
+        mRedPacketFragment = new OnSellFragment();
         mRecommendFragment = new RecommendFragment();
         mSearchFragment = new SearchFragment();
         mFm = getSupportFragmentManager();

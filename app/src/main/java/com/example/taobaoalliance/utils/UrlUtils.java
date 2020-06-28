@@ -9,8 +9,12 @@ public class UrlUtils {
     public static String getTicketUrl(String url) {
         if (url.startsWith("http") || url.startsWith("https")) {
             return url;
-        }else {
+        } else {
             return "https:" + url;
         }
+    }
+
+    public static String getRecommendPageContentUrl(int categoryId) {
+        return "recommend/" + categoryId;
     }
 }

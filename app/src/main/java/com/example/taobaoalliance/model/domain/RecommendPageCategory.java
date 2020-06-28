@@ -48,6 +48,16 @@ public class RecommendPageCategory {
         this.data = data;
     }
 
+    @Override
+    public String toString() {
+        return "RecommendPageCategory{" +
+                "success=" + success +
+                ", code=" + code +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
+    }
+
     public static class DataBean {
         /**
          * type : 1

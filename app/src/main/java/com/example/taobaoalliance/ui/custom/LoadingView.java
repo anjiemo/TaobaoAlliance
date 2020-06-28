@@ -43,7 +43,7 @@ public class LoadingView extends AppCompatImageView {
                 if (mDegrees >= 360) {
                     mDegrees = 0;
                 }
-                LogUtils.d(LoadingView.this,"loading...");
+                //LogUtils.d(LoadingView.this,"loading...");
                 invalidate();
                 //判断是否要继续旋转
                 //如果不可见，或者已经DetachedFromWindow就不再转动了

@@ -1,12 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.fragment.SearchFragment">
 
     <!--历史记录-->
+    <LinearLayout
+        android:id="@+id/search_history_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_search_history"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/delete_icon" />
+
+        </RelativeLayout>
+
+        <com.example.taobaoalliance.ui.custom.TextFlowLayout
+            android:id="@+id/search_history_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:horizontalSpace="10dp"
+            app:verticalSpace="10dp" />
+
+    </LinearLayout>
 
     <!--推荐关键字-->
+
+    <LinearLayout
+        android:id="@+id/search_recommend_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_hot_search"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <com.example.taobaoalliance.ui.custom.TextFlowLayout
+            android:id="@+id/search_recommend_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:horizontalSpace="10dp"
+            app:verticalSpace="10dp" />
+
+    </LinearLayout>
 
     <!--搜索结果-->
 

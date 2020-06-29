@@ -3,25 +3,37 @@ package com.example.taobaoalliance.ui.fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.blankj.utilcode.util.CollectionUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
-import com.example.taobaoalliance.utils.LogUtils;
+import com.example.taobaoalliance.ui.custom.TextFlowLayout;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.view.ISearchPageCallback;
-import com.lcodecore.tkrefreshlayout.utils.LogUtil;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
 
 public class SearchFragment extends BaseFragment implements ISearchPageCallback {
 
     private ISearchPresenter mSearchPresenter;
+    @BindView(R.id.search_history_view)
+    TextFlowLayout mHistoriesView;
+    @BindView(R.id.search_recommend_view)
+    TextFlowLayout mRecommendView;
+    @BindView(R.id.search_history_container)
+    View mHistoryContainer;
+    @BindView(R.id.search_recommend_container)
+    View mRecommendContainer;
 
     @Override
     protected void initPresenter() {
@@ -58,7 +70,12 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
 
     @Override
     public void onHistoriesLoaded(List<String> histories) {
-
+        if (CollectionUtils.isEmpty(histories)) {
+            mHistoryContainer.setVisibility(View.GONE);
+        }else {
+            mHistoryContainer.setVisibility(View.VISIBLE);
+            mHistoriesView.setTextList(histories);
+        }
     }
 
     @Override
@@ -89,6 +106,16 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     @Override
     public void onRecommendWordsLoaded(List<SearchRecommend.DataBean> recommendWords) {
         //LogUtils.d(this, "recommendWords size =====> " + recommendWords.size());
+        List<String> recommendKeywords = new ArrayList<>();
+        for (SearchRecommend.DataBean item : recommendWords) {
+            recommendKeywords.add(item.getKeyword());
+        }
+        if (CollectionUtils.isEmpty(recommendKeywords)) {
+            mRecommendContainer.setVisibility(View.GONE);
+        } else {
+            mRecommendView.setTextList(recommendKeywords);
+            mRecommendContainer.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

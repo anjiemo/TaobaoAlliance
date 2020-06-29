@@ -73,6 +73,11 @@ public class TextFlowLayout extends ViewGroup {
             //等价于
             TextView item = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.flow_text_view, this, false);
             item.setText(text);
+            item.setOnClickListener(v -> {
+                if (mOnFlowTextItemClickListener != null) {
+                    mOnFlowTextItemClickListener.onFlowItemClick(text);
+                }
+            });
             addView(item);
         }
     }
@@ -83,6 +88,7 @@ public class TextFlowLayout extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        if (getChildCount() == 0) return;
         //这个是描述单行
         List<View> line = null;
         lines.clear();
@@ -92,7 +98,6 @@ public class TextFlowLayout extends ViewGroup {
         //LogUtils.d(this,"onMeasure ====> " + getChildCount());
         //测量孩子
         int childCount = getChildCount();
-        if (childCount == 0) return;
         for (int i = 0; i < childCount; i++) {
             View itemView = getChildAt(i);
             if (itemView.getVisibility() != VISIBLE) {
@@ -104,26 +109,26 @@ public class TextFlowLayout extends ViewGroup {
             measureChild(itemView, widthMeasureSpec, heightMeasureSpec);
             //测量后
             LogUtils.d(this, "after height =====> " + itemView.getMeasuredHeight());
-            if (line == null) {
-                //说明当前行为空，可以添加进来
+//            if (line == null) {
+//                //说明当前行为空，可以添加进来
+//                line = createNewLine(itemView);
+//            } else {
+//                //判断是否可以继续再添加
+//                if (canBeAdd(itemView, line)) {
+//                    //可以添加，添加进去
+//                    line.add(itemView);
+//                } else {
+//                    //新创建一行
+//                    line = createNewLine(itemView);
+//                }
+//            }
+            if (line == null || !canBeAdd(itemView, line)) {
+                //如果该行为空，或者该行无法继续添加，则创建新的一行
                 line = createNewLine(itemView);
             } else {
-                //判断是否可以继续再添加
-                if (canBeAdd(itemView, line)) {
-                    //可以添加，添加进去
-                    line.add(itemView);
-                } else {
-                    //新创建一行
-                    line = createNewLine(itemView);
-                }
+                //可以添加，添加进去
+                line.add(itemView);
             }
-//            if (line != null && canBeAdd(itemView, line)) {
-//                //可以添加，添加进去
-//                line.add(itemView);
-//            } else {
-//                //新创建一行
-//                createNewLine(itemView);
-//            }
         }
         mItemHeight = getChildAt(0).getMeasuredHeight();
         int selfHeight = (int) (lines.size() * mItemHeight + mItemVerticalSpace * (lines.size() + 1) + 0.5f);
@@ -160,8 +165,8 @@ public class TextFlowLayout extends ViewGroup {
         }
         //水平间距的宽度
         totalWidth += mItemHorizontalSpace * (line.size() + 1);
-        LogUtils.d(this, "totalWidth =====> " + totalWidth);
-        LogUtils.d(this, "mSelfWidth ====> " + mSelfWidth);
+        //LogUtils.d(this, "totalWidth =====> " + totalWidth);
+        //LogUtils.d(this, "mSelfWidth ====> " + mSelfWidth);
         //如果小于/等于当前控件的宽度，则可以添加，否则不能添加
         return totalWidth <= mSelfWidth;
     }
@@ -182,5 +187,15 @@ public class TextFlowLayout extends ViewGroup {
             }
             topOffSet += mItemHeight + mItemHorizontalSpace;
         }
+    }
+
+    public void setOnFlowTextItemClickListener(OnFlowTextItemClickListener onFlowTextItemClickListener) {
+        mOnFlowTextItemClickListener = onFlowTextItemClickListener;
+    }
+
+    private OnFlowTextItemClickListener mOnFlowTextItemClickListener = null;
+
+    public interface OnFlowTextItemClickListener {
+        void onFlowItemClick(String text);
     }
 }

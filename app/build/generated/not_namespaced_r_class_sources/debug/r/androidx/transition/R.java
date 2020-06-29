@@ -23,7 +23,7 @@ public final class R {
         public static final int fontStyle = 0x7f040149;
         public static final int fontVariationSettings = 0x7f04014a;
         public static final int fontWeight = 0x7f04014b;
-        public static final int ttcIndex = 0x7f040388;
+        public static final int ttcIndex = 0x7f040389;
     }
     public static final class color {
         private color() {}
@@ -104,18 +104,18 @@ public final class R {
         public static final int right_side = 0x7f09016d;
         public static final int save_non_transition_alpha = 0x7f09017a;
         public static final int save_overlay_view = 0x7f09017b;
-        public static final int tag_transition_group = 0x7f0901b6;
-        public static final int tag_unhandled_key_event_manager = 0x7f0901b7;
-        public static final int tag_unhandled_key_listeners = 0x7f0901b8;
-        public static final int text = 0x7f0901bd;
-        public static final int text2 = 0x7f0901be;
-        public static final int time = 0x7f0901d6;
-        public static final int title = 0x7f0901d7;
-        public static final int transition_current_scene = 0x7f0901e6;
-        public static final int transition_layout_save = 0x7f0901e7;
-        public static final int transition_position = 0x7f0901e8;
-        public static final int transition_scene_layoutid_cache = 0x7f0901e9;
-        public static final int transition_transform = 0x7f0901ea;
+        public static final int tag_transition_group = 0x7f0901ba;
+        public static final int tag_unhandled_key_event_manager = 0x7f0901bb;
+        public static final int tag_unhandled_key_listeners = 0x7f0901bc;
+        public static final int text = 0x7f0901c1;
+        public static final int text2 = 0x7f0901c2;
+        public static final int time = 0x7f0901da;
+        public static final int title = 0x7f0901db;
+        public static final int transition_current_scene = 0x7f0901ea;
+        public static final int transition_layout_save = 0x7f0901eb;
+        public static final int transition_position = 0x7f0901ec;
+        public static final int transition_scene_layoutid_cache = 0x7f0901ed;
+        public static final int transition_transform = 0x7f0901ee;
     }
     public static final class integer {
         private integer() {}
@@ -125,12 +125,12 @@ public final class R {
     public static final class layout {
         private layout() {}
 
-        public static final int notification_action = 0x7f0c007c;
-        public static final int notification_action_tombstone = 0x7f0c007d;
-        public static final int notification_template_custom_big = 0x7f0c007e;
-        public static final int notification_template_icon_group = 0x7f0c007f;
-        public static final int notification_template_part_chronometer = 0x7f0c0080;
-        public static final int notification_template_part_time = 0x7f0c0081;
+        public static final int notification_action = 0x7f0c007d;
+        public static final int notification_action_tombstone = 0x7f0c007e;
+        public static final int notification_template_custom_big = 0x7f0c007f;
+        public static final int notification_template_icon_group = 0x7f0c0080;
+        public static final int notification_template_part_chronometer = 0x7f0c0081;
+        public static final int notification_template_part_time = 0x7f0c0082;
     }
     public static final class string {
         private string() {}
@@ -162,7 +162,7 @@ public final class R {
         public static final int FontFamily_fontProviderFetchTimeout = 3;
         public static final int FontFamily_fontProviderPackage = 4;
         public static final int FontFamily_fontProviderQuery = 5;
-        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f040141, 0x7f040149, 0x7f04014a, 0x7f04014b, 0x7f040388 };
+        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f040141, 0x7f040149, 0x7f04014a, 0x7f04014b, 0x7f040389 };
         public static final int FontFamilyFont_android_font = 0;
         public static final int FontFamilyFont_android_fontWeight = 1;
         public static final int FontFamilyFont_android_fontStyle = 2;

@@ -25,9 +25,9 @@ public final class R {
         public static final int s_left_jiantou = 0x7f0800c8;
         public static final int s_light = 0x7f0800c9;
         public static final int scan_mask = 0x7f0800cc;
-        public static final int shape_small_round_blue1_code_tool = 0x7f0800e8;
-        public static final int shape_small_round_blue_code_tool = 0x7f0800e9;
-        public static final int transparent_bg_code_tool = 0x7f080102;
+        public static final int shape_small_round_blue1_code_tool = 0x7f0800eb;
+        public static final int shape_small_round_blue_code_tool = 0x7f0800ec;
+        public static final int transparent_bg_code_tool = 0x7f080105;
     }
     public static final class id {
         private id() {}
@@ -77,14 +77,14 @@ public final class R {
         public static final int rx_title = 0x7f090179;
         public static final int search_book_contents_failed = 0x7f090187;
         public static final int search_book_contents_succeeded = 0x7f090188;
-        public static final int split = 0x7f0901a3;
-        public static final int ticker_made_count = 0x7f0901ce;
-        public static final int ticker_scan_count = 0x7f0901cf;
-        public static final int top_back = 0x7f0901e2;
-        public static final int top_mask = 0x7f0901e3;
-        public static final int top_openpicture = 0x7f0901e4;
-        public static final int webview = 0x7f090216;
-        public static final int zhuce_title = 0x7f09021f;
+        public static final int split = 0x7f0901a7;
+        public static final int ticker_made_count = 0x7f0901d2;
+        public static final int ticker_scan_count = 0x7f0901d3;
+        public static final int top_back = 0x7f0901e6;
+        public static final int top_mask = 0x7f0901e7;
+        public static final int top_openpicture = 0x7f0901e8;
+        public static final int webview = 0x7f09021a;
+        public static final int zhuce_title = 0x7f090223;
     }
     public static final class layout {
         private layout() {}

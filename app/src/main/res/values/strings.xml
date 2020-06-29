@@ -14,4 +14,6 @@
     <string name="text_recommend_title">精选宝贝</string>
     <string name="text_coupon_purchase">领券购买</string>
     <string name="text_on_sell_title">特惠宝贝</string>
+    <string name="text_search_history">搜索历史</string>
+    <string name="text_hot_search">热门搜索</string>
 </resources>

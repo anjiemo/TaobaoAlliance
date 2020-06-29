@@ -16,19 +16,19 @@ public final class R {
         public static final int ic_clear_white_48dp = 0x7f080082;
         public static final int ic_error_outline_white_48dp = 0x7f080083;
         public static final int ic_info_outline_white_48dp = 0x7f080084;
-        public static final int toast_frame = 0x7f0800f5;
+        public static final int toast_frame = 0x7f0800f8;
     }
     public static final class id {
         private id() {}
 
-        public static final int toast_icon = 0x7f0901dd;
-        public static final int toast_root = 0x7f0901de;
-        public static final int toast_text = 0x7f0901df;
+        public static final int toast_icon = 0x7f0901e1;
+        public static final int toast_root = 0x7f0901e2;
+        public static final int toast_text = 0x7f0901e3;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int toast_layout = 0x7f0c0099;
+        public static final int toast_layout = 0x7f0c009a;
     }
     public static final class raw {
         private raw() {}

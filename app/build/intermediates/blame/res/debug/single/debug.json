@@ -72,6 +72,10 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\drawable\\avd_hide_password.xml"
     },
     {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_flow_text_bg_normal.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\shape_flow_text_bg_normal.xml"
+    },
+    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
@@ -676,6 +680,10 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_flow_text_view.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\flow_text_view.xml"
+    },
+    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
@@ -738,6 +746,10 @@
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_checkbox_unchecked_to_checked_mtrl_animation.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_flow_text_bg.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\selector_flow_text_bg.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -1878,6 +1890,10 @@
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_flow_text_bg_press.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\shape_flow_text_bg_press.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",

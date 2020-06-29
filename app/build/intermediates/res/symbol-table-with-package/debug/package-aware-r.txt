@@ -416,6 +416,7 @@ attr hintTextColor
 attr homeAsUpIndicator
 attr homeLayout
 attr horizontalOffset
+attr horizontalSpace
 attr hoveredFocusedTranslationZ
 attr icon
 attr iconEndPadding
@@ -965,6 +966,7 @@ attr useCompatPadding
 attr useMaterialThemeColors
 attr values
 attr verticalOffset
+attr verticalSpace
 attr viewInflaterClass
 attr visibleItems
 attr voiceIcon
@@ -3082,6 +3084,7 @@ drawable seat_sold
 drawable seekbar_thumb
 drawable selector_bg
 drawable selector_checkbox_sure_cancle
+drawable selector_flow_text_bg
 drawable selector_location
 drawable selector_love
 drawable set
@@ -3090,6 +3093,8 @@ drawable shape_button_bg
 drawable shape_circle_blue
 drawable shape_circle_blue1
 drawable shape_edit_box_bg
+drawable shape_flow_text_bg_normal
+drawable shape_flow_text_bg_press
 drawable shape_gray_circle_bg
 drawable shape_indicator_point_normal
 drawable shape_indicator_point_selected
@@ -3532,8 +3537,12 @@ id search_button
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_history_container
+id search_history_view
 id search_mag_icon
 id search_plate
+id search_recommend_container
+id search_recommend_view
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
@@ -3780,6 +3789,7 @@ layout dialog_show_picture
 layout dialog_sure
 layout dialog_sure_false
 layout dialog_year_month_day
+layout flow_text_view
 layout footer_item_default_loading
 layout fragment_empty
 layout fragment_error
@@ -4016,12 +4026,14 @@ string text_goods_off_prise
 string text_goods_original_prise
 string text_goods_sell_count
 string text_home
+string text_hot_search
 string text_ling_quan
 string text_network_error_tips
 string text_on_sell_title
 string text_recommend_title
 string text_red_packet
 string text_search
+string text_search_history
 string text_search_tips
 string text_selected
 string text_tao_kou_ling
@@ -4824,6 +4836,7 @@ styleable FlikerProgressBar borderWidth finishColor loadingColor radius stopColo
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
+styleable FlowTextStyle horizontalSpace verticalSpace
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding

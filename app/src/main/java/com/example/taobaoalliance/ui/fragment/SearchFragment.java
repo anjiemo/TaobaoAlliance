@@ -1,24 +1,31 @@
 package com.example.taobaoalliance.ui.fragment;
 
+import android.graphics.Rect;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.CollectionUtils;
+import com.blankj.utilcode.util.ConvertUtils;
 import com.blankj.utilcode.util.ObjectUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.Histories;
 import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
+import com.example.taobaoalliance.ui.adapter.LinearItemContentAdapter;
 import com.example.taobaoalliance.ui.custom.TextFlowLayout;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.view.ISearchPageCallback;
+import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
+import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +45,11 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     View mRecommendContainer;
     @BindView(R.id.search_history_delete)
     View mHistoryDelete;
+    @BindView(R.id.search_result_list)
+    RecyclerView mSearchList;
+    @BindView(R.id.search_result_container)
+    TwinklingRefreshLayout mRefreshContainer;
+    private LinearItemContentAdapter mSearchResultAdapter;
 
     @Override
     protected void initPresenter() {
@@ -45,7 +57,7 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         mSearchPresenter.registerViewCallback(this);
         //获取搜索推荐词
         mSearchPresenter.getRecommendWords();
-        //mSearchPresenter.doSearch("毛衣");
+        mSearchPresenter.doSearch("毛衣");
         mSearchPresenter.getHistories();
     }
 
@@ -72,12 +84,28 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
             //删除历史记录
             mSearchPresenter.delHistories();
         });
+        mRefreshContainer.setOnRefreshListener(new RefreshListenerAdapter() {
+            @Override
+            public void onLoadMore(TwinklingRefreshLayout refreshLayout) {
+                //去加载更多内容
+                if (mSearchPresenter != null) {
+                    mSearchPresenter.loaderMore();
+                }
+            }
+        });
     }
 
     @Override
     protected void initView(View rootView) {
-        setUpState(State.SUCCESS);
-
+        //设置布局管理器
+        mSearchList.setLayoutManager(new LinearLayoutManager(getContext()));
+        //设置适配器
+        mSearchResultAdapter = new LinearItemContentAdapter();
+        mSearchList.setAdapter(mSearchResultAdapter);
+        //设置刷新控件
+        mRefreshContainer.setEnableLoadmore(true);
+        mRefreshContainer.setEnableRefresh(false);
+        mRefreshContainer.setEnableOverScroll(true);
     }
 
     @Override
@@ -100,22 +128,45 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
 
     @Override
     public void onSearchSuccess(SearchResult result) {
+        setUpState(State.SUCCESS);
         //LogUtils.d(this,"result =====> " + result);
+        //隐藏掉历史记录和推荐
+        mRecommendContainer.setVisibility(View.GONE);
+        mHistoryContainer.setVisibility(View.GONE);
+        //显示搜索界面
+        mRefreshContainer.setVisibility(View.VISIBLE);
+        //设置数据
+        mSearchResultAdapter.setData(result.getData().getTbk_dg_material_optional_response().getResult_list().getMap_data());
+        mSearchList.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+                outRect.top = ConvertUtils.dp2px(1.5f);
+                outRect.bottom = ConvertUtils.dp2px(1.5f);
+            }
+        });
     }
 
     @Override
     public void onMoreLoaded(SearchResult result) {
-
+        mRefreshContainer.finishLoadmore();
+        //加载更多的结果
+        //拿到结果，添加到适配器的尾部
+        List<SearchResult.DataBean.TbkDgMaterialOptionalResponseBean.ResultListBean.MapDataBean> moreData = result.getData().getTbk_dg_material_optional_response().getResult_list().getMap_data();
+        mSearchResultAdapter.addData(moreData);
+        //提示用户加载到的内容
+        ToastUtils.showShort(String.format("加载到了%1s个宝贝", moreData.size()));
     }
 
     @Override
     public void onMoreLoaderError() {
-
+        mRefreshContainer.finishLoadmore();
+        ToastUtils.showShort("网络异常，请稍后重试~");
     }
 
     @Override
     public void onMoreLoadedEmpty() {
-
+        mRefreshContainer.finishLoadmore();
+        ToastUtils.showShort("没有更多数据了~");
     }
 
     @Override
@@ -128,23 +179,23 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         if (CollectionUtils.isEmpty(recommendKeywords)) {
             mRecommendContainer.setVisibility(View.GONE);
         } else {
-            mRecommendView.setTextList(recommendKeywords);
             mRecommendContainer.setVisibility(View.VISIBLE);
+            mRecommendView.setTextList(recommendKeywords);
         }
     }
 
     @Override
     public void onError() {
-
+        setUpState(State.ERROR);
     }
 
     @Override
     public void onLoading() {
-
+        setUpState(State.LOADING);
     }
 
     @Override
     public void onEmpty() {
-
+        setUpState(State.EMPTY);
     }
 }

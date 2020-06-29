@@ -15,9 +15,8 @@ import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
 import com.example.taobaoalliance.model.domain.IBaseInfo;
-import com.example.taobaoalliance.utils.LogUtils;
+import com.example.taobaoalliance.model.domain.ILinearItemInfo;
 import com.example.taobaoalliance.utils.UrlUtils;
-import com.vondear.rxtool.RxTool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,25 +25,24 @@ import java.util.Locale;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerContentAdapter.InnerHolder> {
+public class LinearItemContentAdapter extends RecyclerView.Adapter<LinearItemContentAdapter.InnerHolder> {
 
-    List<HomePagerContent.DataBean> objects = new ArrayList<>();
+    List<ILinearItemInfo> objects = new ArrayList<>();
 
     @NonNull
     @Override
     public InnerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_home_pager_content, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_linear_goods_content, parent, false);
         return new InnerHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull InnerHolder holder, int position) {
-        HomePagerContent.DataBean dataBean = objects.get(position);
+        ILinearItemInfo dataBean = objects.get(position);
         holder.setData(dataBean);
         holder.itemView.setOnClickListener(v -> {
             if (mOnListItemClickListener != null) {
-                HomePagerContent.DataBean item = objects.get(position);
-                mOnListItemClickListener.onItemClick(item);
+                mOnListItemClickListener.onItemClick(dataBean);
             }
         });
     }
@@ -54,13 +52,13 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
         return objects.size();
     }
 
-    public void setData(List<HomePagerContent.DataBean> contents) {
+    public void setData(List<? extends ILinearItemInfo> contents) {
         objects.clear();
         objects.addAll(contents);
         notifyDataSetChanged();
     }
 
-    public void addData(List<HomePagerContent.DataBean> contents) {
+    public void addData(List<? extends ILinearItemInfo> contents) {
         //添加之前拿到原来的size
         int oldSize = objects.size();
         objects.addAll(contents);
@@ -88,18 +86,18 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
             ButterKnife.bind(this, itemView);
         }
 
-        public void setData(HomePagerContent.DataBean dataBean) {
+        public void setData(ILinearItemInfo dataBean) {
             Context context = itemView.getContext();
-            ViewGroup.LayoutParams layoutParams = ivCover.getLayoutParams();
-            int width = layoutParams.width;
-            int height = layoutParams.height;
-            int coverSize = Math.max(width, height) / 2;
-            String coverPath = UrlUtils.getCoverPath(dataBean.getPict_url(), coverSize);
-//            LogUtils.d(this, "coverPath============> " + coverPath);
-            Glide.with(context).load(coverPath).into(ivCover);
+            //ViewGroup.LayoutParams layoutParams = ivCover.getLayoutParams();
+            //int width = layoutParams.width;
+            //int height = layoutParams.height;
+            //int coverSize = Math.max(width, height) / 2;
+            String coverPath = UrlUtils.getTicketUrl(dataBean.getCover());
+            //LogUtils.d(this, "coverPath============> " + coverPath);
+            Glide.with(context).load(coverPath).error(R.mipmap.no_image).placeholder(R.mipmap.no_image).into(ivCover);
             tvTitle.setText(dataBean.getTitle());
-            String finalPrice = dataBean.getZk_final_price();
-            long couponAmount = dataBean.getCoupon_amount();
+            String finalPrice = dataBean.getFinalPrise();
+            long couponAmount = dataBean.getCouponAmount();
             float resultPrise = Float.parseFloat(finalPrice) - couponAmount;
             tvFinalPrise.setText(String.format(Locale.SIMPLIFIED_CHINESE, "%.2f", resultPrise));
             tvOffPrise.setText(String.format(context.getString(R.string.text_goods_off_prise), couponAmount));
@@ -114,7 +112,8 @@ public class HomePagerContentAdapter extends RecyclerView.Adapter<HomePagerConte
     }
 
     private OnListItemClickListener mOnListItemClickListener = null;
-    public interface OnListItemClickListener{
+
+    public interface OnListItemClickListener {
         void onItemClick(IBaseInfo item);
     }
 }

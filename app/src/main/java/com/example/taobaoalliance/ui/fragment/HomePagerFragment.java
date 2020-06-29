@@ -20,7 +20,7 @@ import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.model.domain.HomePagerContent;
 import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.presenter.ICategoryPagerPresenter;
-import com.example.taobaoalliance.ui.adapter.HomePagerContentAdapter;
+import com.example.taobaoalliance.ui.adapter.LinearItemContentAdapter;
 import com.example.taobaoalliance.ui.adapter.LooperPagerAdapter;
 import com.example.taobaoalliance.ui.custom.AutoLoopViewPager;
 import com.example.taobaoalliance.utils.Constants;
@@ -37,12 +37,12 @@ import java.util.List;
 import butterknife.BindView;
 
 public class HomePagerFragment extends BaseFragment
-        implements ICategoryCallback, HomePagerContentAdapter.OnListItemClickListener,
+        implements ICategoryCallback, LinearItemContentAdapter.OnListItemClickListener,
         LooperPagerAdapter.OnLooperPageItemClickListener {
 
     private ICategoryPagerPresenter mCategoryPagerPresenter;
     private int mMaterialId;
-    private HomePagerContentAdapter mContentAdapter;
+    private LinearItemContentAdapter mContentAdapter;
     private LooperPagerAdapter mLooperPagerAdapter;
 
     public static HomePagerFragment newInstance(Categories.DataBean category) {
@@ -152,12 +152,12 @@ public class HomePagerFragment extends BaseFragment
         mContentList.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-                outRect.top = ConvertUtils.dp2px(2);
-                outRect.bottom = ConvertUtils.dp2px(2);
+                outRect.top = ConvertUtils.dp2px(1.5f);
+                outRect.bottom = ConvertUtils.dp2px(1.5f);
             }
         });
         //创建适配器
-        mContentAdapter = new HomePagerContentAdapter();
+        mContentAdapter = new LinearItemContentAdapter();
         //设置适配器
         mContentList.setAdapter(mContentAdapter);
         //创建轮播图适配器
@@ -195,7 +195,7 @@ public class HomePagerFragment extends BaseFragment
     @Override
     public void onContentLoaded(List<HomePagerContent.DataBean> contents) {
         //数据列表加载到了
-        // TODO: 2020/6/21 更新UI
+        //更新UI
         mContentAdapter.setData(contents);
         setUpState(State.SUCCESS);
     }

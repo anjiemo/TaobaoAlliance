@@ -29,6 +29,7 @@ import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
 import com.example.taobaoalliance.ui.adapter.LinearItemContentAdapter;
 import com.example.taobaoalliance.ui.custom.TextFlowLayout;
+import com.example.taobaoalliance.utils.KeyboardUtil;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.utils.TicketUtils;
 import com.example.taobaoalliance.view.ISearchPageCallback;
@@ -40,7 +41,7 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class SearchFragment extends BaseFragment implements ISearchPageCallback {
+public class SearchFragment extends BaseFragment implements ISearchPageCallback, TextFlowLayout.OnFlowTextItemClickListener {
 
     private ISearchPresenter mSearchPresenter;
     @BindView(R.id.search_history_view)
@@ -102,6 +103,8 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
 
     @Override
     protected void initListener() {
+        mHistoriesView.setOnFlowTextItemClickListener(this);
+        mRecommendView.setOnFlowTextItemClickListener(this);
         //发起搜索
         mSearchBtn.setOnClickListener(v -> {
             //如果有内容则搜索
@@ -109,14 +112,21 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
             if (hasInput(false)) {
                 //发起搜索
                 if (mSearchPresenter != null) {
-                    mSearchPresenter.doSearch(mSearchInputBox.getText().toString().trim());
+                    //mSearchPresenter.doSearch(mSearchInputBox.getText().toString().trim());
+                    toSearch(mSearchInputBox.getText().toString().trim());
+                    KeyboardUtil.hide(v);
                 }
             } else {
-                //
+                //隐藏键盘
+                KeyboardUtil.hide(v);
             }
         });
         //清除输入框里的内容
-        mClearInputBtn.setOnClickListener(v -> mSearchInputBox.setText(""));
+        mClearInputBtn.setOnClickListener(v -> {
+            mSearchInputBox.setText("");
+            //回到历史记录界面
+            switch2HistoryPage();
+        });
         //监听输入框的内容变化
         mSearchInputBox.addTextChangedListener(new TextWatcher() {
             @Override
@@ -143,9 +153,9 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
                 String keyword = v.getText().toString().trim();
                 if (TextUtils.isEmpty(keyword)) return false;
                 //判断拿到的内容是否为空
-
                 //发起搜索
-                mSearchPresenter.doSearch(keyword);
+                toSearch(keyword);
+                //mSearchPresenter.doSearch(keyword);
             }
             return false;
         });
@@ -167,6 +177,18 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
                 TicketUtils::toTicketPage);
     }
 
+    /**
+     * 切换到历史和推荐界面
+     */
+    private void switch2HistoryPage() {
+        if (mSearchPresenter != null) {
+            mSearchPresenter.getHistories();
+        }
+        mRecommendContainer.setVisibility(mRecommendView.getContentSize() != 0 ? View.VISIBLE : View.GONE);
+        //内容要隐藏
+        mRefreshContainer.setVisibility(View.GONE);
+    }
+
     private boolean hasInput(boolean containSpace) {
         if (containSpace) {
             return mSearchInputBox.getText().toString().trim().length() > 0;
@@ -186,10 +208,18 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         mRefreshContainer.setEnableLoadmore(true);
         mRefreshContainer.setEnableRefresh(false);
         mRefreshContainer.setEnableOverScroll(true);
+        mSearchList.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+                outRect.top = ConvertUtils.dp2px(1.5f);
+                outRect.bottom = ConvertUtils.dp2px(1.5f);
+            }
+        });
     }
 
     @Override
     public void onHistoriesLoaded(Histories histories) {
+        setUpState(State.SUCCESS);
         if (ObjectUtils.isEmpty(histories) || CollectionUtils.isEmpty(histories.getHistories())) {
             mHistoryContainer.setVisibility(View.GONE);
         } else {
@@ -223,13 +253,6 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
             //切换到搜索内容为空
             setUpState(State.EMPTY);
         }
-        mSearchList.addItemDecoration(new RecyclerView.ItemDecoration() {
-            @Override
-            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-                outRect.top = ConvertUtils.dp2px(1.5f);
-                outRect.bottom = ConvertUtils.dp2px(1.5f);
-            }
-        });
     }
 
     @Override
@@ -283,5 +306,21 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     @Override
     public void onEmpty() {
         setUpState(State.EMPTY);
+    }
+
+    @Override
+    public void onFlowItemClick(String text) {
+        //发起搜索
+        toSearch(text);
+    }
+
+    private void toSearch(String text) {
+        if (mSearchPresenter != null) {
+            mSearchList.scrollToPosition(0);
+            mSearchInputBox.setText(text);
+            int length = mSearchInputBox.getText().length();
+            if (length > 0) mSearchInputBox.setSelection(length);
+            mSearchPresenter.doSearch(text);
+        }
     }
 }

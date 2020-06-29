@@ -9,10 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.CollectionUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.utils.LogUtils;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @SuppressLint("CustomViewStyleable")
@@ -65,8 +68,11 @@ public class TextFlowLayout extends ViewGroup {
     }
 
     public void setTextList(List<String> textList) {
-        mTextList = textList;
-        //遍历你饿哦让
+        removeAllViews();
+        mTextList.clear();
+        mTextList.addAll(textList);
+        Collections.reverse(mTextList);
+        //遍历内容
         for (String text : mTextList) {
             //添加子View
             //View item = LayoutInflater.from(getContext()).inflate(R.layout.flow_text_view, this, true);
@@ -80,6 +86,10 @@ public class TextFlowLayout extends ViewGroup {
             });
             addView(item);
         }
+    }
+
+    public int getContentSize() {
+        return mTextList.size();
     }
 
     //这个是描述所有的行

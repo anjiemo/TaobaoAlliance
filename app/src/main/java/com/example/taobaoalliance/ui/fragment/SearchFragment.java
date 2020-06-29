@@ -1,7 +1,9 @@
 package com.example.taobaoalliance.ui.fragment;
 
 import android.graphics.Rect;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +58,7 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     @BindView(R.id.search_btn)
     TextView mSearchBtn;
     @BindView(R.id.search_clear_btn)
-    ImageView mClearBtn;
+    ImageView mClearInputBtn;
     @BindView(R.id.search_input_box)
     EditText mSearchInputBox;
     @BindView(R.id.search_result_container)
@@ -69,7 +71,7 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         mSearchPresenter.registerViewCallback(this);
         //获取搜索推荐词
         mSearchPresenter.getRecommendWords();
-        mSearchPresenter.doSearch("毛衣");
+        //mSearchPresenter.doSearch("毛衣");
         mSearchPresenter.getHistories();
     }
 
@@ -100,6 +102,42 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
 
     @Override
     protected void initListener() {
+        //发起搜索
+        mSearchBtn.setOnClickListener(v -> {
+            //如果有内容则搜索
+            //如果输入框没有内容则取消
+            if (hasInput(false)) {
+                //发起搜索
+                if (mSearchPresenter != null) {
+                    mSearchPresenter.doSearch(mSearchInputBox.getText().toString().trim());
+                }
+            } else {
+                //
+            }
+        });
+        //清除输入框里的内容
+        mClearInputBtn.setOnClickListener(v -> mSearchInputBox.setText(""));
+        //监听输入框的内容变化
+        mSearchInputBox.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //变化的时候通知
+                //如果长度不为0，那么显示删除按钮
+                //否则隐藏删除按钮
+                mClearInputBtn.setVisibility(hasInput(true) ? View.VISIBLE : View.GONE);
+                mSearchBtn.setText(hasInput(false) ? "搜索" : "取消");
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         mSearchInputBox.setOnEditorActionListener((v, actionId, event) -> {
             if (actionId == EditorInfo.IME_ACTION_SEARCH && mSearchPresenter != null) {
                 String keyword = v.getText().toString().trim();
@@ -127,6 +165,14 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         mSearchResultAdapter.setOnListItemClickListener(
                 //搜素内容被点击了
                 TicketUtils::toTicketPage);
+    }
+
+    private boolean hasInput(boolean containSpace) {
+        if (containSpace) {
+            return mSearchInputBox.getText().toString().trim().length() > 0;
+        } else {
+            return mSearchInputBox.getText().toString().length() > 0;
+        }
     }
 
     @Override

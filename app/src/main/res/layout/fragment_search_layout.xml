@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:paddingStart="20dp"
-            android:paddingEnd="10dp"
+            android:paddingEnd="20dp"
             android:text="@string/text_cancel"
             android:textColor="@color/white" />
 
@@ -41,8 +41,8 @@
 
         <ImageView
             android:id="@+id/search_clear_btn"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
             android:layout_toStartOf="@id/search_btn"

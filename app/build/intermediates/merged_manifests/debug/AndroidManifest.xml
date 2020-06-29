@@ -37,6 +37,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.taobaoalliance.ui.activity.ScanQrCodeActivity" />
         <activity
             android:name="com.example.taobaoalliance.ui.activity.TicketActivity"
             android:launchMode="singleTop" />

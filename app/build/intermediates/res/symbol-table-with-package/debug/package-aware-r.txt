@@ -3249,6 +3249,7 @@ id btn_next
 id buttonPanel
 id button_container
 id cancel_button
+id capture_container
 id capture_containter
 id capture_crop_layout
 id capture_preview
@@ -3633,6 +3634,7 @@ id top
 id topPanel
 id top_back
 id top_mask
+id top_openPicture
 id top_openpicture
 id touch_outside
 id transition_current_scene
@@ -3757,6 +3759,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_tool
 layout activity_main
+layout activity_scan_qr_code
 layout activity_scaner_code
 layout activity_ticket
 layout activity_webview

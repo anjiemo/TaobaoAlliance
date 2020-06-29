@@ -15,8 +15,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-
-        <activity android:name="com.vondear.rxfeature.activity.ActivityScanerCode" />
+        <activity android:name=".ui.activity.ScanQrCodeActivity" />
         <activity
             android:name=".ui.activity.TicketActivity"
             android:launchMode="singleTop" />

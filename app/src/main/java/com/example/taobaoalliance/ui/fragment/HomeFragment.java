@@ -17,6 +17,7 @@ import com.example.taobaoalliance.presenter.IHomePresenter;
 import com.example.taobaoalliance.presenter.impl.HomePresenterImpl;
 import com.example.taobaoalliance.ui.activity.IMainActivity;
 import com.example.taobaoalliance.ui.activity.MainActivity;
+import com.example.taobaoalliance.ui.activity.ScanQrCodeActivity;
 import com.example.taobaoalliance.ui.adapter.HomePagerAdapter;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.view.IHomeCallback;
@@ -64,7 +65,7 @@ public class HomeFragment extends BaseFragment implements IHomeCallback {
         });
         mScanBtn.setOnClickListener(v -> {
             //跳转到扫码界面
-            startActivity(new Intent(getContext(), ActivityScanerCode.class));
+            startActivity(new Intent(getContext(), ScanQrCodeActivity.class));
         });
     }
 

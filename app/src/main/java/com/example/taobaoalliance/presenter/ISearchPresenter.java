@@ -25,7 +25,7 @@ public interface ISearchPresenter extends IBasePresenter<ISearchPageCallback> {
     /**
      * 重新搜索
      */
-    void refresh();
+    void research();
 
     /**
      * 获取更多的搜索内容

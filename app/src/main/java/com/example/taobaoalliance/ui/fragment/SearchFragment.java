@@ -23,6 +23,7 @@ import com.example.taobaoalliance.presenter.ISearchPresenter;
 import com.example.taobaoalliance.ui.adapter.LinearItemContentAdapter;
 import com.example.taobaoalliance.ui.custom.TextFlowLayout;
 import com.example.taobaoalliance.utils.PresenterManager;
+import com.example.taobaoalliance.utils.TicketUtils;
 import com.example.taobaoalliance.view.ISearchPageCallback;
 import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
@@ -62,6 +63,14 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     }
 
     @Override
+    protected void onRetryClick() {
+        //重新加载内容
+        if (mSearchPresenter != null) {
+            mSearchPresenter.research();
+        }
+    }
+
+    @Override
     protected void release() {
         if (mSearchPresenter != null) {
             mSearchPresenter.unregisterViewCallback(this);
@@ -93,6 +102,9 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
                 }
             }
         });
+        mSearchResultAdapter.setOnListItemClickListener(
+                //搜素内容被点击了
+                TicketUtils::toTicketPage);
     }
 
     @Override

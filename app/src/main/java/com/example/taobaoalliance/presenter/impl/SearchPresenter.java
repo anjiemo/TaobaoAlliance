@@ -155,7 +155,7 @@ public class SearchPresenter implements ISearchPresenter {
     }
 
     @Override
-    public void refresh() {
+    public void research() {
         if (mCurrentKeyword == null) {
             onEmpty();
         } else {

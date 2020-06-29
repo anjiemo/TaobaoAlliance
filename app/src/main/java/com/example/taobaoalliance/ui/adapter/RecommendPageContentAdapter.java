@@ -1,5 +1,6 @@
 package com.example.taobaoalliance.ui.adapter;
 
+import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blankj.utilcode.util.ConvertUtils;
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.utils.Constants;
+import com.example.taobaoalliance.utils.CornerTransform;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,8 +80,12 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
         }
 
         public void setData(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean itemData) {
+            Context context = itemView.getContext();
             String pictUrl = itemData.getPict_url();
-            Glide.with(itemView.getContext()).load(pictUrl).error(R.mipmap.no_image).placeholder(R.mipmap.no_image).into(ivCover);
+            CornerTransform cornerTransform = new CornerTransform(context, ConvertUtils.dp2px(6))
+                    .setExceptCorner(false, false, false, false);
+            Glide.with(context).load(pictUrl).error(R.mipmap.no_image).placeholder(R.mipmap.no_image)
+                    .transform(cornerTransform).into(ivCover);
             if (TextUtils.isEmpty(itemData.getCoupon_click_url())) {
                 tvOriginalPrise.setText("晚啦，没有优惠券了");
                 tvBuyBtn.setVisibility(View.GONE);

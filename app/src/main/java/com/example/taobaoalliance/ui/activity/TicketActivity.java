@@ -7,19 +7,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
+
 import com.blankj.utilcode.util.AppUtils;
+import com.blankj.utilcode.util.ConvertUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseActivity;
 import com.example.taobaoalliance.model.domain.TicketResult;
 import com.example.taobaoalliance.presenter.ITickPresenter;
+import com.example.taobaoalliance.utils.CornerTransform;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.utils.UrlUtils;
 import com.example.taobaoalliance.view.ITicketPagerCallback;
@@ -43,6 +48,7 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
     View mRetryLoadText;
     private boolean mHasTaoBaoApp = false;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void initPresenter() {
         mTicketPresenter = PresenterManager.getInstance().getTicketPresenter();
@@ -117,7 +123,10 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
         //设置图片封面
         if (mCover != null && !TextUtils.isEmpty(cover)) {
             String coverPath = UrlUtils.getTicketUrl(cover);
-            Glide.with(this).load(coverPath).error(R.mipmap.no_image).placeholder(R.mipmap.no_image).into(mCover);
+            CornerTransform cornerTransform = new CornerTransform(this, ConvertUtils.dp2px(8))
+                    .setExceptCorner(false, false, false, false);
+            Glide.with(this).load(coverPath).error(R.mipmap.no_image).placeholder(R.mipmap.no_image)
+                    .transform(cornerTransform).into(mCover);
         }
         //设置Code
         if (result != null && result.getData().getTbk_tpwd_create_response() != null) {

@@ -12,10 +12,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.blankj.utilcode.util.ConvertUtils;
 import com.bumptech.glide.Glide;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.OnSellContent;
+import com.example.taobaoalliance.utils.CornerTransform;
 import com.example.taobaoalliance.utils.UrlUtils;
 
 import java.util.ArrayList;
@@ -94,7 +96,10 @@ public class OnSellContentAdapter extends RecyclerView.Adapter<OnSellContentAdap
         public void setData(OnSellContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean data, Context context) {
             String pictUrl = data.getPict_url();
             String targetUrl = UrlUtils.getTicketUrl(pictUrl);
-            Glide.with(context).load(targetUrl).error(R.mipmap.no_image).placeholder(R.mipmap.no_image).into(ivCover);
+            CornerTransform cornerTransform = new CornerTransform(context, ConvertUtils.dp2px(6))
+                    .setExceptCorner(false, false, false, false);
+            Glide.with(context).load(targetUrl).error(R.mipmap.no_image).placeholder(R.mipmap.no_image)
+                    .transform(cornerTransform).into(ivCover);
             tvTitle.setText(data.getTitle());
             String originalPrise = data.getZk_final_price();
             tvOriginalPrise.setText(String.format("¥%1s ", originalPrise));

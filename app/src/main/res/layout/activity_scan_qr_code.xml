@@ -25,7 +25,7 @@
             android:id="@+id/top_mask"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="40dp"
             android:alpha="0.5"
@@ -41,8 +41,7 @@
             android:layout_marginEnd="40dp"
             android:alpha="0.5"
             android:onClick="btn"
-            android:src="@drawable/s_img"
-            android:visibility="gone" />
+            android:src="@drawable/s_img" />
 
         <ImageView
             android:id="@+id/top_back"
@@ -172,7 +171,7 @@
                 android:src="@drawable/linecode_icon"
                 android:text="条形码"
                 android:textColor="#DBD5D5" />
-            
+
         </LinearLayout>
 
     </RelativeLayout>

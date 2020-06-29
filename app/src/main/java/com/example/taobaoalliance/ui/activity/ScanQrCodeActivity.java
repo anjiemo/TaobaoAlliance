@@ -29,7 +29,6 @@ import androidx.fragment.app.FragmentActivity;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.model.domain.IBaseInfo;
-import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.utils.TicketUtils;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -144,7 +143,7 @@ public class ScanQrCodeActivity extends FragmentActivity {
         //权限初始化
         initPermission();
         //扫描动画初始化
-        initScanerAnimation();
+        initScannerAnimation();
         //初始化 CameraManager
         CameraManager.init(this);
         hasSurface = false;
@@ -257,7 +256,7 @@ public class ScanQrCodeActivity extends FragmentActivity {
         }
     }
 
-    private void initScanerAnimation() {
+    private void initScannerAnimation() {
         ImageView mQrLineView = findViewById(R.id.capture_scan_line);
         RxAnimationTool.ScaleUpDowm(mQrLineView);
     }

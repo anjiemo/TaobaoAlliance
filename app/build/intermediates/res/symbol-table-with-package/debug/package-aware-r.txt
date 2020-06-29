@@ -3534,15 +3534,20 @@ id search_book_contents_failed
 id search_book_contents_succeeded
 id search_btn
 id search_button
+id search_clear_btn
 id search_close_btn
 id search_edit_frame
 id search_go_btn
 id search_history_container
+id search_history_delete
 id search_history_view
+id search_input_box
 id search_mag_icon
 id search_plate
 id search_recommend_container
 id search_recommend_view
+id search_result_container
+id search_result_list
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
@@ -3806,7 +3811,7 @@ layout include_home_pager_title_part
 layout include_rx_title
 layout include_title
 layout include_webview
-layout item_home_pager_content
+layout item_linear_goods_content
 layout item_listview_popup
 layout item_on_sell_content
 layout item_pinned_header
@@ -4021,6 +4026,7 @@ string path_password_strike_through
 string rmb
 string search_menu_title
 string status_bar_notification_info_overflow
+string text_cancel
 string text_coupon_purchase
 string text_goods_off_prise
 string text_goods_original_prise

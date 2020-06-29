@@ -21,9 +21,9 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int toast_icon = 0x7f0901e1;
-        public static final int toast_root = 0x7f0901e2;
-        public static final int toast_text = 0x7f0901e3;
+        public static final int toast_icon = 0x7f0901e6;
+        public static final int toast_root = 0x7f0901e7;
+        public static final int toast_text = 0x7f0901e8;
     }
     public static final class layout {
         private layout() {}

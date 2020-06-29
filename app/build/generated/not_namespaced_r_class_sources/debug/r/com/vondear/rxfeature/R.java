@@ -77,14 +77,14 @@ public final class R {
         public static final int rx_title = 0x7f090179;
         public static final int search_book_contents_failed = 0x7f090187;
         public static final int search_book_contents_succeeded = 0x7f090188;
-        public static final int split = 0x7f0901a7;
-        public static final int ticker_made_count = 0x7f0901d2;
-        public static final int ticker_scan_count = 0x7f0901d3;
-        public static final int top_back = 0x7f0901e6;
-        public static final int top_mask = 0x7f0901e7;
-        public static final int top_openpicture = 0x7f0901e8;
-        public static final int webview = 0x7f09021a;
-        public static final int zhuce_title = 0x7f090223;
+        public static final int split = 0x7f0901ac;
+        public static final int ticker_made_count = 0x7f0901d7;
+        public static final int ticker_scan_count = 0x7f0901d8;
+        public static final int top_back = 0x7f0901eb;
+        public static final int top_mask = 0x7f0901ec;
+        public static final int top_openpicture = 0x7f0901ed;
+        public static final int webview = 0x7f09021f;
+        public static final int zhuce_title = 0x7f090228;
     }
     public static final class layout {
         private layout() {}

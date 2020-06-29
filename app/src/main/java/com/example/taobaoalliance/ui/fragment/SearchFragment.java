@@ -1,9 +1,14 @@
 package com.example.taobaoalliance.ui.fragment;
 
 import android.graphics.Rect;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -48,6 +53,12 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     View mHistoryDelete;
     @BindView(R.id.search_result_list)
     RecyclerView mSearchList;
+    @BindView(R.id.search_btn)
+    TextView mSearchBtn;
+    @BindView(R.id.search_clear_btn)
+    ImageView mClearBtn;
+    @BindView(R.id.search_input_box)
+    EditText mSearchInputBox;
     @BindView(R.id.search_result_container)
     TwinklingRefreshLayout mRefreshContainer;
     private LinearItemContentAdapter mSearchResultAdapter;
@@ -89,6 +100,17 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
 
     @Override
     protected void initListener() {
+        mSearchInputBox.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH && mSearchPresenter != null) {
+                String keyword = v.getText().toString().trim();
+                if (TextUtils.isEmpty(keyword)) return false;
+                //判断拿到的内容是否为空
+
+                //发起搜索
+                mSearchPresenter.doSearch(keyword);
+            }
+            return false;
+        });
         mHistoryDelete.setOnClickListener(v -> {
             //删除历史记录
             mSearchPresenter.delHistories();
@@ -148,7 +170,13 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         //显示搜索界面
         mRefreshContainer.setVisibility(View.VISIBLE);
         //设置数据
-        mSearchResultAdapter.setData(result.getData().getTbk_dg_material_optional_response().getResult_list().getMap_data());
+        try {
+            mSearchResultAdapter.setData(result.getData().getTbk_dg_material_optional_response().getResult_list().getMap_data());
+        } catch (Exception e) {
+            e.printStackTrace();
+            //切换到搜索内容为空
+            setUpState(State.EMPTY);
+        }
         mSearchList.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {

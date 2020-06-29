@@ -82,6 +82,7 @@ public class MainActivity extends BaseActivity {
     private BaseFragment lastOneFragment = null;
 
     private void switchFragment(BaseFragment targetFragment) {
+        if (targetFragment == lastOneFragment) return;
         //修改成add和hide的方式来控制Fragment的切换
         FragmentTransaction fragmentTransaction = mFm.beginTransaction();
         if (!targetFragment.isAdded()) {

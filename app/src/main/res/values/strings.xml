@@ -16,4 +16,5 @@
     <string name="text_on_sell_title">特惠宝贝</string>
     <string name="text_search_history">搜索历史</string>
     <string name="text_hot_search">热门搜索</string>
+    <string name="text_cancel">取消</string>
 </resources>

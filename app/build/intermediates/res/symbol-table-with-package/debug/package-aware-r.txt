@@ -4042,6 +4042,7 @@ string text_network_error_tips
 string text_on_sell_title
 string text_recommend_title
 string text_red_packet
+string text_scan_tips
 string text_search
 string text_search_history
 string text_search_tips

@@ -4041,11 +4041,12 @@ int string text_network_error_tips 0x7f110069
 int string text_on_sell_title 0x7f11006a
 int string text_recommend_title 0x7f11006b
 int string text_red_packet 0x7f11006c
-int string text_search 0x7f11006d
-int string text_search_history 0x7f11006e
-int string text_search_tips 0x7f11006f
-int string text_selected 0x7f110070
-int string text_tao_kou_ling 0x7f110071
+int string text_scan_tips 0x7f11006d
+int string text_search 0x7f11006e
+int string text_search_history 0x7f11006f
+int string text_search_tips 0x7f110070
+int string text_selected 0x7f110071
+int string text_tao_kou_ling 0x7f110072
 int style ActivityTranslucent 0x7f120000
 int style AlertDialog_AppCompat 0x7f120001
 int style AlertDialog_AppCompat_Light 0x7f120002

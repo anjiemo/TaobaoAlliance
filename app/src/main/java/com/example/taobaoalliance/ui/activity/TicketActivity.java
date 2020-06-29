@@ -114,10 +114,12 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
 
     @Override
     public void onTicketLoaded(String cover, TicketResult result) {
+        //设置图片封面
         if (mCover != null && !TextUtils.isEmpty(cover)) {
             String coverPath = UrlUtils.getTicketUrl(cover);
             Glide.with(this).load(coverPath).error(R.mipmap.no_image).placeholder(R.mipmap.no_image).into(mCover);
         }
+        //设置Code
         if (result != null && result.getData().getTbk_tpwd_create_response() != null) {
             mTicketCode.setText(result.getData().getTbk_tpwd_create_response().getData().getModel());
         }

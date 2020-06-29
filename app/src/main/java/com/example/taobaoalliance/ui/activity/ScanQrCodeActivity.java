@@ -26,7 +26,11 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.taobaoalliance.R;
+import com.example.taobaoalliance.model.domain.IBaseInfo;
+import com.example.taobaoalliance.utils.PresenterManager;
+import com.example.taobaoalliance.utils.TicketUtils;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
@@ -62,7 +66,7 @@ public class ScanQrCodeActivity extends FragmentActivity {
     /**
      * 扫描结果监听
      */
-    private static OnRxScanerListener mScanerListener;
+    private static OnRxScanerListener mScannerListener;
 
     private InactivityTimer inactivityTimer;
 
@@ -124,8 +128,8 @@ public class ScanQrCodeActivity extends FragmentActivity {
     /**
      * 设置扫描信息回调
      */
-    public static void setScanerListener(OnRxScanerListener scanerListener) {
-        mScanerListener = scanerListener;
+    public static void setScannerListener(OnRxScanerListener scannerListener) {
+        mScannerListener = scannerListener;
     }
 
     @Override
@@ -232,7 +236,7 @@ public class ScanQrCodeActivity extends FragmentActivity {
     @Override
     protected void onDestroy() {
         inactivityTimer.shutdown();
-        mScanerListener = null;
+        mScannerListener = null;
         super.onDestroy();
     }
 
@@ -335,16 +339,16 @@ public class ScanQrCodeActivity extends FragmentActivity {
                 // 开始对图像资源解码
                 Result rawResult = RxQrBarTool.decodeFromPhoto(photo);
                 if (rawResult != null) {
-                    if (mScanerListener == null) {
+                    if (mScannerListener == null) {
                         initDialogResult(rawResult);
                     } else {
-                        mScanerListener.onSuccess("From to Picture", rawResult);
+                        mScannerListener.onSuccess("From to Picture", rawResult);
                     }
                 } else {
-                    if (mScanerListener == null) {
+                    if (mScannerListener == null) {
                         RxToast.error("图片识别失败.");
                     } else {
-                        mScanerListener.onFail("From to Picture", "图片识别失败");
+                        mScannerListener.onFail("From to Picture", "图片识别失败");
                     }
                 }
             } catch (IOException e) {
@@ -403,12 +407,37 @@ public class ScanQrCodeActivity extends FragmentActivity {
 
         String result1 = result.getText();
         Log.v("二维码/条形码 扫描结果", result1);
-        if (mScanerListener == null) {
-            RxToast.success(result1);
-            initDialogResult(result);
+        //处理扫描结果
+        if (result1.contains("taobao.com")) {
+            //属于淘宝联盟的二维码
+            //跳转到淘口令界面
+            TicketUtils.toTicketPage(new IBaseInfo() {
+                @Override
+                public String getCover() {
+                    return null;
+                }
+
+                @Override
+                public String getTitle() {
+                    return "";
+                }
+
+                @Override
+                public String getUrl() {
+                    return result1;
+                }
+            });
         } else {
-            mScanerListener.onSuccess("From to Camera", result);
+            //非法二维码
+            ToastUtils.showShort("当前二维码非法！");
         }
+        //https://uland.taobao.com/coupon/edetail?e=YqfwkpuJwIANfLV8niU3R5TgU2jJNKOfNNtsjZw%2F%2FoIZ1xjojYirAja0eEPYeyAOzkrWgBDFUzDGAnWMMDjz7%2BmFKyIN1bVX65OH1WfUm95Uf2TiFOebe%2B%2BB5YLEpr4hwmx%2FaYuFuBuOeUcSvy%2FHYmF5qFnaO9996DeX2ucVKhvHjZlrd41oqCtXMc0NHG1Bz5JO%2BPQ43%2B5lBRYM90QVRw%3D%3D&&app_pvid=59590_11.132.118.123_562_1593420940495&ptl=floorId:9660;app_pvid:59590_11.132.118.123_562_1593420940495;tpp_pvid:78f5e1fd-10e9-45f9-907d-9ce359c1eee3&union_lens=lensId%3AMAPI%401593420940%400b84767b_84dc_172ff4a0583_8865%4001
+//        if (mScannerListener == null) {
+//            RxToast.success(result1);
+//            initDialogResult(result);
+//        } else {
+//            mScannerListener.onSuccess("From to Camera", result);
+//        }
     }
     //==============================================================================================解析结果 及 后续处理 end
 

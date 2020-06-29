@@ -17,4 +17,5 @@
     <string name="text_search_history">搜索历史</string>
     <string name="text_hot_search">热门搜索</string>
     <string name="text_cancel">取消</string>
+    <string name="text_scan_tips">扫描【领券联盟商品二维码】领券</string>
 </resources>

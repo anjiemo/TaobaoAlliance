@@ -10074,11 +10074,12 @@ public final class R {
     public static final int text_on_sell_title=0x7f11006a;
     public static final int text_recommend_title=0x7f11006b;
     public static final int text_red_packet=0x7f11006c;
-    public static final int text_search=0x7f11006d;
-    public static final int text_search_history=0x7f11006e;
-    public static final int text_search_tips=0x7f11006f;
-    public static final int text_selected=0x7f110070;
-    public static final int text_tao_kou_ling=0x7f110071;
+    public static final int text_scan_tips=0x7f11006d;
+    public static final int text_search=0x7f11006e;
+    public static final int text_search_history=0x7f11006f;
+    public static final int text_search_tips=0x7f110070;
+    public static final int text_selected=0x7f110071;
+    public static final int text_tao_kou_ling=0x7f110072;
   }
   public static final class style {
     public static final int ActivityTranslucent=0x7f120000;

@@ -13,7 +13,6 @@
         android:clipToPadding="true"
         android:fitsSystemWindows="true" />
 
-
     <RelativeLayout
         android:id="@+id/rl_title"
         android:layout_width="match_parent"
@@ -26,8 +25,9 @@
             android:id="@+id/top_mask"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp"
             android:alpha="0.5"
             android:onClick="btn"
             android:src="@drawable/s_light" />
@@ -41,7 +41,8 @@
             android:layout_marginEnd="40dp"
             android:alpha="0.5"
             android:onClick="btn"
-            android:src="@drawable/s_img" />
+            android:src="@drawable/s_img"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/top_back"
@@ -71,7 +72,6 @@
             android:background="@drawable/scan_mask"
             android:contentDescription="@string/app_name" />
 
-
         <RelativeLayout
             android:id="@+id/capture_crop_layout"
             android:layout_width="280dp"
@@ -88,7 +88,6 @@
                 android:background="@drawable/rxtool_scan_ray"
                 android:contentDescription="@string/app_name" />
         </RelativeLayout>
-
 
         <ImageView
             android:id="@+id/right_mask"
@@ -119,11 +118,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_scan_help"
-            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dp_10"
-            android:text="将二维码图片对准扫描框即可自动扫描"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="@string/text_scan_tips"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
@@ -137,8 +134,8 @@
             android:gravity="bottom"
             android:text="RxTool"
             android:textColor="#84FFFFFF"
-            android:textSize="@dimen/text_12" />
-
+            android:textSize="@dimen/text_12"
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/ll_scan_help"
@@ -152,7 +149,6 @@
             android:weightSum="2">
 
             <TextView
-
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -176,6 +172,7 @@
                 android:src="@drawable/linecode_icon"
                 android:text="条形码"
                 android:textColor="#DBD5D5" />
+            
         </LinearLayout>
 
     </RelativeLayout>

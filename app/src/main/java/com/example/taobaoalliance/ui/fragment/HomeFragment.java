@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.taobaoalliance.R;
@@ -13,6 +14,8 @@ import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.Categories;
 import com.example.taobaoalliance.presenter.IHomePresenter;
 import com.example.taobaoalliance.presenter.impl.HomePresenterImpl;
+import com.example.taobaoalliance.ui.activity.IMainActivity;
+import com.example.taobaoalliance.ui.activity.MainActivity;
 import com.example.taobaoalliance.ui.adapter.HomePagerAdapter;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.view.IHomeCallback;
@@ -26,6 +29,8 @@ public class HomeFragment extends BaseFragment implements IHomeCallback {
     TabLayout mTabLayout;
     @BindView(R.id.home_pager)
     ViewPager homePager;
+    @BindView(R.id.home_search_input_box)
+    View mSearchInputBox;
 
     private IHomePresenter mHomePresenter;
     private HomePagerAdapter mHomePagerAdapter;
@@ -41,6 +46,18 @@ public class HomeFragment extends BaseFragment implements IHomeCallback {
         //给ViewPager设置适配器
         mHomePagerAdapter = new HomePagerAdapter(getChildFragmentManager());
         homePager.setAdapter(mHomePagerAdapter);
+    }
+
+    @Override
+    protected void initListener() {
+        mSearchInputBox.setOnClickListener(v -> {
+            //跳转到搜索页面
+            FragmentActivity activity = getActivity();
+            if (activity instanceof MainActivity) {
+                IMainActivity mainActivity = (IMainActivity) activity;
+                mainActivity.switch2Search();
+            }
+        });
     }
 
     @Override

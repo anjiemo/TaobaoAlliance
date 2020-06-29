@@ -315,12 +315,12 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback,
     }
 
     private void toSearch(String text) {
-        if (mSearchPresenter != null) {
-            mSearchList.scrollToPosition(0);
-            mSearchInputBox.setText(text);
-            int length = mSearchInputBox.getText().length();
-            if (length > 0) mSearchInputBox.setSelection(length);
-            mSearchPresenter.doSearch(text);
-        }
+        if (mSearchPresenter == null) return;
+        mSearchList.scrollToPosition(0);
+        mSearchInputBox.setText(text);
+        mSearchInputBox.setFocusable(true);
+        mSearchInputBox.requestFocus();
+        mSearchInputBox.setSelection(text.length());
+        mSearchPresenter.doSearch(text);
     }
 }

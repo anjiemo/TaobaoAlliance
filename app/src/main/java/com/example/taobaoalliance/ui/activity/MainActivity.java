@@ -15,7 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements IMainActivity {
 
     @BindView(R.id.main_navigation_bar)
     BottomNavigationView mNavigationView;
@@ -28,6 +28,14 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initPresenter() {
 
+    }
+
+    /**
+     * 跳转到搜索界面
+     */
+    public void switch2Search() {
+        //切换导航栏的选中项
+        mNavigationView.setSelectedItemId(R.id.search);
     }
 
     @Override
@@ -82,6 +90,7 @@ public class MainActivity extends BaseActivity {
     private BaseFragment lastOneFragment = null;
 
     private void switchFragment(BaseFragment targetFragment) {
+        //如果上一个Fragment跟当前要切换的Fragment是同一个，那么不需要切换
         if (targetFragment == lastOneFragment) return;
         //修改成add和hide的方式来控制Fragment的切换
         FragmentTransaction fragmentTransaction = mFm.beginTransaction();
@@ -94,7 +103,7 @@ public class MainActivity extends BaseActivity {
             fragmentTransaction.hide(lastOneFragment);
         }
         lastOneFragment = targetFragment;
-//        fragmentTransaction.replace(R.id.main_page_container, targetFragment);
+        //fragmentTransaction.replace(R.id.main_page_container, targetFragment);
         fragmentTransaction.commit();
     }
 }

@@ -1,6 +1,7 @@
 package com.example.taobaoalliance.view;
 
 import com.example.taobaoalliance.base.IBaseCallback;
+import com.example.taobaoalliance.model.domain.Histories;
 import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 
@@ -13,7 +14,7 @@ public interface ISearchPageCallback extends IBaseCallback {
      *
      * @param histories
      */
-    void onHistoriesLoaded(List<String> histories);
+    void onHistoriesLoaded(Histories histories);
 
     /**
      * 历史记录删除完成

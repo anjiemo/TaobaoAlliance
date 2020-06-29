@@ -40,16 +40,21 @@ public class SearchPresenter implements ISearchPresenter {
     @Override
     public void getHistories() {
         Histories histories = mJsonCacheUtil.getValue(KEY_HISTORIES, Histories.class);
-        if (histories != null && histories.getHistories() != null && histories.getHistories().size() != 0) {
-            for (ISearchPageCallback callback : mSearchPageCallbacks) {
-                callback.onHistoriesLoaded(histories.getHistories());
-            }
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onHistoriesLoaded(histories);
         }
     }
 
     @Override
     public void delHistories() {
         mJsonCacheUtil.delCache(KEY_HISTORIES);
+        onHistoriesDeleted();
+    }
+
+    private void onHistoriesDeleted() {
+        for (ISearchPageCallback callback : mSearchPageCallbacks) {
+            callback.onHistoriesDeleted();
+        }
     }
 
     public static final String KEY_HISTORIES = "key_histories";

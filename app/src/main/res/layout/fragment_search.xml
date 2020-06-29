@@ -26,6 +26,7 @@
                 android:textSize="14sp" />
 
             <ImageView
+                android:id="@+id/search_history_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

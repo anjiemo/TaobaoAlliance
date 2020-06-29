@@ -9,8 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.blankj.utilcode.util.CollectionUtils;
+import com.blankj.utilcode.util.ObjectUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
+import com.example.taobaoalliance.model.domain.Histories;
 import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
@@ -34,6 +36,8 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     View mHistoryContainer;
     @BindView(R.id.search_recommend_container)
     View mRecommendContainer;
+    @BindView(R.id.search_history_delete)
+    View mHistoryDelete;
 
     @Override
     protected void initPresenter() {
@@ -41,7 +45,7 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
         mSearchPresenter.registerViewCallback(this);
         //获取搜索推荐词
         mSearchPresenter.getRecommendWords();
-        mSearchPresenter.doSearch("键盘");
+        //mSearchPresenter.doSearch("毛衣");
         mSearchPresenter.getHistories();
     }
 
@@ -63,24 +67,35 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback 
     }
 
     @Override
+    protected void initListener() {
+        mHistoryDelete.setOnClickListener(v -> {
+            //删除历史记录
+            mSearchPresenter.delHistories();
+        });
+    }
+
+    @Override
     protected void initView(View rootView) {
         setUpState(State.SUCCESS);
 
     }
 
     @Override
-    public void onHistoriesLoaded(List<String> histories) {
-        if (CollectionUtils.isEmpty(histories)) {
+    public void onHistoriesLoaded(Histories histories) {
+        if (ObjectUtils.isEmpty(histories) || CollectionUtils.isEmpty(histories.getHistories())) {
             mHistoryContainer.setVisibility(View.GONE);
-        }else {
+        } else {
             mHistoryContainer.setVisibility(View.VISIBLE);
-            mHistoriesView.setTextList(histories);
+            mHistoriesView.setTextList(histories.getHistories());
         }
     }
 
     @Override
     public void onHistoriesDeleted() {
-
+        //更新历史记录
+        if (mSearchPresenter != null) {
+            mSearchPresenter.getHistories();
+        }
     }
 
     @Override

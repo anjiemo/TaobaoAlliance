@@ -134,6 +134,7 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
     }
 
     private void handleLoadMoreResult(int categoryId, HomePagerContent result) {
+        pagesInfo.put(categoryId, mCurrentPage);
         for (ICategoryCallback callback : mCallbacks) {
             if (callback.getCategoryId() == categoryId) {
                 if (result == null || result.getData().size() == 0) {

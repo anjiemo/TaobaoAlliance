@@ -20,12 +20,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_action_chip.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\test_action_chip.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_action_chip.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\test_action_chip.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_navigation_item_text_color.xml.flat",
@@ -80,12 +80,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_small_round_blue1.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable\\shape_small_round_blue1.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_small_round_blue1.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable\\shape_small_round_blue1.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
@@ -152,12 +152,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\mtrl_layout_snackbar.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_rx_title.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\layout\\include_rx_title.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23_abc_control_background_material.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_rx_title.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\layout\\include_rx_title.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_no_image.png.flat",
@@ -176,16 +176,16 @@
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-hdpi\\empty.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_select_dialog_multichoice.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\mtrl_alert_select_dialog_multichoice.xml"
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_refresh_loading07.png.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\refreshlibrary\\build\\intermediates\\packaged_res\\debug\\mipmap-hdpi-v4\\refresh_loading07.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_circle_bar_code_tool.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\5b5be814b2f0613e7d8617bb7adbe2e8\\RxFeature-v2.4.1\\res\\drawable-xxhdpi-v4\\circle_bar_code_tool.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_refresh_loading07.png.flat",
-        "source": "D:\\Android\\TaobaoAlliance\\refreshlibrary\\build\\intermediates\\packaged_res\\debug\\mipmap-hdpi-v4\\refresh_loading07.png"
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_select_dialog_multichoice.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\mtrl_alert_select_dialog_multichoice.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_search.png.flat",
@@ -268,12 +268,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\btn_checkbox_checked_mtrl.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tooltip_arrow_left.9.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\tooltip_arrow_left.9.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_ic_error.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\drawable\\mtrl_ic_error.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_tooltip_arrow_left.9.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\tooltip_arrow_left.9.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -320,12 +320,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_tooltip.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_tooltip.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -364,12 +364,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\xml\\standalone_badge.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\animator\\mtrl_chip_state_list_anim.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\animator\\mtrl_chip_state_list_anim.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\xml_standalone_badge_gravity_bottom_start.xml.flat",
@@ -436,12 +436,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\raw\\heart.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_seat_green.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xhdpi-v4\\seat_green.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_info_outline_white_48dp.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxxhdpi-v4\\ic_info_outline_white_48dp.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_seat_green.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xhdpi-v4\\seat_green.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -452,24 +452,24 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\anim\\anim_marquee_out.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_picker_text_input_date.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\mtrl_picker_text_input_date.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_picker_text_input_date.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\mtrl_picker_text_input_date.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_shape_loading_view.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\layout\\dialog_shape_loading_view.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_cascading_menu_item_layout.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_ic_arrow_drop_down.xml.flat",
@@ -564,12 +564,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\animator\\mtrl_btn_state_list_anim.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_arrow.png.flat",
         "source": "D:\\Android\\TaobaoAlliance\\refreshlibrary\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\ic_arrow.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -596,12 +596,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\xml\\standalone_badge_gravity_top_start.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_primary_text_material_light.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_toolbar_elevation.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\test_toolbar_elevation.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_edit_box_bg.xml.flat",
@@ -648,28 +648,28 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_circle_qr_code.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\circle_qr_code.png"
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_tooltip_enter.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\abc_tooltip_enter.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_circle_qr_code.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\circle_qr_code.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_icon_se_pic.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xhdpi-v4\\icon_se_pic.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_home_normal.png.flat",
-        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-hdpi\\home_normal.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_picker_header_toggle.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\layout\\mtrl_picker_header_toggle.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_home_normal.png.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-hdpi\\home_normal.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -828,12 +828,12 @@
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_lace_blue.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\lace_blue.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_lace_blue.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\lace_blue.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_checkbox_to_unchecked_check_path_merged_animation.xml.flat",
@@ -856,12 +856,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_design_error.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\color\\design_error.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_toast_layout.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\5cad59bd131f7199497ea46b1cf12a97\\RxKit-v2.4.1\\res\\layout\\toast_layout.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_design_error.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\color\\design_error.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_s_left_jiantou.png.flat",
@@ -892,12 +892,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_circle_heart_circle.png.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\circle_heart_circle.png"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_material_ic_keyboard_arrow_left_black_24dp.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b74871ba5250761320631d0c02d1f6f7\\material-1.3.0-alpha01\\res\\drawable\\material_ic_keyboard_arrow_left_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_circle_heart_circle.png.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\drawable-xxhdpi-v4\\circle_heart_circle.png"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -1112,12 +1112,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_marquee_in.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\anim\\anim_marquee_in.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_checkbox_to_unchecked_icon_null_animation.xml.flat",
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\btn_checkbox_to_unchecked_icon_null_animation.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_marquee_in.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\b2fd280daa02e851f16ef7e0fe97d370\\jetified-RxUI-v2.4.1\\res\\anim\\anim_marquee_in.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1148,12 +1148,12 @@
         "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
-        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_secondary_text_material_light.xml"
-    },
-    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4_refresh_loading02.png.flat",
         "source": "D:\\Android\\TaobaoAlliance\\refreshlibrary\\build\\intermediates\\packaged_res\\debug\\mipmap-hdpi-v4\\refresh_loading02.png"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
+        "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_loading.png.flat",

@@ -23,6 +23,7 @@ public class HomeFragment_ViewBinding extends BaseFragment_ViewBinding {
     target.mTabLayout = Utils.findRequiredViewAsType(source, R.id.home_indicator, "field 'mTabLayout'", TabLayout.class);
     target.homePager = Utils.findRequiredViewAsType(source, R.id.home_pager, "field 'homePager'", ViewPager.class);
     target.mSearchInputBox = Utils.findRequiredView(source, R.id.home_search_input_box, "field 'mSearchInputBox'");
+    target.mScanBtn = Utils.findRequiredView(source, R.id.scan_icon, "field 'mScanBtn'");
   }
 
   @Override
@@ -34,6 +35,7 @@ public class HomeFragment_ViewBinding extends BaseFragment_ViewBinding {
     target.mTabLayout = null;
     target.homePager = null;
     target.mSearchInputBox = null;
+    target.mScanBtn = null;
 
     super.unbind();
   }

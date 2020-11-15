@@ -28,6 +28,7 @@ import com.example.taobaoalliance.model.domain.SearchRecommend;
 import com.example.taobaoalliance.model.domain.SearchResult;
 import com.example.taobaoalliance.presenter.ISearchPresenter;
 import com.example.taobaoalliance.ui.adapter.LinearItemContentAdapter;
+import com.example.taobaoalliance.ui.custom.FlowLayout;
 import com.example.taobaoalliance.ui.custom.TextFlowLayout;
 import com.example.taobaoalliance.utils.KeyboardUtil;
 import com.example.taobaoalliance.utils.PresenterManager;
@@ -41,13 +42,13 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class SearchFragment extends BaseFragment implements ISearchPageCallback, TextFlowLayout.OnFlowTextItemClickListener {
+public class SearchFragment extends BaseFragment implements ISearchPageCallback, FlowLayout.OnItemClickListener {
 
     private ISearchPresenter mSearchPresenter;
     @BindView(R.id.search_history_view)
-    TextFlowLayout mHistoriesView;
+    FlowLayout mHistoriesView;
     @BindView(R.id.search_recommend_view)
-    TextFlowLayout mRecommendView;
+    FlowLayout mRecommendView;
     @BindView(R.id.search_history_container)
     View mHistoryContainer;
     @BindView(R.id.search_recommend_container)
@@ -103,8 +104,8 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback,
 
     @Override
     protected void initListener() {
-        mHistoriesView.setOnFlowTextItemClickListener(this);
-        mRecommendView.setOnFlowTextItemClickListener(this);
+        mHistoriesView.setOnItemClickListener(this);
+        mRecommendView.setOnItemClickListener(this);
         //发起搜索
         mSearchBtn.setOnClickListener(v -> {
             //如果有内容则搜索
@@ -309,7 +310,7 @@ public class SearchFragment extends BaseFragment implements ISearchPageCallback,
     }
 
     @Override
-    public void onFlowItemClick(String text) {
+    public void onItemClick(View view, String text) {
         //发起搜索
         toSearch(text);
     }

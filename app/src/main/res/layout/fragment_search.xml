@@ -34,10 +34,10 @@
 
         </RelativeLayout>
 
-        <com.example.taobaoalliance.ui.custom.TextFlowLayout
+        <com.example.taobaoalliance.ui.custom.FlowLayout
             android:id="@+id/search_history_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:horizontalSpace="10dp"
             app:verticalSpace="10dp" />
 
@@ -64,10 +64,10 @@
 
         </RelativeLayout>
 
-        <com.example.taobaoalliance.ui.custom.TextFlowLayout
+        <com.example.taobaoalliance.ui.custom.FlowLayout
             android:id="@+id/search_recommend_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:horizontalSpace="10dp"
             app:verticalSpace="10dp" />
 

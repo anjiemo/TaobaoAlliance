@@ -1,15 +1,15 @@
 [
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_edit_box_bg.xml.flat",
-        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\shape_edit_box_bg.xml"
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_home_pager_title_part.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\include_home_pager_title_part.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_back.png.flat",
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\mipmap-hdpi\\back.png"
     },
     {
-        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_home_pager_title_part.xml.flat",
-        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\include_home_pager_title_part.xml"
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_edit_box_bg.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\shape_edit_box_bg.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_home_press.png.flat",
@@ -34,6 +34,10 @@
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_loading.xml.flat",
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\fragment_loading.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_flow_text.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\selector_flow_text.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
@@ -196,6 +200,10 @@
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\fragment_empty.xml"
     },
     {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_flow_text_color.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\selector_flow_text_color.xml"
+    },
+    {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_indicator_point_selected.xml.flat",
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\drawable\\shape_indicator_point_selected.xml"
     },
@@ -222,6 +230,10 @@
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_linear_goods_content.xml.flat",
         "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\item_linear_goods_content.xml"
+    },
+    {
+        "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_flow_text.xml.flat",
+        "source": "D:\\Android\\TaobaoAlliance\\app\\src\\main\\res\\layout\\item_flow_text.xml"
     },
     {
         "merged": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",

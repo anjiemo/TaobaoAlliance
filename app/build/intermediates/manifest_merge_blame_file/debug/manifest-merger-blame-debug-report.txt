@@ -14,47 +14,47 @@
 11-->D:\Android\TaobaoAlliance\app\src\main\AndroidManifest.xml:6:5-67
 11-->D:\Android\TaobaoAlliance\app\src\main\AndroidManifest.xml:6:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:11:5-79
-12-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:11:22-76
+12-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:11:5-79
+12-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:11:22-76
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:13:5-81
-13-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:13:22-78
+13-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:13:5-81
+13-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:13:22-78
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:14:5-79
-14-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:14:22-76
+14-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:14:5-79
+14-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:14:22-76
 15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-15-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:15:5-76
-15-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:15:22-73
+15-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:15:5-76
+15-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:15:22-73
 16    <uses-permission android:name="android.permission.CALL_PHONE" />
-16-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:16:5-69
-16-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:16:22-66
+16-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:16:5-69
+16-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:16:22-66
 17    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
-17-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:17:5-84
-17-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:17:22-81
+17-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:17:5-84
+17-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:17:22-81
 18    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 外部存储 -->
-18-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:18:5-83
-18-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:18:22-80
+18-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:18:5-83
+18-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:18:22-80
 19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-19-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:21:5-75
-19-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:21:22-72
+19-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:21:5-75
+19-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:21:22-72
 20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 许可振动 -->
-20-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:22:5-81
-20-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:22:22-78
+20-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:22:5-81
+20-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:22:22-78
 21    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 打开闪光灯 -->
-21-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:24:5-66
-21-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:24:22-63
+21-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:24:5-66
+21-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:24:22-63
 22    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 许可使用照相机 -->
-22-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:26:5-69
-22-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:26:22-66
+22-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:26:5-69
+22-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:26:22-66
 23    <uses-permission android:name="android.permission.CAMERA" /> <!-- 许可调用相机硬件 -->
-23-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:28:5-65
-23-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:28:22-62
+23-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:28:5-65
+23-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:28:22-62
 24    <uses-feature android:name="android.hardware.camera" /> <!-- 许可调用相机自动对焦 -->
-24-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:30:5-60
-24-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:30:19-57
+24-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:30:5-60
+24-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:30:19-57
 25    <uses-feature android:name="android.hardware.camera.autofocus" />
-25-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:32:5-70
-25-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:32:19-67
+25-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:32:5-70
+25-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:32:19-67
 26
 27    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 28
@@ -65,7 +65,7 @@
 31        android:allowBackup="true"
 31-->D:\Android\TaobaoAlliance\app\src\main\AndroidManifest.xml:10:9-35
 32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-32-->[androidx.core:core:1.2.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\2c4911487622891b7d804fc82995f4ba\core-1.2.0\AndroidManifest.xml:24:18-86
+32-->[androidx.core:core:1.2.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\73a261e87730420e3144cf3bb8142c71\core-1.2.0\AndroidManifest.xml:24:18-86
 33        android:debuggable="true"
 34        android:icon="@mipmap/ic_launcher"
 34-->D:\Android\TaobaoAlliance\app\src\main\AndroidManifest.xml:11:9-43
@@ -107,89 +107,89 @@
 51        </activity>
 52
 53        <provider
-53-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:37:9-45:20
+53-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:37:9-45:20
 54            android:name="androidx.core.content.FileProvider"
-54-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:38:13-62
+54-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:38:13-62
 55            android:authorities="com.example.taobaoalliance.fileprovider"
-55-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:39:13-64
+55-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:39:13-64
 56            android:exported="false"
-56-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:40:13-37
+56-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:40:13-37
 57            android:grantUriPermissions="true" >
-57-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:41:13-47
+57-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:41:13-47
 58            <meta-data
-58-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:42:13-44:54
+58-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:42:13-44:54
 59                android:name="android.support.FILE_PROVIDER_PATHS"
-59-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:43:17-67
+59-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:43:17-67
 60                android:resource="@xml/file_paths" />
-60-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:44:17-51
+60-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:44:17-51
 61        </provider>
 62
 63        <activity
-63-->[com.github.tamsiree.RxTool:RxUI:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\b2fd280daa02e851f16ef7e0fe97d370\jetified-RxUI-v2.4.1\AndroidManifest.xml:14:9-16:70
+63-->[com.github.tamsiree.RxTool:RxUI:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\153c4f280ee1992236011ba6c67804aa\jetified-RxUI-v2.4.1\AndroidManifest.xml:14:9-16:70
 64            android:name="com.vondear.rxui.activity.ActivityWebView"
-64-->[com.github.tamsiree.RxTool:RxUI:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\b2fd280daa02e851f16ef7e0fe97d370\jetified-RxUI-v2.4.1\AndroidManifest.xml:15:13-69
+64-->[com.github.tamsiree.RxTool:RxUI:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\153c4f280ee1992236011ba6c67804aa\jetified-RxUI-v2.4.1\AndroidManifest.xml:15:13-69
 65            android:windowSoftInputMode="stateHidden|adjustResize" />
-65-->[com.github.tamsiree.RxTool:RxUI:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\b2fd280daa02e851f16ef7e0fe97d370\jetified-RxUI-v2.4.1\AndroidManifest.xml:16:13-67
+65-->[com.github.tamsiree.RxTool:RxUI:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\153c4f280ee1992236011ba6c67804aa\jetified-RxUI-v2.4.1\AndroidManifest.xml:16:13-67
 66        <activity android:name="com.vondear.rxfeature.activity.ActivityScanerCode" >
-66-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5b5be814b2f0613e7d8617bb7adbe2e8\RxFeature-v2.4.1\AndroidManifest.xml:12:9-13:20
-66-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5b5be814b2f0613e7d8617bb7adbe2e8\RxFeature-v2.4.1\AndroidManifest.xml:12:19-83
+66-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\190d8242c5d07a1d5837946cabd4a281\jetified-RxFeature-v2.4.1\AndroidManifest.xml:12:9-13:20
+66-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\190d8242c5d07a1d5837946cabd4a281\jetified-RxFeature-v2.4.1\AndroidManifest.xml:12:19-83
 67        </activity>
 68        <activity android:name="com.vondear.rxfeature.activity.ActivityCodeTool" >
-68-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5b5be814b2f0613e7d8617bb7adbe2e8\RxFeature-v2.4.1\AndroidManifest.xml:14:9-15:20
-68-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5b5be814b2f0613e7d8617bb7adbe2e8\RxFeature-v2.4.1\AndroidManifest.xml:14:19-81
+68-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\190d8242c5d07a1d5837946cabd4a281\jetified-RxFeature-v2.4.1\AndroidManifest.xml:14:9-15:20
+68-->[com.github.tamsiree.RxTool:RxFeature:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\190d8242c5d07a1d5837946cabd4a281\jetified-RxFeature-v2.4.1\AndroidManifest.xml:14:19-81
 69        </activity>
 70        <activity
-70-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:10:9-14:75
+70-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:10:9-14:75
 71            android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess"
-71-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:11:13-83
+71-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:11:13-83
 72            android:configChanges="orientation|keyboardHidden|screenSize"
-72-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:12:13-74
+72-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:12:13-74
 73            android:theme="@style/ActivityTranslucent"
-73-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:13:13-55
+73-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:13:13-55
 74            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
-74-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:14:13-72
+74-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:14:13-72
 75        <activity
-75-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:15:9-20:75
+75-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:15:9-20:75
 76            android:name="com.blankj.utilcode.util.UtilsTransActivity"
-76-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:16:13-71
+76-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:16:13-71
 77            android:configChanges="orientation|keyboardHidden|screenSize"
-77-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:17:13-74
+77-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:17:13-74
 78            android:multiprocess="true"
-78-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:18:13-40
+78-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:18:13-40
 79            android:theme="@style/ActivityTranslucent"
-79-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:19:13-55
+79-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:19:13-55
 80            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
-80-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:20:13-72
+80-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:20:13-72
 81
 82        <provider
-82-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:22:9-30:20
+82-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:22:9-30:20
 83            android:name="com.blankj.utilcode.util.UtilsFileProvider"
-83-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:23:13-70
+83-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:23:13-70
 84            android:authorities="com.example.taobaoalliance.utilcode.provider"
-84-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:24:13-69
+84-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:24:13-69
 85            android:exported="false"
-85-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:25:13-37
+85-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:25:13-37
 86            android:grantUriPermissions="true" >
-86-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:26:13-47
+86-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:26:13-47
 87            <meta-data
-87-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:42:13-44:54
+87-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:42:13-44:54
 88                android:name="android.support.FILE_PROVIDER_PATHS"
-88-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:43:17-67
+88-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:43:17-67
 89                android:resource="@xml/util_code_provider_paths" />
-89-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\5cad59bd131f7199497ea46b1cf12a97\RxKit-v2.4.1\AndroidManifest.xml:44:17-51
+89-->[com.github.tamsiree.RxTool:RxKit:v2.4.1] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\3b249f15bf2ee78a9fa2ff0ba19f3cef\jetified-RxKit-v2.4.1\AndroidManifest.xml:44:17-51
 90        </provider>
 91
 92        <service
-92-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:32:9-38:19
+92-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:32:9-38:19
 93            android:name="com.blankj.utilcode.util.MessengerUtils$ServerService"
-93-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:33:13-81
+93-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:33:13-81
 94            android:exported="false" >
-94-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:34:13-37
+94-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:34:13-37
 95            <intent-filter>
-95-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:35:13-37:29
+95-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:35:13-37:29
 96                <action android:name="com.example.taobaoalliance.messenger" />
-96-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:36:17-69
-96-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\9718847b2393d6dabd95af0c9f399fc7\jetified-utilcodex-1.29.0\AndroidManifest.xml:36:25-66
+96-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:36:17-69
+96-->[com.blankj:utilcodex:1.29.0] D:\GradleWorkSpace\.gradle\caches\transforms-2\files-2.1\e69276d2888950b91f3810d51ecd748c\jetified-utilcodex-1.29.0\AndroidManifest.xml:36:25-66
 97            </intent-filter>
 98        </service>
 99    </application>

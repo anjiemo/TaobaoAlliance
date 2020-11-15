@@ -40,6 +40,7 @@ public class TicketPresenterImpl implements ITickPresenter {
         LogUtils.d(this, "url =====> " + url);
         LogUtils.d(this, "cover =====> " + cover);
         String targetUrl = UrlUtils.getTicketUrl(url);
+        LogUtils.d(this, String.format("targetUrl is ======> %s", targetUrl));
         //去获取淘口令
         Retrofit retrofit = RetrofitManager.getOurInstance().getRetrofit();
         Api api = retrofit.create(Api.class);

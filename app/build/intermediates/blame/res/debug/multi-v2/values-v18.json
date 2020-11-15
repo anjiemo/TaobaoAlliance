@@ -4,7 +4,7 @@
             "outputFile": "D:\\Android\\TaobaoAlliance\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\values-v18\\values-v18.xml",
+                    "source": "D:\\GradleWorkSpace\\.gradle\\caches\\transforms-2\\files-2.1\\5fe3c885cde85685800d972af335ba50\\appcompat-1.1.0\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

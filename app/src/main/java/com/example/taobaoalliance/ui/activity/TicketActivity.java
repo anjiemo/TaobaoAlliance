@@ -25,6 +25,7 @@ import com.example.taobaoalliance.base.BaseActivity;
 import com.example.taobaoalliance.model.domain.TicketResult;
 import com.example.taobaoalliance.presenter.ITickPresenter;
 import com.example.taobaoalliance.utils.CornerTransform;
+import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.utils.UrlUtils;
 import com.example.taobaoalliance.view.ITicketPagerCallback;
@@ -130,7 +131,25 @@ public class TicketActivity extends BaseActivity implements ITicketPagerCallback
         }
         //设置Code
         if (result != null && result.getData().getTbk_tpwd_create_response() != null) {
-            mTicketCode.setText(result.getData().getTbk_tpwd_create_response().getData().getModel());
+            String ticketCode = null;
+            try {
+                ticketCode = result.getData().getTbk_tpwd_create_response().getData().getModel();
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
+            if (!TextUtils.isEmpty(ticketCode)) {
+                int startIndex = ticketCode.indexOf("￥");
+                int lastIndex = ticketCode.lastIndexOf("￥");
+                LogUtils.d(this, "startIndex is ====> " + startIndex);
+                LogUtils.d(this, "lastIndex is ====> " + lastIndex);
+                try {
+                    ticketCode = ticketCode.substring(startIndex, lastIndex + 1);
+                } catch (IndexOutOfBoundsException e) {
+                    e.printStackTrace();
+                    LogUtils.e(this, "The ticketCode is error！");
+                }
+            }
+            mTicketCode.setText(ticketCode == null ? "" : ticketCode);
         }
         if (mLoadingView != null) {
             mLoadingView.setVisibility(View.GONE);

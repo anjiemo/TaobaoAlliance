@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.ConvertUtils;
+import com.blankj.utilcode.util.GsonUtils;
 import com.example.taobaoalliance.R;
 import com.example.taobaoalliance.base.BaseFragment;
 import com.example.taobaoalliance.model.domain.IBaseInfo;
@@ -20,6 +21,7 @@ import com.example.taobaoalliance.model.domain.RecommendPageCategory;
 import com.example.taobaoalliance.presenter.IRecommendPagePresenter;
 import com.example.taobaoalliance.ui.adapter.RecommendPageContentAdapter;
 import com.example.taobaoalliance.ui.adapter.RecommendPageLeftAdapter;
+import com.example.taobaoalliance.utils.LogUtils;
 import com.example.taobaoalliance.utils.PresenterManager;
 import com.example.taobaoalliance.utils.TicketUtils;
 import com.example.taobaoalliance.view.IRecommendPageCallback;

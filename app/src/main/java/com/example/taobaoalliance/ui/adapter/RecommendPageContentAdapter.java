@@ -18,6 +18,8 @@ import com.example.taobaoalliance.model.domain.IBaseInfo;
 import com.example.taobaoalliance.model.domain.RecommendContent;
 import com.example.taobaoalliance.utils.Constants;
 import com.example.taobaoalliance.utils.CornerTransform;
+import com.example.taobaoalliance.utils.LogUtils;
+import com.example.taobaoalliance.utils.UrlUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ import butterknife.ButterKnife;
 
 public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendPageContentAdapter.InnerHolder> {
 
-    private List<RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean> mData = new ArrayList<>();
+    private List<RecommendContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean> mData = new ArrayList<>();
 
     @NonNull
     @Override
@@ -38,7 +40,7 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
 
     @Override
     public void onBindViewHolder(@NonNull InnerHolder holder, int position) {
-        RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean itemData = mData.get(position);
+        RecommendContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean itemData = mData.get(position);
         holder.setData(itemData);
         View itemView = holder.itemView;
         itemView.setOnClickListener(v -> {
@@ -55,7 +57,7 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
 
     public void setData(RecommendContent content) {
         if (content.getCode() == Constants.SUCCESS_CODE) {
-            List<RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean> uatm_tbk_item = content.getData().getTbk_uatm_favorites_item_get_response().getResults().getUatm_tbk_item();
+            List<RecommendContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean> uatm_tbk_item = content.getData().getTbk_dg_optimus_material_response().getResult_list().getMap_data();
             mData.clear();
             mData.addAll(uatm_tbk_item);
             notifyDataSetChanged();
@@ -79,12 +81,14 @@ public class RecommendPageContentAdapter extends RecyclerView.Adapter<RecommendP
             ButterKnife.bind(this, itemView);
         }
 
-        public void setData(RecommendContent.DataBean.TbkUatmFavoritesItemGetResponseBean.ResultsBean.UatmTbkItemBean itemData) {
+        public void setData(RecommendContent.DataBean.TbkDgOptimusMaterialResponseBean.ResultListBean.MapDataBean itemData) {
             Context context = itemView.getContext();
             String pictUrl = itemData.getPict_url();
             CornerTransform cornerTransform = new CornerTransform(context, ConvertUtils.dp2px(6))
                     .setExceptCorner(false, false, false, false);
-            Glide.with(context).load(pictUrl).error(R.mipmap.no_image).placeholder(R.mipmap.no_image)
+            String coverPath = UrlUtils.getCoverPath(pictUrl, 220);
+            LogUtils.d(this, String.format("Cover url is ========> %s", coverPath));
+            Glide.with(context).load(coverPath).error(R.mipmap.no_image).placeholder(R.mipmap.no_image)
                     .transform(cornerTransform).into(ivCover);
             if (TextUtils.isEmpty(itemData.getCoupon_click_url())) {
                 tvOriginalPrise.setText("晚啦，没有优惠券了");

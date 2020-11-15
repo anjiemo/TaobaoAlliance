@@ -35,7 +35,7 @@
             android:hint="@string/text_search_tips"
             android:imeOptions="actionSearch"
             android:paddingStart="10dp"
-            android:paddingEnd="30dp"
+            android:paddingEnd="42dp"
             android:singleLine="true"
             android:textSize="14sp" />
 

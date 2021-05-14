@@ -17,6 +17,7 @@
         android:id="@+id/main_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         app:itemIconTint="@drawable/navigation_bar_color"

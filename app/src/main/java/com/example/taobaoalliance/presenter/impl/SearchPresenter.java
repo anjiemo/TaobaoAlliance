@@ -117,6 +117,7 @@ public class SearchPresenter implements ISearchPresenter {
 
             @Override
             public void onFailure(@NonNull Call<SearchResult> call, @NonNull Throwable t) {
+                t.printStackTrace();
                 onError();
             }
         });

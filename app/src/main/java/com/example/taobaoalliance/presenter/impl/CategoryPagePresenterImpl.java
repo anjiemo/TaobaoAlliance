@@ -60,6 +60,7 @@ public class CategoryPagePresenterImpl implements ICategoryPagerPresenter {
             @Override
             public void onFailure(@NonNull Call<HomePagerContent> call, @NonNull Throwable t) {
                 LogUtils.d(this, "onFailure===========> " + t.toString());
+                t.printStackTrace();
                 handleNetworkError(categoryId);
             }
         });

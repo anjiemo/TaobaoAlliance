@@ -24,6 +24,8 @@ public class TicketUtils {
         //拿到TicketPresenter去加载数据
         ITickPresenter ticketPresenter = PresenterManager.getInstance().getTicketPresenter();
         ticketPresenter.getTicket(title, url, cover);
-        appContext.startActivity(new Intent(appContext, TicketActivity.class));
+        Intent intent = new Intent(appContext, TicketActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        appContext.startActivity(intent);
     }
 }

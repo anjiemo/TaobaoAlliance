@@ -153,7 +153,7 @@ public class OnSellContent {
                     private String coupon_start_time;
                     private int coupon_total_count;
                     private String item_description;
-                    private long item_id;
+                    private String item_id;
                     private int level_one_category_id;
                     private String level_one_category_name;
                     private String nick;
@@ -278,11 +278,11 @@ public class OnSellContent {
                         this.item_description = item_description;
                     }
 
-                    public long getItem_id() {
+                    public String getItem_id() {
                         return item_id;
                     }
 
-                    public void setItem_id(long item_id) {
+                    public void setItem_id(String item_id) {
                         this.item_id = item_id;
                     }
 

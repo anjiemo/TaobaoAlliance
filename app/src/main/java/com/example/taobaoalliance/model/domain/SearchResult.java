@@ -213,12 +213,12 @@ public class SearchResult {
                     private String include_mkt;
                     private String info_dxjh;
                     private String item_description;
-                    private long item_id;
+                    private String item_id;
                     private String item_url;
                     private int level_one_category_id;
                     private String level_one_category_name;
                     private String nick;
-                    private long num_iid;
+                    private String num_iid;
                     private String pict_url;
                     private Object presale_deposit;
                     private int presale_end_time;
@@ -383,11 +383,11 @@ public class SearchResult {
                         this.item_description = item_description;
                     }
 
-                    public long getItem_id() {
+                    public String getItem_id() {
                         return item_id;
                     }
 
-                    public void setItem_id(long item_id) {
+                    public void setItem_id(String item_id) {
                         this.item_id = item_id;
                     }
 
@@ -423,11 +423,11 @@ public class SearchResult {
                         this.nick = nick;
                     }
 
-                    public long getNum_iid() {
+                    public String getNum_iid() {
                         return num_iid;
                     }
 
-                    public void setNum_iid(long num_iid) {
+                    public void setNum_iid(String num_iid) {
                         this.num_iid = num_iid;
                     }
 

@@ -57,6 +57,7 @@ public class RecommendPagePresenterIml implements IRecommendPagePresenter {
 
             @Override
             public void onFailure(@NonNull Call<RecommendPageCategory> call, @NonNull Throwable t) {
+                t.printStackTrace();
                 onLoadedError();
             }
         });
